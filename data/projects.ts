@@ -69,18 +69,18 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
     },
     media: [
       {
-        key: "before",
+        key: "after",
         type: "image",
-        src: '/door1.png',
+        src: '/door.png',
         alt: {
           en: "Before: raw industrial loft with exposed concrete",
           es: "Antes: loft industrial crudo con concreto expuesto",
         },
       },
       {
-        key: "after",
+        key: "before",
         type: "image",
-        src: "/door.png",
+        src: "/door1.png",
         alt: {
           en: "After: luminous creative loft with layered work lounges",
           es: "Después: loft creativo luminoso con zonas de trabajo estratificadas",
@@ -101,7 +101,7 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
     },
     media: [
       {
-        key: "before",
+        key: "after",
         type: "image",
         src: "/renovation.png",
         alt: {
@@ -110,7 +110,7 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
         },
       },
       {
-        key: "after",
+        key: "before",
         type: "image",
         src: "/renovation1.png",
         alt: {
@@ -133,7 +133,7 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
     },
     media: [
         {
-        key: "before",
+        key: "after",
         type: "image",
         src: '/bathroom.png',
         alt: {
@@ -160,7 +160,7 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
         },
       },
       {
-        key: "after",
+        key: "before",
         type: "image",
         src: '/bathroom3.png',
         alt: {

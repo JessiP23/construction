@@ -58,6 +58,8 @@
     },
     "values": {
         "title": "Precision, Trust, Beauty",
+        "subtitle": "Principles that anchor every build",
+        "description": "These commitments shape how we communicate, craft, and care for every structure entrusted to our studio.",
         "items": [
             {
                 "title": "Integrated Craft",
@@ -76,14 +78,220 @@
     "specialties": {
         "title": "Signature Specialties",
         "description": "From structural reimagination to bespoke finishes, we orchestrate every layer of the build.",
-        "items": [
-            "Whole-home remodeling",
-            "Roofing and envelope renewal",
-            "Curated painting & plaster artistry",
-            "Luxury flooring systems",
-            "Custom millwork and cabinetry",
-            "Outdoor living architecture"
-        ]
+        "support": "Select a discipline to explore our methodology, deliverables, and reference transformations.",
+        "cardIndicator": "Discipline",
+        "ctaLabel": "View offering",
+        "backLabel": "Back to specialties",
+        "deliverablesTitle": "Signature deliverables",
+        "processTitle": "How we lead the work",
+        "referenceProjects": "Reference transformations",
+        "viewAllWork": "See all projects",
+        "items": {
+            "wholeHomeRemodeling": {
+                "name": "Whole-home remodeling",
+                "excerpt": "Comprehensive structural and interior overhauls delivered with concierge coordination.",
+                "summary": "We choreograph architecture, engineering, and interiors to transform an entire residence while honoring the original context.",
+                "seoDescription": "Titino Construction delivers whole-home remodeling with structural upgrades, integrated interiors, and concierge site leadership.",
+                "metrics": [
+                    { "label": "Ideal scope", "value": "4,000–18,000 sq ft commissions" },
+                    { "label": "Typical duration", "value": "6–18 month programs" },
+                    { "label": "Core disciplines", "value": "Structure, envelope, interiors, millwork" }
+                ],
+                "deliverables": [
+                    "Feasibility, zoning, and budget modeling",
+                    "Structural reframing and seismic reinforcement",
+                    "High-performance envelope insulation strategies",
+                    "MEP coordination with integrated smart systems",
+                    "Custom millwork packages and finish schedules",
+                    "Turnover documentation and maintenance playbooks"
+                ],
+                "process": [
+                    {
+                        "title": "Discovery & Modeling",
+                        "description": "Laser scans, code due diligence, and digital twins capture constraints before design decisions are locked."
+                    },
+                    {
+                        "title": "Construction Leadership",
+                        "description": "Dedicated site leads coordinate trades, track QA benchmarks, and communicate progress in transparent dashboards."
+                    },
+                    {
+                        "title": "Commissioning & Stewardship",
+                        "description": "Soft handovers, resident training, and scheduled tune-ups protect the investment long after turnover."
+                    }
+                ],
+                "ctaLabel": "Schedule a remodeling consultation"
+            },
+            "envelopeRenewal": {
+                "name": "Roofing and envelope renewal",
+                "excerpt": "High-performance roofing and facade renewal engineered for longevity in demanding climates.",
+                "summary": "We resolve water intrusion and weatherization by rebuilding the protective shell with marine-grade assemblies and rigorous testing.",
+                "seoDescription": "Titino Construction revitalizes roofing and building envelopes with diagnostics, reconstruction, and performance verification.",
+                "metrics": [
+                    { "label": "Ideal scope", "value": "Coastal & alpine residences" },
+                    { "label": "Typical duration", "value": "8–20 week engagements" },
+                    { "label": "Core disciplines", "value": "Roofing, glazing, waterproofing" }
+                ],
+                "deliverables": [
+                    "Forensic moisture mapping and drone imaging",
+                    "Temporary protection and site logistics planning",
+                    "Roof structure reinforcement and decking upgrades",
+                    "Custom flashing, drainage, and gutter design",
+                    "Triple-sealed glazing and air/vapor barrier integration",
+                    "Post-completion thermal and water testing reports"
+                ],
+                "process": [
+                    {
+                        "title": "Diagnostics & Planning",
+                        "description": "Infrared scans, drone surveys, and envelope modeling reveal vulnerabilities before demolition begins."
+                    },
+                    {
+                        "title": "Envelope Reconstruction",
+                        "description": "Sequenced tear-offs with live protection allow us to rebuild assemblies with precision and minimal disruption."
+                    },
+                    {
+                        "title": "Performance Verification",
+                        "description": "We pressure-test, water-test, and document performance so owners have proof of longevity."
+                    }
+                ],
+                "ctaLabel": "Book an envelope assessment"
+            },
+            "paintingPlaster": {
+                "name": "Curated painting & plaster artistry",
+                "excerpt": "Museum-grade finishes curated for depth, tactility, and longevity.",
+                "summary": "Our finish atelier formulates pigments, limewashes, and Venetian plasters that respond to light, touch, and storytelling.",
+                "seoDescription": "Titino Construction offers curated painting and plaster artistry with bespoke pigments and hand-troweled finishes.",
+                "metrics": [
+                    { "label": "Ideal scope", "value": "Luxury residences & boutique hospitality" },
+                    { "label": "Typical duration", "value": "3–8 week finishing cycles" },
+                    { "label": "Core disciplines", "value": "Surface prep, pigments, artisan application" }
+                ],
+                "deliverables": [
+                    "Palette strategy with daylight and luminaire mockups",
+                    "Surface remediation, skim coating, and leveling",
+                    "Custom pigment mixing and limewash formulation",
+                    "Venetian plaster, tadelakt, and specialty stucco application",
+                    "Protective sealants tuned to humidity and wear",
+                    "Care instructions and touch-up kits for facility teams"
+                ],
+                "process": [
+                    {
+                        "title": "Material Storyboarding",
+                        "description": "We prototype finishes under project lighting and iterate with clients until the palette feels inevitable."
+                    },
+                    {
+                        "title": "Crafted Application",
+                        "description": "Dust-controlled prep, multi-layer trowel techniques, and artisan crews deliver consistent depth."
+                    },
+                    {
+                        "title": "Finish Protection",
+                        "description": "Sealants, cure schedules, and maintenance checklists preserve the finish for years to come."
+                    }
+                ],
+                "ctaLabel": "Consult on finish storytelling"
+            },
+            "luxuryFlooring": {
+                "name": "Luxury flooring systems",
+                "excerpt": "Precision flooring systems balancing acoustics, comfort, and visual rhythm.",
+                "summary": "We engineer substrate preparation, radiant systems, and finish materials so the finished plane performs quietly and flawlessly.",
+                "seoDescription": "Titino Construction installs luxury flooring systems with engineered substrates, radiant heat integration, and bespoke finishes.",
+                "metrics": [
+                    { "label": "Ideal scope", "value": "Residences, wellness spas, boutique retail" },
+                    { "label": "Typical duration", "value": "4–12 week programs" },
+                    { "label": "Core disciplines", "value": "Substrate, radiant, finish installation" }
+                ],
+                "deliverables": [
+                    "Moisture testing and self-leveling underlayments",
+                    "Radiant heating and controls integration",
+                    "Custom parquet, stone, or microcement fabrication",
+                    "Acoustic underlayment and isolation strategy",
+                    "Stair nosing, thresholds, and detail transitions",
+                    "Protection plans and commissioning reports"
+                ],
+                "process": [
+                    {
+                        "title": "Technical Survey",
+                        "description": "Slab analysis, slope mapping, and coordination with MEP anticipate tolerances before install crews mobilize."
+                    },
+                    {
+                        "title": "Fabrication & Mockups",
+                        "description": "Pattern studies and on-site mockups confirm rhythm, tone, and slip resistance for each zone."
+                    },
+                    {
+                        "title": "Installation & Protection",
+                        "description": "Phased installation with moisture monitoring is followed by protection and punch coordination."
+                    }
+                ],
+                "ctaLabel": "Start a flooring specification"
+            },
+            "millworkCabinetry": {
+                "name": "Custom millwork and cabinetry",
+                "excerpt": "Bespoke millwork and cabinetry fabricated with joinery-first precision.",
+                "summary": "Our wood studio partners with clients from concept sketches through installation to deliver integrated storage and architectural furniture.",
+                "seoDescription": "Titino Construction crafts custom millwork and cabinetry with detailed shop drawings, artisan fabrication, and lifetime service.",
+                "metrics": [
+                    { "label": "Ideal scope", "value": "Kitchens, libraries, hospitality suites" },
+                    { "label": "Typical duration", "value": "12–24 week programs" },
+                    { "label": "Core disciplines", "value": "Design development, fabrication, finishing" }
+                ],
+                "deliverables": [
+                    "Material, veneer, and hardware curation",
+                    "Revit shop drawings and 3D coordination",
+                    "Solid timber and veneer fabrication",
+                    "Integrated lighting, power, and technology routing",
+                    "White-glove installation with field adjustments",
+                    "Finish care manuals and service agreements"
+                ],
+                "process": [
+                    {
+                        "title": "Design Dialogue",
+                        "description": "We translate brand, lifestyle, and ergonomics into detailed joinery concepts and approvals."
+                    },
+                    {
+                        "title": "Fabrication & Finishing",
+                        "description": "CNC precision meets hand finishing in our atelier, with mockups for critical touchpoints."
+                    },
+                    {
+                        "title": "Installation & Aftercare",
+                        "description": "Staged installation, punch resolution, and enrollment in ongoing care keep the millwork pristine."
+                    }
+                ],
+                "ctaLabel": "Plan a millwork commission"
+            },
+            "outdoorArchitecture": {
+                "name": "Outdoor living architecture",
+                "excerpt": "Indoor-outdoor architecture that choreographs landscape, water, and light.",
+                "summary": "We build terraces, pools, kitchens, and pavilions designed for year-round entertaining and restorative rituals.",
+                "seoDescription": "Titino Construction designs and builds outdoor living architecture with structural engineering, water features, and hospitality-grade detailing.",
+                "metrics": [
+                    { "label": "Ideal scope", "value": "Courtyards, rooftops, and estate grounds" },
+                    { "label": "Typical duration", "value": "10–24 week programs" },
+                    { "label": "Core disciplines", "value": "Landscape structures, water features, lighting" }
+                ],
+                "deliverables": [
+                    "Site analysis with sun, wind, and privacy mapping",
+                    "Structural foundations and drainage engineering",
+                    "Water feature and pool filtration design",
+                    "Outdoor kitchen, fireplace, and audio integration",
+                    "Lighting, planting, and irrigation coordination",
+                    "Seasonal calibration and stewardship plan"
+                ],
+                "process": [
+                    {
+                        "title": "Site Story & Zoning",
+                        "description": "We map circulation, sightlines, and microclimates to choreograph experiential zones."
+                    },
+                    {
+                        "title": "Build Sequence",
+                        "description": "Excavation, utilities, and structural pours are phased to protect existing landscapes."
+                    },
+                    {
+                        "title": "Activation & Stewardship",
+                        "description": "Commissioning, planting care, and seasonal service visits keep the environment performing beautifully."
+                    }
+                ],
+                "ctaLabel": "Design an outdoor retreat"
+            }
+        }
     },
     "projects": {
         "title": "Featured Transformations",

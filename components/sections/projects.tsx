@@ -17,11 +17,12 @@ interface ProjectCopy {
 }
 
 type ProjectCopyMap = Record<string, ProjectCopy>;
+type StageLabels = Record<ProjectStageKey, string>;
 
 export function ProjectsSection() {
   const { t } = useTranslation();
   const stageLabels = useMemo(
-    () => t("projects.stageLabels", { returnObjects: true }) as Record<ProjectStageKey, string>,
+    () => t("projects.stageLabels", { returnObjects: true }) as StageLabels,
     [t],
   );
   const projectCopy = useMemo(
@@ -66,7 +67,7 @@ function ProjectCard({
 }: {
   project: Project;
   copy: ProjectCopy;
-  stageLabels: Record<ProjectStageKey, string>;
+  stageLabels: StageLabels;
 }) {
   const { language } = useLanguage();
 
@@ -79,9 +80,9 @@ function ProjectCard({
   }
 
   return (
-    <article className="relative overflow-hidden rounded-[32px] border border-[#ded8cc] bg-white p-10 shadow-[0_24px_70px_rgba(13,17,23,0.08)] transition-colors">
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)]">
-        <div className="flex flex-col gap-8">
+    <article className="relative overflow-hidden rounded-[32px] border border-[#ded8cc] bg-white p-10 shadow-[0_24px_70px_rgba(13,17,23,0.08)]">
+      <div className="flex flex-col gap-10 lg:flex-row">
+        <div className="flex w-full flex-col justify-between gap-8 lg:max-w-[320px]">
           <header className="space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#4c4f5a]">
               {copy.location}
@@ -89,23 +90,11 @@ function ProjectCard({
             <h3 className="text-3xl font-semibold text-[#0b1f3b] md:text-4xl">
               {copy.title}
             </h3>
-            <p className="max-w-sm text-base leading-relaxed text-[#222a35]">
-              {copy.description}
-            </p>
           </header>
-          <div className="space-y-6 border-t border-[#e6dfd2] pt-6 text-sm leading-relaxed text-[#1d2530]">
-            <ProjectNarrative
-              label={stageLabels.before}
-              narrative={copy.story.before}
-            />
-            <ProjectNarrative
-              label={stageLabels.after}
-              narrative={copy.story.after}
-            />
-          </div>
+          <StageLegend stageLabels={stageLabels} hasProcess={processMedia.length > 0} />
         </div>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex-1 space-y-6">
           <div className="grid gap-4 sm:grid-cols-2">
             <ProjectImage
               media={beforeMedia}
@@ -120,11 +109,11 @@ function ProjectCard({
           </div>
 
           {processMedia.length > 0 ? (
-            <div className="space-y-3 rounded-2xl bg-[#f4efe5] p-5">
+            <div className="rounded-3xl border border-[#dad5ca] bg-[#f8f5ee] p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#4c4f5a]">
                 {stageLabels.process}
               </p>
-              <div className="grid gap-3 sm:grid-cols-3">
+              <div className="mt-3 grid gap-3 sm:grid-cols-3">
                 {processMedia.map((media) => (
                   <ProjectProcessImage
                     key={media.src}
@@ -138,6 +127,46 @@ function ProjectCard({
         </div>
       </div>
     </article>
+  );
+}
+
+const legendSwatches: Record<ProjectStageKey, string> = {
+  before: "#0b1f3b",
+  process: "#7a828c",
+  after: "#1c3f73",
+};
+
+function StageLegend({
+  stageLabels,
+  hasProcess,
+}: {
+  stageLabels: StageLabels;
+  hasProcess: boolean;
+}) {
+  return (
+    <div className="space-y-4">
+      <div className="h-px w-24 bg-[#e6dfd2]" />
+      <ul className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#4c4f5a]">
+        <LegendItem label={stageLabels.before} color={legendSwatches.before} />
+        <LegendItem label={stageLabels.after} color={legendSwatches.after} />
+        {hasProcess ? (
+          <LegendItem label={stageLabels.process} color={legendSwatches.process} />
+        ) : null}
+      </ul>
+    </div>
+  );
+}
+
+function LegendItem({ label, color }: { label: string; color: string }) {
+  return (
+    <li className="flex items-center gap-2">
+      <span
+        className="h-1.5 w-1.5 rounded-full"
+        style={{ backgroundColor: color }}
+        aria-hidden
+      />
+      {label}
+    </li>
   );
 }
 
@@ -161,9 +190,6 @@ function ProjectImage({
           className="h-full w-full object-cover"
         />
       </div>
-      <figcaption className="pointer-events-none absolute left-6 top-6 inline-flex items-center rounded-full bg-[#0b1f3b] px-4 py-1 text-xs font-semibold uppercase tracking-[0.36em] text-white">
-        {label}
-      </figcaption>
     </figure>
   );
 }
@@ -188,16 +214,5 @@ function ProjectProcessImage({
         />
       </div>
     </figure>
-  );
-}
-
-function ProjectNarrative({ label, narrative }: { label: string; narrative: string }) {
-  return (
-    <div className="space-y-2">
-      <h4 className="text-xs font-semibold uppercase tracking-[0.28em] text-[#4c4f5a]">
-        {label}
-      </h4>
-      <p>{narrative}</p>
-    </div>
   );
 }

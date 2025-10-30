@@ -1,6 +1,2 @@
-[00:00:00.605] Server  LOG      ✓ Ready in 442ms
-[00:00:02.413] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
-[00:00:26.536] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:00:26.576] Server  LOG      ✓ Compiled in 23ms
-[00:05:13.028] Server  LOG      ✓ Compiled in 26ms
-[00:07:37.409] Server  LOG      ✓ Compiled in 19ms
+[00:00:00.503] Server  LOG      ✓ Ready in 351ms
+[00:02:19.413] Server  LOG      ✓ Compiled in 27ms

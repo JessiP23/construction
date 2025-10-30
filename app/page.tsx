@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 
 import { NavigationBar } from "@/components/navigation-bar";
 import { HeroSection } from "@/components/sections/hero";
-import { ValuesSection } from "@/components/sections/values";
 import { ProjectsSection } from "@/components/sections/projects";
+import { SpecialtiesSection } from "@/components/sections/specialties";
+import { ValuesSection } from "@/components/sections/values";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { ContactSection } from "@/components/sections/contact";
 import { FooterSection } from "@/components/sections/footer";
@@ -21,8 +22,9 @@ export default function Home() {
     >
       <NavigationBar />
       <HeroSection />
-      <ValuesSection />
       <ProjectsSection />
+  <SpecialtiesSection />
+  <ValuesSection />
       <TestimonialsSection />
       <ContactSection />
       <FooterSection />
