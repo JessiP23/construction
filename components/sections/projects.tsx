@@ -163,19 +163,32 @@ function ProjectCard({
                 key={media.key}
                 type="button"
                 onClick={() => setActiveStage(media.key)}
-                className={`rounded-full px-4 py-2 text-xs tracking-[0.16em] transition ${
+                className={`flex items-center justify-center rounded-full px-3 py-2 text-xs tracking-[0.16em] transition ${
                   activeStage === media.key
                     ? "bg-white text-[var(--foreground)] shadow-sm"
                     : "bg-white/65 text-[rgba(36,48,71,0.72)] hover:bg-white/85"
                 }`}
                 data-cursor="focus"
+                aria-label={stageLabels[media.key]}
               >
-                {stageLabels[media.key]}
+                {media.poster ? (
+                  <div className="relative h-10 w-16 overflow-hidden rounded-md">
+                    <Image
+                      src={media.poster}
+                      alt={media.alt[language]}
+                      width={64}
+                      height={40}
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <span className="text-[0.7rem]">{stageLabels[media.key]}</span>
+                )}
               </button>
             ))}
           </div>
         </div>
-  <div className="flex flex-col gap-6 md:max-h-[70vh] md:overflow-y-auto md:pr-2">
+        <div className="flex flex-col gap-6 md:max-h-[70vh] md:overflow-y-auto md:pr-2">
           <DialogTitle className="font-display text-3xl tracking-tight text-[var(--foreground)]">
             {copy.title}
           </DialogTitle>

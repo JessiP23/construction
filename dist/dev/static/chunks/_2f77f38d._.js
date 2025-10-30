@@ -974,7 +974,7 @@ function buildImage(path) {
 const projects = [
     {
         id: "ridgeResidence",
-        cover: buildImage("https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=2000&q=80"),
+        cover: "/stairs.png",
         coverAlt: {
             en: "Completed alpine living room with expansive glazing and timber beams",
             es: "Sala alpina terminada con ventanales y vigas de madera"
@@ -987,7 +987,7 @@ const projects = [
             {
                 key: "before",
                 type: "image",
-                src: buildImage("https://images.unsplash.com/photo-1529429617124-aee1092c9f6d?auto=format&fit=crop&w=2000&q=80"),
+                src: "/stairs.png",
                 alt: {
                     en: "Before renovation: compartmentalized mountain home under construction",
                     es: "Antes de la renovación: vivienda de montaña compartimentada en obra"
@@ -996,7 +996,7 @@ const projects = [
             {
                 key: "process",
                 type: "image",
-                src: buildImage("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80"),
+                src: "/door.png",
                 alt: {
                     en: "Process: structural framing with exposed timber beams",
                     es: "Proceso: estructura con vigas de madera expuestas"
@@ -1005,7 +1005,9 @@ const projects = [
             {
                 key: "after",
                 type: "image",
-                src: buildImage("https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=2000&q=80"),
+                src: "/images/ridge-after.jpg",
+                // small thumbnail/poster you want shown in the modal controls
+                poster: "/images/ridge-thumb.jpg",
                 alt: {
                     en: "After: open-plan alpine living room with panoramic glazing",
                     es: "Después: sala alpina de planta abierta con ventanales panorámicos"
@@ -1601,9 +1603,34 @@ function ProjectCard({ project, copy, index }) {
                                 children: project.media.map((media)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         type: "button",
                                         onClick: ()=>setActiveStage(media.key),
-                                        className: `rounded-full px-4 py-2 text-xs tracking-[0.16em] transition ${activeStage === media.key ? "bg-white text-[var(--foreground)] shadow-sm" : "bg-white/65 text-[rgba(36,48,71,0.72)] hover:bg-white/85"}`,
+                                        className: `flex items-center justify-center rounded-full px-3 py-2 text-xs tracking-[0.16em] transition ${activeStage === media.key ? "bg-white text-[var(--foreground)] shadow-sm" : "bg-white/65 text-[rgba(36,48,71,0.72)] hover:bg-white/85"}`,
                                         "data-cursor": "focus",
-                                        children: stageLabels[media.key]
+                                        "aria-label": stageLabels[media.key],
+                                        children: media.poster ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "relative h-10 w-16 overflow-hidden rounded-md",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                src: media.poster,
+                                                alt: media.alt[language],
+                                                width: 64,
+                                                height: 40,
+                                                className: "object-cover"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/sections/projects.tsx",
+                                                lineNumber: 176,
+                                                columnNumber: 21
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/sections/projects.tsx",
+                                            lineNumber: 175,
+                                            columnNumber: 19
+                                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-[0.7rem]",
+                                            children: stageLabels[media.key]
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/sections/projects.tsx",
+                                            lineNumber: 185,
+                                            columnNumber: 19
+                                        }, this)
                                     }, media.key, false, {
                                         fileName: "[project]/components/sections/projects.tsx",
                                         lineNumber: 162,
@@ -1628,7 +1655,7 @@ function ProjectCard({ project, copy, index }) {
                                 children: copy.title
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
-                                lineNumber: 179,
+                                lineNumber: 192,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogDescription"], {
@@ -1636,7 +1663,7 @@ function ProjectCard({ project, copy, index }) {
                                 children: copy.location
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
-                                lineNumber: 182,
+                                lineNumber: 195,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1644,7 +1671,7 @@ function ProjectCard({ project, copy, index }) {
                                 children: copy.description
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
-                                lineNumber: 185,
+                                lineNumber: 198,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1654,12 +1681,12 @@ function ProjectCard({ project, copy, index }) {
                                         children: service
                                     }, service, false, {
                                         fileName: "[project]/components/sections/projects.tsx",
-                                        lineNumber: 190,
+                                        lineNumber: 203,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
-                                lineNumber: 188,
+                                lineNumber: 201,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1683,7 +1710,7 @@ function ProjectCard({ project, copy, index }) {
                                                 children: stageLabels[media.key]
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/projects.tsx",
-                                                lineNumber: 211,
+                                                lineNumber: 224,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1691,18 +1718,18 @@ function ProjectCard({ project, copy, index }) {
                                                 children: copy.story[media.key]
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/projects.tsx",
-                                                lineNumber: 212,
+                                                lineNumber: 225,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, `story-${media.key}`, true, {
                                         fileName: "[project]/components/sections/projects.tsx",
-                                        lineNumber: 200,
+                                        lineNumber: 213,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
-                                lineNumber: 198,
+                                lineNumber: 211,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogClose"], {
@@ -1714,19 +1741,19 @@ function ProjectCard({ project, copy, index }) {
                                     children: t("projects.modal.close")
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 219,
+                                    lineNumber: 232,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
-                                lineNumber: 218,
+                                lineNumber: 231,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/sections/projects.tsx",
-                        lineNumber: 178,
-                        columnNumber: 3
+                        lineNumber: 191,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {

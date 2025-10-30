@@ -34,9 +34,7 @@ function buildImage(path: string) {
 export const projects: Project[] = [
   {
     id: "ridgeResidence",
-    cover: buildImage(
-      "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=2000&q=80",
-    ),
+  cover: "/stairs.png",
     coverAlt: {
       en: "Completed alpine living room with expansive glazing and timber beams",
       es: "Sala alpina terminada con ventanales y vigas de madera",
@@ -49,9 +47,7 @@ export const projects: Project[] = [
       {
         key: "before",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1529429617124-aee1092c9f6d?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: "/stairs.png",
         alt: {
           en: "Before renovation: compartmentalized mountain home under construction",
           es: "Antes de la renovación: vivienda de montaña compartimentada en obra",
@@ -60,9 +56,7 @@ export const projects: Project[] = [
       {
         key: "process",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: "/door.png",
         alt: {
           en: "Process: structural framing with exposed timber beams",
           es: "Proceso: estructura con vigas de madera expuestas",
@@ -71,9 +65,9 @@ export const projects: Project[] = [
       {
         key: "after",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: "/images/ridge-after.jpg",
+        // small thumbnail/poster you want shown in the modal controls
+        poster: "/images/ridge-thumb.jpg",
         alt: {
           en: "After: open-plan alpine living room with panoramic glazing",
           es: "Después: sala alpina de planta abierta con ventanales panorámicos",

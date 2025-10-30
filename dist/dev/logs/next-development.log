@@ -1,3 +1,8 @@
-[00:00:00.457] Server  LOG      ✓ Ready in 325ms
-[00:00:42.736] Server  LOG      ✓ Compiled in 99ms
-[00:00:49.134] Server  LOG      ✓ Compiled in 25ms
+[00:00:00.479] Server  LOG      ✓ Ready in 335ms
+[00:01:11.000] Server  LOG      ✓ Compiled in 22ms
+[00:01:17.594] Server  LOG      ✓ Compiled in 17ms
+[00:16:44.497] Server  LOG      ✓ Compiled in 35ms
+[00:31:05.087] Server  LOG      ✓ Compiled in 18ms
+[00:31:16.472] Browser WARN    Image with src "/stairs.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:31:46.883] Server  LOG      ✓ Compiled in 25ms
