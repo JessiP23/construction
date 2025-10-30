@@ -1,32 +1,6 @@
-[00:03:01.453] Server  LOG      ✓ Compiled in 19ms
-[00:03:23.372] Server  LOG      ✓ Compiled in 20ms
-[00:03:30.249] Server  LOG      ✓ Compiled in 16ms
-[00:03:36.914] Server  LOG      ✓ Compiled in 15ms
-[00:03:40.255] Server  LOG      ✓ Compiled in 16ms
-[00:03:42.215] Server  LOG      ✓ Compiled in 16ms
-[00:04:59.606] Server  LOG      ✓ Compiled in 14ms
-[00:05:06.816] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
-
-If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
-
-For more information, see https://radix-ui.com/primitives/docs/components/dialog
-[00:05:06.816] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:05:06.816] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
-
-If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
-
-For more information, see https://radix-ui.com/primitives/docs/components/dialog
-[00:05:06.816] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:06:40.481] Server  LOG      ✓ Compiled in 33ms
-[00:06:50.431] Server  LOG      ✓ Compiled in 37ms
-[00:07:36.562] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:07:36.562] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:07:48.327] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:07:48.327] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:07:50.417] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:07:50.417] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:09:01.368] Server  LOG      ✓ Compiled in 19ms
-[00:09:47.859] Server  LOG      ✓ Compiled in 17ms
-[00:11:35.431] Server  LOG      ✓ Compiled in 15ms
-[00:11:36.817] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:11:36.817] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:00:00.605] Server  LOG      ✓ Ready in 442ms
+[00:00:02.413] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'map')
+[00:00:26.536] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:00:26.576] Server  LOG      ✓ Compiled in 23ms
+[00:05:13.028] Server  LOG      ✓ Compiled in 26ms
+[00:07:37.409] Server  LOG      ✓ Compiled in 19ms

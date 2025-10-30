@@ -1,19 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
-import { useMemo, useState, useRef, useEffect, useCallback } from "react";
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { projects, ProjectStageKey, Project } from "@/data/projects";
+import { projects, ProjectStageKey, Project, ProjectMedia } from "@/data/projects";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-  DialogClose,
-} from "@/components/ui/dialog";
 import { useLanguage } from "@/components/language-provider";
 
 interface ProjectCopy {
@@ -28,6 +20,10 @@ type ProjectCopyMap = Record<string, ProjectCopy>;
 
 export function ProjectsSection() {
   const { t } = useTranslation();
+  const stageLabels = useMemo(
+    () => t("projects.stageLabels", { returnObjects: true }) as Record<ProjectStageKey, string>,
+    [t],
+  );
   const projectCopy = useMemo(
     () => t("projects.items", { returnObjects: true }) as ProjectCopyMap,
     [t],
@@ -44,17 +40,17 @@ export function ProjectsSection() {
   );
 
   return (
-    <section id="work" className="relative py-24 md:py-32">
+    <section id="work" className="relative bg-[#f4efe5] py-24 md:py-32">
       <div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 md:px-10">
         <SectionHeading
           eyebrow={t("projects.title")}
           title={t("projects.subtitle")}
           description={null}
         />
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="flex flex-col gap-12">
           {projectEntries.map(({ project, copy, index }) => (
             <Reveal key={project.id} delay={index * 0.12}>
-              <ProjectCard project={project} copy={copy} />
+              <ProjectCard project={project} copy={copy} stageLabels={stageLabels} />
             </Reveal>
           ))}
         </div>
@@ -63,179 +59,145 @@ export function ProjectsSection() {
   );
 }
 
-function ProjectCard({ project, copy }: { project: Project; copy: ProjectCopy }) {
-  const { t } = useTranslation();
+function ProjectCard({
+  project,
+  copy,
+  stageLabels,
+}: {
+  project: Project;
+  copy: ProjectCopy;
+  stageLabels: Record<ProjectStageKey, string>;
+}) {
   const { language } = useLanguage();
-  const stageLabels = {
-    before: t("projects.stageLabels.before"),
-    process: t("projects.stageLabels.process"),
-    after: t("projects.stageLabels.after"),
-  } as Record<ProjectStageKey, string>;
-  const [open, setOpen] = useState(false);
-  const defaultIndex = project.media.findIndex((m) => m.key === "after");
-  const [activeIndex, setActiveIndex] = useState<number>(defaultIndex >= 0 ? defaultIndex : 0);
-  const activeMedia = project.media[activeIndex] ?? project.media[0];
-  const viewerRef = useRef<HTMLDivElement | null>(null);
-  const [isZoomed, setIsZoomed] = useState(false);
 
-  const onKey = useCallback(
-    (e: KeyboardEvent) => {
-      if (!open) return;
-      if (e.key === "ArrowRight") {
-        setActiveIndex((i) => (i + 1) % project.media.length);
-      } else if (e.key === "ArrowLeft") {
-        setActiveIndex((i) => (i - 1 + project.media.length) % project.media.length);
-      } else if (e.key === "Escape") {
-        setOpen(false);
-      } else if (e.key === "f") {
-        if (viewerRef.current) {
-          if (!document.fullscreenElement) {
-            viewerRef.current.requestFullscreen().catch(() => {});
-          } else {
-            document.exitFullscreen().catch(() => {});
-          }
-        }
-      }
-    },
-    [open, project.media.length],
-  );
+  const beforeMedia = project.media.find((media) => media.key === "before");
+  const afterMedia = project.media.find((media) => media.key === "after");
+  const processMedia = project.media.filter((media) => media.key === "process");
 
-  useEffect(() => {
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onKey]);
-
-  const handleOpen = (val: boolean) => {
-    setOpen(val);
-    if (val) {
-      setActiveIndex(defaultIndex >= 0 ? defaultIndex : 0);
-      setIsZoomed(false);
-    }
-  };
+  if (!beforeMedia || !afterMedia) {
+    return null;
+  }
 
   return (
-    <Dialog open={open} onOpenChange={handleOpen}>
-      <DialogTrigger asChild>
-        <motion.article
-          className="project-card group relative overflow-hidden rounded-[32px] cursor-pointer"
-          whileHover={{ y: -8 }}
-          transition={{ type: "spring", stiffness: 180, damping: 20 }}
-          data-cursor="focus"
-          onClick={() => setOpen(true)}
-        >
-          <div className="relative h-72 overflow-hidden rounded-[28px]">
-            <Image
-              src={project.cover ?? project.media[0].src}
-              alt={project.cover ? project.media[activeIndex]?.alt?.[language] ?? copy.title : copy.title}
-              fill
-              sizes="(min-width: 1024px) 480px, 100vw"
-              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+    <article className="relative overflow-hidden rounded-[32px] border border-[#ded8cc] bg-white p-10 shadow-[0_24px_70px_rgba(13,17,23,0.08)] transition-colors">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)]">
+        <div className="flex flex-col gap-8">
+          <header className="space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[#4c4f5a]">
+              {copy.location}
+            </p>
+            <h3 className="text-3xl font-semibold text-[#0b1f3b] md:text-4xl">
+              {copy.title}
+            </h3>
+            <p className="max-w-sm text-base leading-relaxed text-[#222a35]">
+              {copy.description}
+            </p>
+          </header>
+          <div className="space-y-6 border-t border-[#e6dfd2] pt-6 text-sm leading-relaxed text-[#1d2530]">
+            <ProjectNarrative
+              label={stageLabels.before}
+              narrative={copy.story.before}
+            />
+            <ProjectNarrative
+              label={stageLabels.after}
+              narrative={copy.story.after}
             />
           </div>
-        </motion.article>
-      </DialogTrigger>
+        </div>
 
-      <DialogContent className="grid gap-6 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:gap-12">
-        <div ref={viewerRef} className="relative overflow-hidden rounded-[20px] bg-slate-50">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`${project.id}-${activeIndex}`}
-              className="relative h-[clamp(260px,55vh,72vh)] overflow-hidden rounded-[12px] border border-white/10 bg-black"
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            >
-              {activeMedia.type === "video" ? (
-                <video className="h-full w-full object-contain bg-black" controls poster={activeMedia.poster}>
-                  <source src={activeMedia.src} />
-                  Your browser does not support video.
-                </video>
-              ) : (
-                <Image
-                  src={activeMedia.src}
-                  alt={activeMedia.alt[language]}
-                  fill
-                  sizes="(min-width: 768px) 55vw, 100vw"
-                  className={`h-full w-full object-cover transition-transform duration-300 ${isZoomed ? "scale-105" : "scale-100"}`}
-                  priority
-                />
-              )}
+        <div className="flex flex-col gap-6">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <ProjectImage
+              media={beforeMedia}
+              label={stageLabels.before}
+              language={language}
+            />
+            <ProjectImage
+              media={afterMedia}
+              label={stageLabels.after}
+              language={language}
+            />
+          </div>
 
-              <button
-                aria-label="Previous"
-                onClick={() => setActiveIndex((i) => (i - 1 + project.media.length) % project.media.length)}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-30 rounded-full bg-black/40 p-2 text-white hover:bg-black/60"
-              >
-                ‹
-              </button>
-              <button
-                aria-label="Next"
-                onClick={() => setActiveIndex((i) => (i + 1) % project.media.length)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 rounded-full bg-black/40 p-2 text-white hover:bg-black/60"
-              >
-                ›
-              </button>
-
-              <div className="absolute right-4 top-4 z-30 flex items-center gap-2">
-                <button aria-label="Zoom" onClick={() => setIsZoomed((s) => !s)} className="rounded bg-black/40 px-2 py-1 text-white">
-                  {isZoomed ? "—" : "+"}
-                </button>
-                <div className="rounded bg-black/40 px-2 py-1 text-xs text-white">{activeIndex + 1}/{project.media.length}</div>
+          {processMedia.length > 0 ? (
+            <div className="space-y-3 rounded-2xl bg-[#f4efe5] p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#4c4f5a]">
+                {stageLabels.process}
+              </p>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {processMedia.map((media) => (
+                  <ProjectProcessImage
+                    key={media.src}
+                    media={media}
+                    language={language}
+                  />
+                ))}
               </div>
-            </motion.div>
-          </AnimatePresence>
-
-          <div className="absolute left-5 top-5 flex gap-2 z-30">
-            {project.media.map((m, idx) => (
-              <button
-                key={m.key}
-                onClick={() => setActiveIndex(idx)}
-                className={`rounded-md overflow-hidden border ${idx === activeIndex ? "ring-2 ring-slate-300" : "opacity-90"}`}
-                aria-label={`${stageLabels[m.key]} thumbnail`}
-              >
-                {m.poster ? (
-                  <Image src={m.poster} alt={m.alt[language]} width={96} height={60} className="object-cover" />
-                ) : (
-                  <div className="px-3 py-2 text-xs text-white/90">{stageLabels[m.key]}</div>
-                )}
-              </button>
-            ))}
-          </div>
+            </div>
+          ) : null}
         </div>
+      </div>
+    </article>
+  );
+}
 
-        <div className="flex flex-col gap-4 md:max-h-[70vh] md:overflow-y-auto md:pr-2">
-          <div className="flex items-center justify-between">
-            <div className="text-sm text-[rgba(36,48,71,0.6)]">{copy.title}</div>
-            <div className="text-xs text-[rgba(36,48,71,0.5)]">{activeIndex + 1} of {project.media.length}</div>
-          </div>
+function ProjectImage({
+  media,
+  label,
+  language,
+}: {
+  media: ProjectMedia;
+  label: string;
+  language: string;
+}) {
+  return (
+    <figure className="group relative overflow-hidden rounded-3xl border border-[#dad5ca] bg-[#101820]">
+      <div className="relative aspect-[4/3]">
+        <Image
+          src={media.src}
+          alt={media.alt[language as keyof typeof media.alt]}
+          fill
+          sizes="(min-width: 1280px) 480px, (min-width: 768px) 50vw, 90vw"
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <figcaption className="pointer-events-none absolute left-6 top-6 inline-flex items-center rounded-full bg-[#0b1f3b] px-4 py-1 text-xs font-semibold uppercase tracking-[0.36em] text-white">
+        {label}
+      </figcaption>
+    </figure>
+  );
+}
 
-          <div className="flex gap-2 overflow-x-auto py-2">
-            {project.media.map((m, idx) => (
-              <button
-                key={`thumb-${m.key}`}
-                onClick={() => setActiveIndex(idx)}
-                className={`flex-none rounded-md overflow-hidden transition-shadow ${idx === activeIndex ? "shadow-lg ring-2 ring-white/60" : "shadow-sm"}`}
-                aria-label={`${stageLabels[m.key]} thumbnail`}
-              >
-                {m.poster ? (
-                  <Image src={m.poster} alt={m.alt[language]} width={160} height={90} className="object-cover" />
-                ) : (
-                  <div className="h-20 w-32 bg-white/70 flex items-center justify-center">{stageLabels[m.key]}</div>
-                )}
-              </button>
-            ))}
-          </div>
+function ProjectProcessImage({
+  media,
+  language,
+}: {
+  media: ProjectMedia;
+  language: string;
+}) {
+  return (
+    <figure className="relative overflow-hidden rounded-2xl border border-[#dad5ca]">
+      <div className="relative aspect-square">
+        <Image
+          src={media.src}
+          alt={media.alt[language as keyof typeof media.alt]}
+          fill
+          sizes="(min-width: 768px) 20vw, 45vw"
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </figure>
+  );
+}
 
-          <div className="mt-4">
-            <DialogClose asChild>
-              <Button variant="primary" size="md" className="self-start">
-                {t("projects.modal.close")}
-              </Button>
-            </DialogClose>
-          </div>
-        </div>
-      </DialogContent>
-    </Dialog>
+function ProjectNarrative({ label, narrative }: { label: string; narrative: string }) {
+  return (
+    <div className="space-y-2">
+      <h4 className="text-xs font-semibold uppercase tracking-[0.28em] text-[#4c4f5a]">
+        {label}
+      </h4>
+      <p>{narrative}</p>
+    </div>
   );
 }

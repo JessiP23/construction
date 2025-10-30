@@ -25,12 +25,6 @@ export type Project = {
   media: ProjectMedia[];
 };
 
-const CLOUDINARY_BASE = "https://res.cloudinary.com/demo/image/fetch/f_auto,q_auto,w_2000";
-
-function buildImage(path: string) {
-  return `${CLOUDINARY_BASE}/${path}`;
-}
-
 const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
   {
     id: "ridgeResidence",
@@ -50,15 +44,6 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
         alt: {
           en: "Before renovation: compartmentalized mountain home under construction",
           es: "Antes de la renovación: vivienda de montaña compartimentada en obra",
-        },
-      },
-      {
-        key: "process",
-        type: "image",
-        src: "/door.png",
-        alt: {
-          en: "Process: structural framing with exposed timber beams",
-          es: "Proceso: estructura con vigas de madera expuestas",
         },
       },
       {
@@ -86,21 +71,10 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
       {
         key: "before",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: '/door1.png',
         alt: {
           en: "Before: raw industrial loft with exposed concrete",
           es: "Antes: loft industrial crudo con concreto expuesto",
-        },
-      },
-      {
-        key: "process",
-        type: "image",
-        src: '/door.png',
-        alt: {
-          en: "Process: steel fins and lighting installation",
-          es: "Proceso: instalación de aletas de acero e iluminación",
         },
       },
       {
@@ -136,18 +110,9 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
         },
       },
       {
-        key: "process",
-        type: "image",
-        src: "/renovation.png",
-        alt: {
-          en: "Process: scaffolding during envelope restoration",
-          es: "Proceso: andamios durante la restauración de la envolvente",
-        },
-      },
-      {
         key: "after",
         type: "image",
-        src: "/renovation.png",
+        src: "/renovation1.png",
         alt: {
           en: "After: living room with marine glazing and serene palette",
           es: "Después: sala con cristalería marina y paleta serena",
@@ -167,12 +132,10 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
       dark: "#101b15",
     },
     media: [
-      {
+        {
         key: "before",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1451976426598-a7593bd6d0b2?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: '/bathroom.png',
         alt: {
           en: "Before: underutilized courtyard with sparse landscaping",
           es: "Antes: patio subutilizado con paisajismo escaso",
@@ -181,9 +144,16 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
       {
         key: "process",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1548783307-f63adc1c2a3f?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: '/bathroom1.png',
+        alt: {
+          en: "Before: underutilized courtyard with sparse landscaping",
+          es: "Antes: patio subutilizado con paisajismo escaso",
+        },
+      },
+      {
+        key: "process",
+        type: "image",
+        src: '/bathroom2.png',
         alt: {
           en: "Process: concrete forming and pool waterproofing",
           es: "Proceso: encofrado de concreto y impermeabilización de piscina",
@@ -192,9 +162,7 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
       {
         key: "after",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: '/bathroom3.png',
         alt: {
           en: "After: tranquil hydrotherapy pavilion with lush planting",
           es: "Después: pabellón de hidroterapia sereno con vegetación abundante",
@@ -204,7 +172,6 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
   },
 ];
 
-// Compute a sensible `cover` for any project that didn't provide one explicitly.
 export const projects: Project[] = rawProjects.map((p) => {
   const media = p.media ?? [];
   const afterMedia = media.find((m) => m.key === "after");
