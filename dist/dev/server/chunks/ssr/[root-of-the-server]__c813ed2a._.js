@@ -110,18 +110,18 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$providers$2e$tsx__$5b
 ;
 ;
 const metadata = {
-    title: "Atelier Construct | Building Beauty with Precision",
-    description: "Luxury construction and remodeling studio delivering architecture-grade craftsmanship across residential and commercial spaces.",
-    metadataBase: new URL("https://atelier-construct.example"),
+    title: "Titino Construction | Building Beauty with Precision",
+    description: "Titino Construction delivers architecture-grade craftsmanship for luxury residential and commercial spaces across the Americas.",
+    metadataBase: new URL("https://titinoconstruction.com"),
     openGraph: {
-        title: "Atelier Construct | Building Beauty with Precision",
-        description: "Luxury construction and remodeling studio delivering architecture-grade craftsmanship across residential and commercial spaces.",
+        title: "Titino Construction | Building Beauty with Precision",
+        description: "Titino Construction delivers architecture-grade craftsmanship for luxury residential and commercial spaces across the Americas.",
         type: "website"
     },
     twitter: {
         card: "summary_large_image",
-        title: "Atelier Construct | Building Beauty with Precision",
-        description: "Luxury construction and remodeling studio delivering architecture-grade craftsmanship across residential and commercial spaces."
+        title: "Titino Construction | Building Beauty with Precision",
+        description: "Titino Construction delivers architecture-grade craftsmanship for luxury residential and commercial spaces across the Americas."
     }
 };
 function RootLayout({ children }) {

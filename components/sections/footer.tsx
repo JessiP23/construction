@@ -8,43 +8,43 @@ export function FooterSection() {
   const year = useMemo(() => new Date().getFullYear(), []);
 
   return (
-    <footer className="relative border-t border-slate-900/10 bg-white/60 py-10 dark:border-slate-800/60 dark:bg-slate-900/70">
+    <footer className="relative border-t border-[rgba(36,48,71,0.12)] bg-white/85 py-10">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between md:px-10">
-        <div className="space-y-2 text-xs uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
-          <span className="block font-display text-sm tracking-[0.3em] text-slate-900 dark:text-white">
-            Atelier Construct
+        <div className="space-y-2 text-xs tracking-[0.14em] text-[rgba(36,48,71,0.55)]">
+          <span className="block font-display text-sm tracking-[0.18em] text-[var(--foreground)]">
+            Titino Construction
           </span>
           <span>{t("footer.crafted")}</span>
           <span>{t("footer.rights", { year })}</span>
         </div>
-        <div className="flex items-center gap-4 text-slate-600 dark:text-slate-300">
+        <div className="flex items-center gap-4 text-[rgba(36,48,71,0.68)]">
           <a
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-900/10 bg-white/60 transition hover:-translate-y-1 hover:border-slate-900/30 hover:shadow-lg dark:border-slate-700/40 dark:bg-slate-900/60"
+            className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]"
             data-cursor="link"
             aria-label="Instagram"
           >
-            <InstagramIcon className="h-5 w-5 text-slate-700 transition group-hover:text-slate-900 dark:text-slate-200 dark:group-hover:text-white" />
+            <InstagramIcon className="h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]" />
           </a>
           <a
             href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-900/10 bg-white/60 transition hover:-translate-y-1 hover:border-slate-900/30 hover:shadow-lg dark:border-slate-700/40 dark:bg-slate-900/60"
+            className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]"
             data-cursor="link"
             aria-label="LinkedIn"
           >
-            <LinkedInIcon className="h-5 w-5 text-slate-700 transition group-hover:text-slate-900 dark:text-slate-200 dark:group-hover:text-white" />
+            <LinkedInIcon className="h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]" />
           </a>
           <a
-            href="mailto:studio@atelierconstruct.com"
-            className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-900/10 bg-white/60 transition hover:-translate-y-1 hover:border-slate-900/30 hover:shadow-lg dark:border-slate-700/40 dark:bg-slate-900/60"
+            href="mailto:titinoavila7329@gmail.com"
+            className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]"
             data-cursor="link"
             aria-label="Email"
           >
-            <EnvelopeIcon className="h-5 w-5 text-slate-700 transition group-hover:text-slate-900 dark:text-slate-200 dark:group-hover:text-white" />
+            <EnvelopeIcon className="h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]" />
           </a>
         </div>
       </div>

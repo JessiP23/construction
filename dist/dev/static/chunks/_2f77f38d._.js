@@ -23,7 +23,7 @@ function LanguageToggle() {
     const languages = (0, __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$language$2d$provider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAvailableLanguages"])();
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex items-center rounded-full border border-white/10 bg-white/40 px-1 py-1 text-xs font-medium backdrop-blur-md transition dark:border-slate-700/40 dark:bg-slate-900/40",
+        className: "flex items-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/70 px-1 py-1 text-xs font-semibold text-[rgba(36,48,71,0.7)] shadow-sm backdrop-blur-md transition",
         children: languages.map((code)=>{
             const isActive = language === code;
             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -31,7 +31,7 @@ function LanguageToggle() {
                 onClick: ()=>setLanguage(code),
                 "aria-pressed": isActive,
                 "aria-label": `${t("languageToggle.aria")}: ${code}`,
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("relative w-12 rounded-full px-3 py-1 transition", isActive ? "bg-[#b9894c] text-white shadow-lg dark:bg-[#d9b878] dark:text-slate-900" : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"),
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("relative w-12 rounded-full px-3 py-1 transition", isActive ? "bg-[var(--accent)] text-white shadow-lg" : "text-[rgba(36,48,71,0.7)] hover:text-[var(--foreground)]"),
                 "data-cursor": "focus",
                 children: t(`languageToggle.${code}`)
             }, code, false, {
@@ -76,13 +76,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
-const baseStyles = "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-[0.02em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent disabled:cursor-not-allowed disabled:opacity-60";
+const baseStyles = "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-[0.02em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60";
 const variantStyles = {
-    primary: "bg-[#b9894c] text-white hover:-translate-y-[2px] hover:bg-[#a1763d] hover:shadow-xl dark:bg-[#d9b878] dark:text-slate-900 dark:hover:bg-[#cfa765]",
-    secondary: "bg-white/40 text-slate-800 shadow-sm hover:bg-white/70 dark:bg-slate-800/60 dark:text-slate-100 dark:hover:bg-slate-700/80",
-    ghost: "bg-transparent text-slate-800 hover:bg-slate-900/5 dark:text-slate-200 dark:hover:bg-slate-200/10",
-    outline: "border border-slate-900/20 bg-transparent text-slate-900 hover:bg-slate-900 hover:text-white dark:border-slate-300/40 dark:text-slate-200 dark:hover:bg-slate-200/10",
-    muted: "bg-slate-200/60 text-slate-700 hover:bg-slate-200 dark:bg-slate-700/50 dark:text-slate-200 dark:hover:bg-slate-600/70"
+    primary: "bg-[var(--accent)] text-white shadow-[0_18px_36px_rgba(192,128,46,0.28)] hover:-translate-y-[2px] hover:bg-[var(--accent-strong)] hover:shadow-[0_24px_48px_rgba(192,128,46,0.32)]",
+    secondary: "border border-[rgba(36,48,71,0.14)] bg-white text-[var(--foreground)] shadow-sm hover:-translate-y-[2px] hover:shadow-[0_18px_34px_rgba(31,42,68,0.16)]",
+    ghost: "bg-transparent text-[var(--foreground)] hover:bg-[rgba(36,48,71,0.08)]",
+    outline: "border border-[rgba(36,48,71,0.22)] bg-transparent text-[var(--foreground)] hover:bg-[rgba(36,48,71,0.08)]",
+    muted: "border border-[rgba(36,48,71,0.08)] bg-[rgba(255,255,255,0.8)] text-[rgba(36,48,71,0.7)] hover:bg-white"
 };
 const sizeStyles = {
     xs: "h-8 px-3 text-[0.65rem]",
@@ -113,193 +113,6 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
-"[project]/components/theme-toggle.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
-
-__turbopack_context__.s([
-    "ThemeToggle",
-    ()=>ThemeToggle
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$provider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/theme-provider.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/react-i18next/dist/es/index.js [app-client] (ecmascript) <locals>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-i18next/dist/es/useTranslation.js [app-client] (ecmascript)");
-;
-var _s = __turbopack_context__.k.signature();
-"use client";
-;
-;
-;
-;
-function ThemeToggle() {
-    _s();
-    const { theme, toggleTheme } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$provider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"])();
-    const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-        type: "button",
-        variant: "ghost",
-        size: "icon",
-        className: "relative border border-slate-900/10 bg-white/60 p-0 text-slate-700 shadow-sm hover:bg-white dark:border-slate-600/40 dark:bg-slate-900/60 dark:text-slate-200",
-        onClick: toggleTheme,
-        "aria-label": t("themeToggle.aria"),
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-            initial: false,
-            mode: "wait",
-            children: theme === "light" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                initial: {
-                    rotate: -90,
-                    opacity: 0,
-                    scale: 0.8
-                },
-                animate: {
-                    rotate: 0,
-                    opacity: 1,
-                    scale: 1
-                },
-                exit: {
-                    rotate: 90,
-                    opacity: 0,
-                    scale: 0.8
-                },
-                transition: {
-                    duration: 0.35,
-                    ease: [
-                        0.22,
-                        1,
-                        0.36,
-                        1
-                    ]
-                },
-                className: "flex h-full w-full items-center justify-center",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SunIcon, {}, void 0, false, {
-                    fileName: "[project]/components/theme-toggle.tsx",
-                    lineNumber: 31,
-                    columnNumber: 13
-                }, this)
-            }, "sun", false, {
-                fileName: "[project]/components/theme-toggle.tsx",
-                lineNumber: 23,
-                columnNumber: 11
-            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].span, {
-                initial: {
-                    rotate: 90,
-                    opacity: 0,
-                    scale: 0.8
-                },
-                animate: {
-                    rotate: 0,
-                    opacity: 1,
-                    scale: 1
-                },
-                exit: {
-                    rotate: -90,
-                    opacity: 0,
-                    scale: 0.8
-                },
-                transition: {
-                    duration: 0.35,
-                    ease: [
-                        0.22,
-                        1,
-                        0.36,
-                        1
-                    ]
-                },
-                className: "flex h-full w-full items-center justify-center",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MoonIcon, {}, void 0, false, {
-                    fileName: "[project]/components/theme-toggle.tsx",
-                    lineNumber: 42,
-                    columnNumber: 13
-                }, this)
-            }, "moon", false, {
-                fileName: "[project]/components/theme-toggle.tsx",
-                lineNumber: 34,
-                columnNumber: 11
-            }, this)
-        }, void 0, false, {
-            fileName: "[project]/components/theme-toggle.tsx",
-            lineNumber: 21,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "[project]/components/theme-toggle.tsx",
-        lineNumber: 13,
-        columnNumber: 5
-    }, this);
-}
-_s(ThemeToggle, "cPBpv6OqUm/MEQu7E5eqVnyZx0I=", false, function() {
-    return [
-        __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$provider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTheme"],
-        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]
-    ];
-});
-_c = ThemeToggle;
-function SunIcon() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 24 24",
-        fill: "none",
-        stroke: "currentColor",
-        strokeWidth: "1.6",
-        className: "h-5 w-5",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                cx: "12",
-                cy: "12",
-                r: "4"
-            }, void 0, false, {
-                fileName: "[project]/components/theme-toggle.tsx",
-                lineNumber: 60,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                d: "M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"
-            }, void 0, false, {
-                fileName: "[project]/components/theme-toggle.tsx",
-                lineNumber: 61,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/components/theme-toggle.tsx",
-        lineNumber: 52,
-        columnNumber: 5
-    }, this);
-}
-_c1 = SunIcon;
-function MoonIcon() {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 24 24",
-        fill: "none",
-        stroke: "currentColor",
-        strokeWidth: "1.6",
-        className: "h-5 w-5",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-            d: "M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79z"
-        }, void 0, false, {
-            fileName: "[project]/components/theme-toggle.tsx",
-            lineNumber: 76,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "[project]/components/theme-toggle.tsx",
-        lineNumber: 68,
-        columnNumber: 5
-    }, this);
-}
-_c2 = MoonIcon;
-var _c, _c1, _c2;
-__turbopack_context__.k.register(_c, "ThemeToggle");
-__turbopack_context__.k.register(_c1, "SunIcon");
-__turbopack_context__.k.register(_c2, "MoonIcon");
-if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
-    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
-}
-}),
 "[project]/components/navigation-bar.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -309,17 +122,13 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/react-i18next/dist/es/index.js [app-client] (ecmascript) <locals>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-i18next/dist/es/useTranslation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$language$2d$toggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/language-toggle.tsx [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$toggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/theme-toggle.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
-;
-;
 ;
 ;
 ;
@@ -345,53 +154,36 @@ const SECTIONS = [
 function NavigationBar() {
     _s();
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
-    const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "NavigationBar.useEffect": ()=>{
-            const handler = {
-                "NavigationBar.useEffect.handler": ()=>{
-                    setScrolled(window.scrollY > 80);
-                }
-            }["NavigationBar.useEffect.handler"];
-            handler();
-            window.addEventListener("scroll", handler, {
-                passive: true
-            });
-            return ({
-                "NavigationBar.useEffect": ()=>window.removeEventListener("scroll", handler)
-            })["NavigationBar.useEffect"];
-        }
-    }["NavigationBar.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-        className: `fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${scrolled ? "bg-white/70 shadow-lg backdrop-blur-xl dark:bg-slate-950/70" : "bg-transparent"}`,
+        className: "fixed left-0 right-0 top-0 z-50 transition-all duration-500 bg-white/80 shadow-lg backdrop-blur-xl",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     href: "/#",
-                    className: "font-display text-xl tracking-[0.08em] text-slate-900 transition hover:text-slate-700 dark:text-slate-100",
+                    className: "font-display text-xl tracking-[0.08em] text-slate-900 transition hover:text-slate-700",
                     "data-cursor": "link",
                     children: "Titino Construction"
                 }, void 0, false, {
                     fileName: "[project]/components/navigation-bar.tsx",
-                    lineNumber: 38,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                     className: "hidden items-center gap-8 text-sm font-medium tracking-[0.08em] md:flex",
                     children: SECTIONS.map((section)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: section.href,
-                            className: "text-slate-600 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white",
+                            className: "text-slate-600 transition hover:text-slate-900",
                             "data-cursor": "link",
                             children: t(section.key)
                         }, section.href, false, {
                             fileName: "[project]/components/navigation-bar.tsx",
-                            lineNumber: 47,
+                            lineNumber: 33,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/navigation-bar.tsx",
-                    lineNumber: 45,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -399,12 +191,7 @@ function NavigationBar() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$language$2d$toggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["LanguageToggle"], {}, void 0, false, {
                             fileName: "[project]/components/navigation-bar.tsx",
-                            lineNumber: 58,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$theme$2d$toggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ThemeToggle"], {}, void 0, false, {
-                            fileName: "[project]/components/navigation-bar.tsx",
-                            lineNumber: 59,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -417,33 +204,33 @@ function NavigationBar() {
                                 children: t("hero.actions.contact")
                             }, void 0, false, {
                                 fileName: "[project]/components/navigation-bar.tsx",
-                                lineNumber: 61,
+                                lineNumber: 46,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/navigation-bar.tsx",
-                            lineNumber: 60,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/navigation-bar.tsx",
-                    lineNumber: 57,
+                    lineNumber: 43,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/navigation-bar.tsx",
-            lineNumber: 37,
+            lineNumber: 23,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/navigation-bar.tsx",
-        lineNumber: 32,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 }
-_s(NavigationBar, "GHiM9TrGI3QyDgXuOiQz+ySJn1A=", false, function() {
+_s(NavigationBar, "zlIdU9EjM2llFt74AbE2KsUJXyM=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]
     ];
@@ -605,12 +392,12 @@ function HeroSection() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 bg-slate-950/55 dark:bg-slate-950/62",
+                        className: "absolute inset-0 bg-[rgba(18,24,36,0.6)]",
                         "aria-hidden": true
                     }, void 0, false, {
                         fileName: "[project]/components/sections/hero.tsx",
                         lineNumber: 31,
-                        columnNumber: 3
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
@@ -624,7 +411,7 @@ function HeroSection() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$reveal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Reveal"], {
                         delay: 0.05,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "inline-flex items-center gap-3 rounded-full border border-white/40 bg-white/40 px-5 py-2 text-sm font-medium tracking-[0.14em] text-white shadow backdrop-blur-sm dark:border-white/20 dark:bg-slate-900/60",
+                            className: "inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/30 px-5 py-2 text-sm font-medium tracking-[0.14em] text-white shadow backdrop-blur-lg",
                             children: t("hero.tagline")
                         }, void 0, false, {
                             fileName: "[project]/components/sections/hero.tsx",
@@ -813,7 +600,7 @@ function HeroSection() {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "block text-2xl font-semibold text-white",
-                                                            children: "+180"
+                                                            children: "20"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/sections/hero.tsx",
                                                             lineNumber: 83,
@@ -830,7 +617,7 @@ function HeroSection() {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "block text-2xl font-semibold text-white",
-                                                            children: "12"
+                                                            children: "2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/components/sections/hero.tsx",
                                                             lineNumber: 87,
@@ -937,7 +724,7 @@ function SectionHeading({ eyebrow, title, description, align = "left" }) {
         }),
         children: [
             eyebrow ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "font-display text-sm tracking-[0.12em] text-slate-500 dark:text-slate-400",
+                className: "font-display text-sm tracking-[0.12em] text-[rgba(36,48,71,0.55)]",
                 children: eyebrow
             }, void 0, false, {
                 fileName: "[project]/components/section-heading.tsx",
@@ -945,7 +732,7 @@ function SectionHeading({ eyebrow, title, description, align = "left" }) {
                 columnNumber: 9
             }, this) : null,
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "font-display text-4xl tracking-tight text-slate-900 dark:text-white md:text-5xl",
+                className: "font-display text-4xl tracking-tight text-[var(--foreground)] md:text-5xl",
                 children: title
             }, void 0, false, {
                 fileName: "[project]/components/section-heading.tsx",
@@ -953,7 +740,7 @@ function SectionHeading({ eyebrow, title, description, align = "left" }) {
                 columnNumber: 7
             }, this),
             description ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300",
+                className: "max-w-2xl text-base leading-relaxed text-[rgba(36,48,71,0.68)]",
                 children: description
             }, void 0, false, {
                 fileName: "[project]/components/section-heading.tsx",
@@ -1026,7 +813,7 @@ function ValuesSection() {
                             children: specialties.map((specialty, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$reveal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Reveal"], {
                                     delay: index * 0.06,
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center justify-between rounded-3xl border border-slate-900/10 bg-white/70 px-6 py-4 text-sm font-semibold tracking-[0.12em] text-slate-700 transition hover:-translate-y-1 hover:border-slate-900/20 hover:shadow-xl dark:border-slate-700/40 dark:bg-slate-900/60 dark:text-slate-200",
+                                        className: "flex items-center justify-between rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white/85 px-6 py-4 text-sm font-semibold tracking-[0.12em] text-[rgba(36,48,71,0.78)] shadow-sm transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.22)] hover:shadow-[0_22px_44px_rgba(31,42,68,0.16)]",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: specialty
@@ -1082,10 +869,10 @@ function ValuesSection() {
                     children: values.map((value, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$reveal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Reveal"], {
                             delay: index * 0.08,
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
-                                className: "group rounded-3xl border border-slate-900/10 bg-white/80 p-8 shadow-lg transition hover:-translate-y-1 hover:border-slate-900/20 hover:shadow-2xl dark:border-slate-700/40 dark:bg-slate-900/70",
+                                className: "group rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.22)] hover:shadow-[0_28px_56px_rgba(31,42,68,0.18)]",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "font-display text-xl tracking-[0.08em] text-slate-900 dark:text-white",
+                                        className: "font-display text-xl tracking-[0.08em] text-[var(--foreground)]",
                                         children: value.title
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/values.tsx",
@@ -1093,7 +880,7 @@ function ValuesSection() {
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300",
+                                        className: "mt-4 text-sm leading-relaxed text-[rgba(36,48,71,0.68)]",
                                         children: value.description
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/values.tsx",
@@ -1101,14 +888,14 @@ function ValuesSection() {
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mt-6 h-px w-full bg-slate-900/15 dark:bg-slate-200/25"
+                                        className: "mt-6 h-px w-full bg-[rgba(36,48,71,0.12)]"
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/values.tsx",
                                         lineNumber: 54,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mt-4 flex items-center gap-3 text-xs tracking-[0.16em] text-slate-400",
+                                        className: "mt-4 flex items-center gap-3 text-xs tracking-[0.16em] text-[rgba(36,48,71,0.5)]",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: [
@@ -1367,7 +1154,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist
 ;
 function Badge({ className, ...props }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/60 px-3 py-1 text-xs tracking-[0.12em] text-slate-700 dark:border-slate-600/40 dark:bg-slate-900/60 dark:text-slate-200", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("inline-flex items-center gap-2 rounded-full border border-[rgba(36,48,71,0.12)] bg-white/75 px-3 py-1 text-xs tracking-[0.12em] text-[rgba(36,48,71,0.72)] shadow-sm", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/components/ui/badge.tsx",
@@ -1420,7 +1207,7 @@ const DialogTitle = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules
 const DialogDescription = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Description"];
 const DialogOverlay = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"])(({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Overlay"], {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("fixed inset-0 z-50 bg-[rgba(18,24,36,0.55)] backdrop-blur-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/components/ui/dialog.tsx",
@@ -1438,11 +1225,11 @@ const DialogContent = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$proje
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Content"], {
                 ref: ref,
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("fixed left-1/2 top-1/2 z-50 w-[min(92vw,1100px)] -translate-x-1/2 -translate-y-1/2 rounded-[32px] border border-white/15 bg-white/90 p-10 shadow-2xl backdrop-blur-2xl duration-200 dark:border-slate-700/60 dark:bg-slate-900/85", "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:zoom-out-95", className),
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("fixed left-1/2 top-1/2 z-50 w-[min(94vw,1100px)] max-h-[92vh] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-[32px] border border-[rgba(255,255,255,0.4)] bg-white/95 p-8 shadow-[0_40px_80px_rgba(12,18,32,0.45)] backdrop-blur-2xl duration-200 md:p-10", "data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:zoom-out-95", className),
                 ...props,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Close"], {
-                        className: "absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-slate-900/10 bg-white/50 text-slate-700 transition hover:rotate-90 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 dark:border-slate-600/40 dark:bg-slate-800/60 dark:text-slate-200",
+                        className: "absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(36,48,71,0.14)] bg-white/80 text-[rgba(36,48,71,0.7)] transition hover:rotate-90 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]",
                         "aria-label": "Close",
                         "data-cursor": "focus",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -1469,7 +1256,7 @@ const DialogContent = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$proje
                     }, void 0, false, {
                         fileName: "[project]/components/ui/dialog.tsx",
                         lineNumber: 45,
-                        columnNumber: 6
+                        columnNumber: 4
                     }, ("TURBOPACK compile-time value", void 0)),
                     children
                 ]
@@ -1722,10 +1509,10 @@ function ProjectCard({ project, copy, index }) {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid gap-3 border-t border-white/10 bg-white/60 px-6 py-4 text-xs tracking-[0.16em] text-slate-600 dark:bg-slate-900/70 dark:text-slate-200",
+                            className: "grid gap-3 border-t border-white/30 bg-white/75 px-6 py-4 text-xs tracking-[0.16em] text-[rgba(36,48,71,0.7)]",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-[0.6rem] tracking-[0.22em] text-slate-500 dark:text-slate-400",
+                                    className: "text-[0.6rem] tracking-[0.22em] text-[rgba(36,48,71,0.5)]",
                                     children: stageLabels[activeStage]
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
@@ -1733,7 +1520,7 @@ function ProjectCard({ project, copy, index }) {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-sm normal-case tracking-normal text-slate-600 dark:text-slate-300",
+                                    className: "text-sm normal-case tracking-normal text-[rgba(36,48,71,0.78)]",
                                     children: copy.story[activeStage]
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
@@ -1758,7 +1545,7 @@ function ProjectCard({ project, copy, index }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogContent"], {
-                className: "grid gap-10 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]",
+                className: "grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:gap-12",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative overflow-hidden rounded-[32px]",
@@ -1766,7 +1553,7 @@ function ProjectCard({ project, copy, index }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                                 mode: "wait",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    className: "relative h-[420px] overflow-hidden rounded-[32px] border border-white/20",
+                                    className: "relative h-[clamp(260px,45vh,420px)] overflow-hidden rounded-[32px] border border-white/25",
                                     initial: {
                                         opacity: 0,
                                         scale: 0.98
@@ -1810,11 +1597,11 @@ function ProjectCard({ project, copy, index }) {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute left-6 top-6 flex gap-3",
+                                className: "absolute left-5 right-5 top-5 flex flex-wrap gap-2 md:gap-3",
                                 children: project.media.map((media)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         type: "button",
                                         onClick: ()=>setActiveStage(media.key),
-                                        className: `rounded-full px-4 py-2 text-xs tracking-[0.16em] transition ${activeStage === media.key ? "bg-white text-slate-900" : "bg-white/40 text-white hover:bg-white/60"}`,
+                                        className: `rounded-full px-4 py-2 text-xs tracking-[0.16em] transition ${activeStage === media.key ? "bg-white text-[var(--foreground)] shadow-sm" : "bg-white/65 text-[rgba(36,48,71,0.72)] hover:bg-white/85"}`,
                                         "data-cursor": "focus",
                                         children: stageLabels[media.key]
                                     }, media.key, false, {
@@ -1834,10 +1621,10 @@ function ProjectCard({ project, copy, index }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col gap-6",
+                        className: "flex flex-col gap-6 md:max-h-[70vh] md:overflow-y-auto md:pr-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogTitle"], {
-                                className: "font-display text-3xl tracking-tight text-slate-900 dark:text-white",
+                                className: "font-display text-3xl tracking-tight text-[var(--foreground)]",
                                 children: copy.title
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
@@ -1845,7 +1632,7 @@ function ProjectCard({ project, copy, index }) {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogDescription"], {
-                                className: "text-sm tracking-[0.2em] text-slate-500 dark:text-slate-400",
+                                className: "text-sm tracking-[0.2em] text-[rgba(36,48,71,0.55)]",
                                 children: copy.location
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
@@ -1853,7 +1640,7 @@ function ProjectCard({ project, copy, index }) {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-base leading-relaxed text-slate-600 dark:text-slate-300",
+                                className: "text-base leading-relaxed text-[rgba(36,48,71,0.72)]",
                                 children: copy.description
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
@@ -1863,7 +1650,7 @@ function ProjectCard({ project, copy, index }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex flex-wrap gap-2",
                                 children: copy.services.map((service)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "rounded-full border border-slate-900/10 bg-white/70 px-3 py-1 text-xs tracking-[0.18em] text-slate-700 dark:border-slate-700/40 dark:bg-slate-900/60 dark:text-slate-200",
+                                        className: "rounded-full border border-[rgba(36,48,71,0.12)] bg-white/80 px-3 py-1 text-xs tracking-[0.18em] text-[rgba(36,48,71,0.7)]",
                                         children: service
                                     }, service, false, {
                                         fileName: "[project]/components/sections/projects.tsx",
@@ -1889,7 +1676,7 @@ function ProjectCard({ project, copy, index }) {
                                         transition: {
                                             duration: 0.45
                                         },
-                                        className: `rounded-3xl border px-4 py-4 text-sm leading-relaxed ${activeStage === media.key ? "border-slate-900/30 bg-white/80 dark:border-slate-500/40 dark:bg-slate-900/70" : "border-slate-900/10 bg-white/50 text-slate-500 dark:border-slate-700/40 dark:bg-slate-900/50 dark:text-slate-400"}`,
+                                        className: `rounded-3xl border px-4 py-4 text-sm leading-relaxed ${activeStage === media.key ? "border-[rgba(36,48,71,0.2)] bg-white/85 shadow-sm text-[rgba(36,48,71,0.78)]" : "border-[rgba(36,48,71,0.12)] bg-white/65 text-[rgba(36,48,71,0.6)]"}`,
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "block text-xs tracking-[0.16em] text-slate-500",
@@ -1939,7 +1726,7 @@ function ProjectCard({ project, copy, index }) {
                     }, void 0, true, {
                         fileName: "[project]/components/sections/projects.tsx",
                         lineNumber: 178,
-                        columnNumber: 9
+                        columnNumber: 3
                     }, this)
                 ]
             }, void 0, true, {
@@ -2024,7 +1811,7 @@ function TestimonialsSection() {
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$reveal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Reveal"], {
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative overflow-hidden rounded-[36px] border border-slate-200 bg-white/90 p-10 text-left shadow-xl transition dark:border-slate-700 dark:bg-slate-900/70 md:p-14",
+                        className: "relative overflow-hidden rounded-[36px] border border-[rgba(36,48,71,0.12)] bg-white p-10 text-left shadow-[0_30px_65px_rgba(31,42,68,0.18)] transition md:p-14",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid gap-10 md:grid-cols-[minmax(0,2.1fr)_minmax(0,1fr)] md:items-start",
                             children: [
@@ -2066,7 +1853,7 @@ function TestimonialsSection() {
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-2xl leading-snug text-slate-800 dark:text-slate-100",
+                                                        className: "text-2xl leading-snug text-[var(--foreground)]",
                                                         children: active.quote
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/testimonials.tsx",
@@ -2080,10 +1867,10 @@ function TestimonialsSection() {
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-                                                className: "flex flex-col gap-1 text-sm text-slate-500 dark:text-slate-300",
+                                                className: "flex flex-col gap-1 text-sm text-[rgba(36,48,71,0.6)]",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-base font-semibold text-slate-800 dark:text-white",
+                                                        className: "text-base font-semibold text-[var(--foreground)]",
                                                         children: active.author
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/testimonials.tsx",
@@ -2091,7 +1878,7 @@ function TestimonialsSection() {
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-sm text-slate-400 dark:text-slate-500",
+                                                        className: "text-sm text-[rgba(36,48,71,0.45)]",
                                                         children: active.role
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/testimonials.tsx",
@@ -2119,7 +1906,7 @@ function TestimonialsSection() {
                                     className: "flex flex-col gap-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-xs font-medium tracking-[0.18em] text-slate-400 dark:text-slate-500",
+                                            className: "text-xs font-medium tracking-[0.18em] text-[rgba(36,48,71,0.45)]",
                                             children: t("testimonials.selectorLabel")
                                         }, void 0, false, {
                                             fileName: "[project]/components/sections/testimonials.tsx",
@@ -2133,7 +1920,7 @@ function TestimonialsSection() {
                                                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                     type: "button",
                                                     onClick: ()=>setIndex(itemIndex),
-                                                    className: `w-full rounded-2xl border px-4 py-4 text-left transition ${activeItem ? "border-[#b9894c]/40 bg-[#f9f4ec] text-slate-800 shadow-sm dark:border-[#d9b878]/40 dark:bg-slate-800/80 dark:text-slate-100" : "border-slate-200 bg-white/70 text-slate-500 hover:border-slate-300 hover:bg-white dark:border-slate-700/50 dark:bg-slate-900/40 dark:text-slate-400 dark:hover:border-slate-600"}`,
+                                                    className: `w-full rounded-2xl border px-4 py-4 text-left transition ${activeItem ? "border-[rgba(192,128,46,0.35)] bg-[#f9f2e6] text-[var(--foreground)] shadow-sm" : "border-[rgba(36,48,71,0.12)] bg-white/75 text-[rgba(36,48,71,0.58)] hover:border-[rgba(36,48,71,0.18)] hover:bg-white"}`,
                                                     "aria-pressed": activeItem,
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "flex items-center justify-between gap-4",
@@ -2142,7 +1929,7 @@ function TestimonialsSection() {
                                                                 className: "flex flex-col",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: "text-sm font-semibold text-slate-700 dark:text-slate-200",
+                                                                        className: "text-sm font-semibold text-[rgba(36,48,71,0.78)]",
                                                                         children: item.author
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/sections/testimonials.tsx",
@@ -2150,7 +1937,7 @@ function TestimonialsSection() {
                                                                         columnNumber: 29
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: "text-xs text-slate-400 dark:text-slate-500",
+                                                                        className: "text-xs text-[rgba(36,48,71,0.45)]",
                                                                         children: item.role
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/components/sections/testimonials.tsx",
@@ -2164,7 +1951,7 @@ function TestimonialsSection() {
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-lg text-slate-300 dark:text-slate-600",
+                                                                className: `text-lg ${activeItem ? "text-[var(--accent)]" : "text-[rgba(36,48,71,0.35)]"}`,
                                                                 children: activeItem ? "⟶" : "→"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/components/sections/testimonials.tsx",
@@ -2282,7 +2069,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 const Input = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"])(_c = ({ className, type = "text", ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
         ref: ref,
         type: type,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("h-12 w-full rounded-2xl border border-slate-900/10 bg-white/70 px-5 text-sm font-medium text-slate-900 transition placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 dark:border-slate-600/40 dark:bg-slate-900/60 dark:text-slate-100 dark:placeholder:text-slate-400", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("h-12 w-full rounded-2xl border border-[rgba(36,48,71,0.12)] bg-white px-5 text-sm font-medium text-[var(--foreground)] transition placeholder:text-[rgba(36,48,71,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-white", className),
         "data-cursor": "focus",
         ...props
     }, void 0, false, {
@@ -2315,7 +2102,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 const Textarea = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["forwardRef"])(_c = ({ className, ...props }, ref)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
         ref: ref,
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("min-h-[160px] w-full rounded-2xl border border-slate-900/10 bg-white/70 px-5 py-4 text-sm font-medium text-slate-900 transition placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 dark:border-slate-600/40 dark:bg-slate-900/60 dark:text-slate-100 dark:placeholder:text-slate-400", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("min-h-[160px] w-full rounded-2xl border border-[rgba(36,48,71,0.12)] bg-white px-5 py-4 text-sm font-medium text-[var(--foreground)] transition placeholder:text-[rgba(36,48,71,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-white", className),
         "data-cursor": "focus",
         ...props
     }, void 0, false, {
@@ -2346,7 +2133,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist
 ;
 function Label({ className, ...props }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("block text-xs font-semibold tracking-[0.12em] text-slate-600 dark:text-slate-300", className),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])("block text-xs font-semibold tracking-[0.12em] text-[rgba(36,48,71,0.68)]", className),
         ...props
     }, void 0, false, {
         fileName: "[project]/components/ui/label.tsx",
@@ -2420,7 +2207,7 @@ function ContactSection() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mt-12 grid gap-8 rounded-3xl border border-slate-200 bg-white/95 p-8 shadow-sm transition dark:border-slate-700 dark:bg-slate-900/75 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:p-10",
+                    className: "mt-12 grid gap-8 rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white p-8 shadow-[0_32px_60px_rgba(31,42,68,0.14)] transition md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:p-10",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                             className: "space-y-6",
@@ -2549,7 +2336,7 @@ function ContactSection() {
                                     className: "flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-sm text-slate-500 dark:text-slate-400",
+                                            className: "text-sm text-[rgba(36,48,71,0.6)]",
                                             children: t("contact.form.helper")
                                         }, void 0, false, {
                                             fileName: "[project]/components/sections/contact.tsx",
@@ -2590,7 +2377,7 @@ function ContactSection() {
                                         transition: {
                                             duration: 0.5
                                         },
-                                        className: "flex items-center gap-3 rounded-2xl border border-emerald-400/30 bg-emerald-100/60 px-4 py-3 text-sm text-emerald-700 dark:border-emerald-400/40 dark:bg-emerald-500/20 dark:text-emerald-300",
+                                        className: "flex items-center gap-3 rounded-2xl border border-emerald-300/40 bg-emerald-50 px-4 py-3 text-sm text-emerald-700",
                                         role: "status",
                                         "aria-live": "polite",
                                         children: [
@@ -2610,7 +2397,7 @@ function ContactSection() {
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-xs text-emerald-600 dark:text-emerald-300/80",
+                                                className: "text-xs text-emerald-600",
                                                 children: t("contact.form.successBody")
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact.tsx",
@@ -2638,10 +2425,10 @@ function ContactSection() {
                             className: "space-y-6 text-sm",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "rounded-3xl border border-slate-200 bg-white/80 p-6 text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200",
+                                    className: "rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white/85 p-6 text-[rgba(36,48,71,0.72)] shadow-sm",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "font-display text-lg tracking-tight text-slate-900 dark:text-white",
+                                            className: "font-display text-lg tracking-tight text-[var(--foreground)]",
                                             children: t("contact.whatsapp")
                                         }, void 0, false, {
                                             fileName: "[project]/components/sections/contact.tsx",
@@ -2684,10 +2471,10 @@ function ContactSection() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "rounded-3xl border border-slate-200 bg-white/80 p-6 text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200",
+                                    className: "rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white/85 p-6 text-[rgba(36,48,71,0.72)] shadow-sm",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "font-display text-lg tracking-tight text-slate-900 dark:text-white",
+                                            className: "font-display text-lg tracking-tight text-[var(--foreground)]",
                                             children: t("contact.email")
                                         }, void 0, false, {
                                             fileName: "[project]/components/sections/contact.tsx",
@@ -2695,8 +2482,8 @@ function ContactSection() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "mailto:studio@titinoconstruction.com",
-                                            className: "mt-3 inline-block text-base font-semibold text-slate-900 underline-offset-4 hover:underline dark:text-slate-100",
+                                            href: "mailto:titinoavila7329@gmail.com",
+                                            className: "mt-3 inline-block text-base font-semibold text-[var(--foreground)] underline-offset-4 hover:underline",
                                             "data-cursor": "link",
                                             children: t("contact.emailAddress")
                                         }, void 0, false, {
@@ -2720,7 +2507,7 @@ function ContactSection() {
                 }, void 0, true, {
                     fileName: "[project]/components/sections/contact.tsx",
                     lineNumber: 36,
-                    columnNumber: 9
+                    columnNumber: 3
                 }, this)
             ]
         }, void 0, true, {
@@ -2769,15 +2556,15 @@ function FooterSection() {
         "FooterSection.useMemo[year]": ()=>new Date().getFullYear()
     }["FooterSection.useMemo[year]"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-        className: "relative border-t border-slate-900/10 bg-white/60 py-10 dark:border-slate-800/60 dark:bg-slate-900/70",
+        className: "relative border-t border-[rgba(36,48,71,0.12)] bg-white/85 py-10",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between md:px-10",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "space-y-2 text-xs tracking-[0.14em] text-slate-500 dark:text-slate-400",
+                    className: "space-y-2 text-xs tracking-[0.14em] text-[rgba(36,48,71,0.55)]",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "block font-display text-sm tracking-[0.18em] text-slate-900 dark:text-white",
+                            className: "block font-display text-sm tracking-[0.18em] text-[var(--foreground)]",
                             children: "Titino Construction"
                         }, void 0, false, {
                             fileName: "[project]/components/sections/footer.tsx",
@@ -2807,17 +2594,17 @@ function FooterSection() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex items-center gap-4 text-slate-600 dark:text-slate-300",
+                    className: "flex items-center gap-4 text-[rgba(36,48,71,0.68)]",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: "https://www.instagram.com",
                             target: "_blank",
                             rel: "noopener noreferrer",
-                            className: "group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-900/10 bg-white/60 transition hover:-translate-y-1 hover:border-slate-900/30 hover:shadow-lg dark:border-slate-700/40 dark:bg-slate-900/60",
+                            className: "group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]",
                             "data-cursor": "link",
                             "aria-label": "Instagram",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(InstagramIcon, {
-                                className: "h-5 w-5 text-slate-700 transition group-hover:text-slate-900 dark:text-slate-200 dark:group-hover:text-white"
+                                className: "h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]"
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/footer.tsx",
                                 lineNumber: 29,
@@ -2832,11 +2619,11 @@ function FooterSection() {
                             href: "https://www.linkedin.com",
                             target: "_blank",
                             rel: "noopener noreferrer",
-                            className: "group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-900/10 bg-white/60 transition hover:-translate-y-1 hover:border-slate-900/30 hover:shadow-lg dark:border-slate-700/40 dark:bg-slate-900/60",
+                            className: "group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]",
                             "data-cursor": "link",
                             "aria-label": "LinkedIn",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LinkedInIcon, {
-                                className: "h-5 w-5 text-slate-700 transition group-hover:text-slate-900 dark:text-slate-200 dark:group-hover:text-white"
+                                className: "h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]"
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/footer.tsx",
                                 lineNumber: 39,
@@ -2848,12 +2635,12 @@ function FooterSection() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "mailto:studio@titinoconstruction.com",
-                            className: "group relative flex h-12 w-12 items-center justify-center rounded-full border border-slate-900/10 bg-white/60 transition hover:-translate-y-1 hover:border-slate-900/30 hover:shadow-lg dark:border-slate-700/40 dark:bg-slate-900/60",
+                            href: "mailto:titinoavila7329@gmail.com",
+                            className: "group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]",
                             "data-cursor": "link",
                             "aria-label": "Email",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(EnvelopeIcon, {
-                                className: "h-5 w-5 text-slate-700 transition group-hover:text-slate-900 dark:text-slate-200 dark:group-hover:text-white"
+                                className: "h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]"
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/footer.tsx",
                                 lineNumber: 47,
@@ -3238,4 +3025,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=_0352409f._.js.map
+//# sourceMappingURL=_2f77f38d._.js.map

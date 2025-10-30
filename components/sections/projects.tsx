@@ -119,7 +119,7 @@ function ProjectCard({
                 <Badge className="bg-white/20 text-xs text-white">
                   {String(index + 1).padStart(2, "0")}
                 </Badge>
-                <span className="text-xs uppercase tracking-[0.22em] text-white/70">
+                <span className="text-xs tracking-[0.14em] text-white/70">
                   {copy.location}
                 </span>
               </div>
@@ -127,22 +127,22 @@ function ProjectCard({
               <p className="max-w-xl text-sm text-white/80">{copy.description}</p>
             </div>
           </div>
-          <div className="grid gap-3 border-t border-white/10 bg-white/60 px-6 py-4 text-xs uppercase tracking-[0.2em] text-slate-600 dark:bg-slate-900/70 dark:text-slate-200">
-            <span className="text-[0.6rem] tracking-[0.3em] text-slate-500 dark:text-slate-400">
+          <div className="grid gap-3 border-t border-white/30 bg-white/75 px-6 py-4 text-xs tracking-[0.16em] text-[rgba(36,48,71,0.7)]">
+            <span className="text-[0.6rem] tracking-[0.22em] text-[rgba(36,48,71,0.5)]">
               {stageLabels[activeStage]}
             </span>
-            <p className="text-sm normal-case tracking-normal text-slate-600 dark:text-slate-300">
+            <p className="text-sm normal-case tracking-normal text-[rgba(36,48,71,0.78)]">
               {copy.story[activeStage]}
             </p>
           </div>
         </motion.article>
       </DialogTrigger>
-      <DialogContent className="grid gap-10 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
+      <DialogContent className="grid gap-8 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:gap-12">
         <div className="relative overflow-hidden rounded-[32px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={`${project.id}-${activeStage}`}
-              className="relative h-[420px] overflow-hidden rounded-[32px] border border-white/20"
+              className="relative h-[clamp(260px,45vh,420px)] overflow-hidden rounded-[32px] border border-white/25"
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
@@ -157,16 +157,16 @@ function ProjectCard({
               />
             </motion.div>
           </AnimatePresence>
-          <div className="absolute left-6 top-6 flex gap-3">
+          <div className="absolute left-5 right-5 top-5 flex flex-wrap gap-2 md:gap-3">
             {project.media.map((media) => (
               <button
                 key={media.key}
                 type="button"
                 onClick={() => setActiveStage(media.key)}
-                className={`rounded-full px-4 py-2 text-xs uppercase tracking-[0.22em] transition ${
+                className={`rounded-full px-4 py-2 text-xs tracking-[0.16em] transition ${
                   activeStage === media.key
-                    ? "bg-white text-slate-900"
-                    : "bg-white/40 text-white hover:bg-white/60"
+                    ? "bg-white text-[var(--foreground)] shadow-sm"
+                    : "bg-white/65 text-[rgba(36,48,71,0.72)] hover:bg-white/85"
                 }`}
                 data-cursor="focus"
               >
@@ -175,21 +175,21 @@ function ProjectCard({
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-6">
-          <DialogTitle className="font-display text-3xl tracking-tight text-slate-900 dark:text-white">
+  <div className="flex flex-col gap-6 md:max-h-[70vh] md:overflow-y-auto md:pr-2">
+          <DialogTitle className="font-display text-3xl tracking-tight text-[var(--foreground)]">
             {copy.title}
           </DialogTitle>
-          <DialogDescription className="text-sm uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">
+          <DialogDescription className="text-sm tracking-[0.2em] text-[rgba(36,48,71,0.55)]">
             {copy.location}
           </DialogDescription>
-          <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+          <p className="text-base leading-relaxed text-[rgba(36,48,71,0.72)]">
             {copy.description}
           </p>
           <div className="flex flex-wrap gap-2">
             {copy.services.map((service) => (
               <span
                 key={service}
-                className="rounded-full border border-slate-900/10 bg-white/70 px-3 py-1 text-xs uppercase tracking-[0.3em] text-slate-700 dark:border-slate-700/40 dark:bg-slate-900/60 dark:text-slate-200"
+                className="rounded-full border border-[rgba(36,48,71,0.12)] bg-white/80 px-3 py-1 text-xs tracking-[0.18em] text-[rgba(36,48,71,0.7)]"
               >
                 {service}
               </span>
@@ -204,11 +204,11 @@ function ProjectCard({
                 transition={{ duration: 0.45 }}
                 className={`rounded-3xl border px-4 py-4 text-sm leading-relaxed ${
                   activeStage === media.key
-                    ? "border-slate-900/30 bg-white/80 dark:border-slate-500/40 dark:bg-slate-900/70"
-                    : "border-slate-900/10 bg-white/50 text-slate-500 dark:border-slate-700/40 dark:bg-slate-900/50 dark:text-slate-400"
+                    ? "border-[rgba(36,48,71,0.2)] bg-white/85 shadow-sm text-[rgba(36,48,71,0.78)]"
+                    : "border-[rgba(36,48,71,0.12)] bg-white/65 text-[rgba(36,48,71,0.6)]"
                 }`}
               >
-                <span className="block text-xs uppercase tracking-[0.22em]">{stageLabels[media.key]}</span>
+                <span className="block text-xs tracking-[0.16em] text-slate-500">{stageLabels[media.key]}</span>
                 <span className="mt-2 block text-sm">
                   {copy.story[media.key]}
                 </span>

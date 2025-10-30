@@ -26,7 +26,7 @@ export function ValuesSection() {
           <div className="grid gap-4">
             {specialties.map((specialty, index) => (
               <Reveal key={specialty} delay={index * 0.06}>
-                <div className="flex items-center justify-between rounded-3xl border border-slate-900/10 bg-white/70 px-6 py-4 text-sm font-semibold uppercase tracking-[0.25em] text-slate-700 transition hover:-translate-y-1 hover:border-slate-900/20 hover:shadow-xl dark:border-slate-700/40 dark:bg-slate-900/60 dark:text-slate-200">
+                <div className="flex items-center justify-between rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white/85 px-6 py-4 text-sm font-semibold tracking-[0.12em] text-[rgba(36,48,71,0.78)] shadow-sm transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.22)] hover:shadow-[0_22px_44px_rgba(31,42,68,0.16)]">
                   <span>{specialty}</span>
                   <motion.span
                     className="text-sm"
@@ -44,17 +44,17 @@ export function ValuesSection() {
         <div className="grid gap-6">
           {values.map((value, index) => (
             <Reveal key={value.title} delay={index * 0.08}>
-              <article className="group rounded-3xl border border-slate-900/10 bg-white/80 p-8 shadow-lg transition hover:-translate-y-1 hover:border-slate-900/20 hover:shadow-2xl dark:border-slate-700/40 dark:bg-slate-900/70">
-                <div className="font-display text-xl uppercase tracking-[0.25em] text-slate-900 dark:text-white">
+              <article className="group rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white p-8 shadow-lg transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.22)] hover:shadow-[0_28px_56px_rgba(31,42,68,0.18)]">
+                <div className="font-display text-xl tracking-[0.08em] text-[var(--foreground)]">
                   {value.title}
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                <p className="mt-4 text-sm leading-relaxed text-[rgba(36,48,71,0.68)]">
                   {value.description}
                 </p>
-                <div className="mt-6 h-px w-full bg-slate-900/15 dark:bg-slate-200/25" />
-                <div className="mt-4 flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-slate-400">
+                <div className="mt-6 h-px w-full bg-[rgba(36,48,71,0.12)]" />
+                <div className="mt-4 flex items-center gap-3 text-xs tracking-[0.16em] text-[rgba(36,48,71,0.5)]">
                   <span>0{index + 1}</span>
-                  <span>Atelier Construct</span>
+                  <span>Titino Construction</span>
                 </div>
               </article>
             </Reveal>

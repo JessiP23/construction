@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useMemo } from "react";
-import { useTheme } from "./theme-provider";
 
 const SHAPES = [
   {
@@ -22,17 +20,13 @@ const SHAPES = [
   },
 ];
 
+const TONES = [
+  "rgba(32, 44, 66, 0.18)",
+  "rgba(132, 146, 168, 0.12)",
+  "rgba(185, 153, 102, 0.14)",
+];
+
 export function AmbientBackground() {
-  const { theme } = useTheme();
-
-  const tones = useMemo(
-    () =>
-      theme === "dark"
-        ? ["rgba(148, 163, 184, 0.22)", "rgba(226, 232, 240, 0.18)", "rgba(100, 116, 139, 0.2)"]
-        : ["rgba(31, 41, 55, 0.12)", "rgba(15, 23, 42, 0.1)", "rgba(71, 85, 105, 0.1)"],
-    [theme],
-  );
-
   return (
     <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       {SHAPES.map((shape, index) => (
@@ -41,7 +35,7 @@ export function AmbientBackground() {
           className="absolute left-1/2 top-1/2 aspect-square rounded-full blur-3xl"
           style={{
             width: shape.size,
-            backgroundColor: tones[index % tones.length],
+            backgroundColor: TONES[index % TONES.length],
           }}
           initial={{
             opacity: 0,

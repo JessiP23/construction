@@ -18,7 +18,7 @@ export const DialogOverlay = forwardRef<
 	<DialogPrimitive.Overlay
 		ref={ref}
 		className={clsx(
-			"fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+			"fixed inset-0 z-50 bg-[rgba(18,24,36,0.55)] backdrop-blur-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
 			className,
 		)}
 		{...props}
@@ -35,18 +35,18 @@ export const DialogContent = forwardRef<
 		<DialogOverlay />
 		<DialogPrimitive.Content
 			ref={ref}
-					className={clsx(
-						"fixed left-1/2 top-1/2 z-50 w-[min(92vw,1100px)] -translate-x-1/2 -translate-y-1/2 rounded-[32px] border border-white/15 bg-white/90 p-10 shadow-2xl backdrop-blur-2xl duration-200 dark:border-slate-700/60 dark:bg-slate-900/85",
+			className={clsx(
+				"fixed left-1/2 top-1/2 z-50 w-[min(94vw,1100px)] max-h-[92vh] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-[32px] border border-[rgba(255,255,255,0.4)] bg-white/95 p-8 shadow-[0_40px_80px_rgba(12,18,32,0.45)] backdrop-blur-2xl duration-200 md:p-10",
 				"data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:zoom-out-95",
 				className,
 			)}
 			{...props}
 		>
-					<DialogPrimitive.Close
-						className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-slate-900/10 bg-white/50 text-slate-700 transition hover:rotate-90 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 dark:border-slate-600/40 dark:bg-slate-800/60 dark:text-slate-200"
-						aria-label="Close"
-						data-cursor="focus"
-					>
+			<DialogPrimitive.Close
+				className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(36,48,71,0.14)] bg-white/80 text-[rgba(36,48,71,0.7)] transition hover:rotate-90 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+				aria-label="Close"
+				data-cursor="focus"
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ export const DialogContent = forwardRef<
 				>
 					<path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M6 18L18 6" />
 				</svg>
-					</DialogPrimitive.Close>
+			</DialogPrimitive.Close>
 			{children}
 		</DialogPrimitive.Content>
 	</DialogPortal>

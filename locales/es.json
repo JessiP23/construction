@@ -1,209 +1,205 @@
 {
-    "navigation": {
-        "work": "Proyectos",
-        "process": "Proceso",
-        "values": "Valores",
-        "contact": "Contacto"
+  "navigation": {
+    "work": "Proyectos",
+    "process": "Proceso",
+    "values": "Valores",
+    "contact": "Contacto"
+  },
+  "languageToggle": {
+    "aria": "Cambiar idioma",
+    "en": "EN",
+    "es": "ES"
+  },
+  "hero": {
+    "tagline": "Estudio de Construcción y Remodelación",
+    "dual": {
+      "en": "Building Dreams.",
+      "es": "Construyendo Sueños."
     },
-    "languageToggle": {
-        "aria": "Cambiar idioma",
-        "en": "EN",
-        "es": "ES"
+    "description": "Acompañamos a clientes exigentes para crear espacios arquitectónicos que equilibran ingeniería estructural con diseño con alma.",
+    "actions": {
+      "work": "Ver Proyectos",
+      "contact": "Contáctanos"
     },
-    "themeToggle": {
-        "light": "Claro",
-        "dark": "Oscuro",
-    "aria": "Alternar modo claro y oscuro"
-    },
-    "hero": {
-        "tagline": "Estudio de Construcción y Remodelación",
-        "dual": {
-            "en": "Building Dreams.",
-            "es": "Construyendo Sueños."
-        },
-        "description": "Acompañamos a clientes exigentes para crear espacios arquitectónicos donde la precisión estructural se une con el diseño emocional.",
-        "actions": {
-            "work": "Ver Proyectos",
-            "contact": "Contacto"
-        },
-        "scroll": "Desplázate para descubrir"
-    },
-    "process": {
+    "scroll": "Desplázate para explorar"
+  },
+  "process": {
     "title": "Nuestro Proceso",
-        "subtitle": "Un marco transparente que guía cada encargo desde la visión hasta la entrega impecable.",
-        "stages": [
-            {
-                "title": "Planificar",
-                "description": "Alineamos visión, viabilidad y presupuesto para iniciar con total claridad.",
-                "highlights": [
-                    "Recorridos del sitio y revisión estructural",
-                    "Presupuestos transparentes y calendario por hitos",
-                    "Mood boards y bocetos 3D ágiles"
-                ]
-            },
-            {
-                "title": "Construir",
-                "description": "Supervisores de confianza coordinan oficios, permisos y avances diarios con precisión.",
-                "highlights": [
-                    "Un solo punto de contacto en obra",
-                    "Recorridos semanales y videos de avance",
-                    "Control de calidad documentado en la nube"
-                ]
-            },
-            {
-                "title": "Entregar",
-                "description": "Entregamos el espacio ajustado, te capacitamos en sistemas y quedamos disponibles para ajustes.",
-                "highlights": [
-                    "Lista de pendientes detallada y retoques",
-                    "Estilismo, limpieza y puesta en marcha",
-                    "Acompañamiento posterior a la entrega"
-                ]
-            }
+    "subtitle": "Un marco transparente que guía cada proyecto desde la visión hasta la entrega impecable.",
+    "stages": [
+      {
+        "title": "Planificar",
+        "description": "Alineamos visión, factibilidad y presupuesto para comenzar con claridad absoluta.",
+        "highlights": [
+          "Visitas al sitio y evaluación estructural",
+          "Presupuestos transparentes y cronograma por hitos",
+          "Mood boards y bocetos 3D rápidos"
         ]
-    },
-    "values": {
+      },
+      {
+        "title": "Construir",
+        "description": "Supervisores de confianza coordinan oficios, permisos y progreso diario para que cada detalle sea preciso.",
+        "highlights": [
+          "Un solo punto de contacto en obra",
+          "Recorridos semanales y recapitulaciones en video",
+          "Controles de calidad registrados en la nube"
+        ]
+      },
+      {
+        "title": "Entregar",
+        "description": "Entregamos un espacio afinado, te capacitamos en los sistemas y quedamos disponibles para cualquier ajuste.",
+        "highlights": [
+          "Lista de entrega detallada y retoques",
+          "Estilismo, limpieza y puesta en marcha",
+          "Soporte post-entrega a tu alcance"
+        ]
+      }
+    ]
+  },
+  "values": {
     "title": "Precisión, Confianza, Belleza",
-        "items": [
-            {
-                "title": "Oficio Integrado",
-                "description": "Nuestros arquitectos, constructores y especialistas en materiales trabajan como un mismo atelier de principio a fin."
-            },
-            {
-                "title": "Transparencia Radical",
-                "description": "Dashboards en tiempo real, bitácoras filmadas semanales y presupuestos de libro abierto te mantienen cerca de la obra."
-            },
-            {
-                "title": "Impresiones Eternas",
-                "description": "Espacios que elevan los rituales diarios: cálidos, intencionales y diseñados para perdurar generaciones."
-            }
-        ]
-    },
-    "specialties": {
-    "title": "Especialidades Emblemáticas",
-    "description": "Desde reimaginar la estructura hasta los acabados a medida, orquestamos cada capa de la construcción.",
-        "items": [
-            "Remodelación integral de residencias",
-            "Renovación de cubiertas y envolventes",
-            "Pintura y estucos curados",
-            "Sistemas de pisos de lujo",
-            "Carpintería y mobiliario a medida",
-            "Arquitectura de espacios exteriores"
-        ]
-    },
-    "projects": {
+    "items": [
+      {
+        "title": "Oficio Integrado",
+        "description": "Nuestros arquitectos, constructores y especialistas en materiales trabajan como un solo taller de principio a fin."
+      },
+      {
+        "title": "Transparencia Radical",
+        "description": "Paneles en tiempo real, registros semanales en video y presupuestos abiertos te mantienen cerca del avance."
+      },
+      {
+        "title": "Impresiones que Perduran",
+        "description": "Espacios que elevan los rituales cotidianos—cálidos, intencionales y diseñados para durar generaciones."
+      }
+    ]
+  },
+  "specialties": {
+    "title": "Especialidades Firmadas",
+    "description": "De la reimaginación estructural a los acabados hechos a medida, orquestamos cada capa de la obra.",
+    "items": [
+      "Remodelación integral de viviendas",
+      "Renovación de techos y envolventes",
+      "Pintura y acabados artesanales",
+      "Sistemas de pisos de lujo",
+      "Carpintería y mobiliario a medida",
+      "Arquitectura para exteriores"
+    ]
+  },
+  "projects": {
     "title": "Transformaciones Destacadas",
-    "subtitle": "Cuatro narrativas arquitectónicas que muestran cómo honramos la herencia mientras diseñamos el mañana.",
-        "stageLabels": {
-            "before": "Antes",
-            "process": "Proceso",
-            "after": "Después"
-        },
-        "modal": {
-            "close": "Cerrar proyecto"
-        },
-        "items": {
-        "ridgeResidence": {
-            "title": "Renovación Ridge Residence",
-            "location": "Aspen, Colorado",
-            "description": "Una casa de montaña despojada hasta su estructura y reimaginada como un cálido refugio alpino.",
-            "services": [
-                "Reestructuración estructural",
-                "Sistemas de calefacción radiante",
-                "Carpintería en nogal"
-            ],
-            "story": {
-                "before": "Las ampliaciones fragmentadas y los acabados obsoletos apagaban las vistas y la luz natural.",
-                "process": "Abrimos la estructura con vigas glulam, revestimos núcleos en nogal y coreografiamos la iluminación con el terreno.",
-                "after": "Un santuario abierto enmarcado en vidrio y madera que invita al paisaje a cada espacio de reunión."
-            }
-        },
-        "cortezLoft": {
-            "title": "Cortez Creative Loft",
-            "location": "Austin, Texas",
-            "description": "Cascarón industrial transformado en sede creativa con zonas adaptables para trabajo y hospitalidad.",
-            "services": [
-                "Zonificación acústica",
-                "Superficies de microcemento",
-                "Diseño de iluminación"
-            ],
-            "story": {
-                "before": "Concreto expuesto y servicios a la vista hacían que el volumen se sintiera frío e inconcluso.",
-                "process": "Aletas de acero a medida definieron vecindarios colaborativos mientras el microcemento cálido articuló la circulación.",
-                "after": "Un loft luminoso que equilibra productividad y pausa, afinado para noches de galería y residencias de clientes."
-            }
-        },
-        "harborHouse": {
-            "title": "Revitalización Harbor House",
-            "location": "Seattle, Washington",
-            "description": "Propiedad histórica junto al mar renovada con materiales grado marino y una paleta serena.",
-            "services": [
-                "Restauración de la envolvente",
-                "Cristalería marina",
-                "Revestimiento con cal aplicada a mano"
-            ],
-            "story": {
-                "before": "La exposición a la sal comprometía la fachada y la humedad afectaba los pisos interiores.",
-                "process": "Reconstruimos la envolvente, integramos triple acristalamiento sellado y aplicamos pinturas minerales que respiran.",
-                "after": "Un refugio costero que resplandece con resiliencia: neutrales suaves, transiciones fluidas y vistas curadas a la costa."
-            }
-        },
-        "solsticeSpa": {
-            "title": "Solstice Garden Spa",
-            "location": "Santa Bárbara, California",
-            "description": "Un pabellón de bienestar interior-exterior que celebra la luz, el agua y las texturas artesanales.",
-            "services": [
-                "Piscinas de hidroterapia",
-                "Carpintería en cedro para sauna",
-                "Riego para muro vivo"
-            ],
-            "story": {
-                "before": "El patio subutilizado carecía de intimidad y uso durante todo el año.",
-                "process": "Esculpimos plataformas aterrazadas, diseñamos cubiertas de vidrio y coreografiamos iluminación sensorial.",
-                "after": "Un spa restaurador donde agua, calor y botánica componen un ritual cotidiano de calma."
-            }
+    "subtitle": "Cuatro narrativas arquitectónicas que honran la herencia mientras diseñan el mañana.",
+    "stageLabels": {
+      "before": "Antes",
+      "process": "Proceso",
+      "after": "Después"
+    },
+    "modal": {
+      "close": "Cerrar proyecto"
+    },
+    "items": {
+      "ridgeResidence": {
+        "title": "Renovación Residencial Ridge",
+        "location": "Aspen, Colorado",
+        "description": "Una casa de montaña despojada hasta su estructura y reimaginada como un refugio cálido.",
+        "services": [
+          "Refuerzo estructural",
+          "Sistemas de piso radiante",
+          "Carpintería en nogal"
+        ],
+        "story": {
+          "before": "Ampliaciones fragmentadas y acabados desactualizados apagaban las vistas y la luz natural.",
+          "process": "Abrimos la estructura con vigas glulam, revestimos núcleos en nogal y coreografiamos la iluminación con el terreno.",
+          "after": "Un santuario abierto enmarcado en vidrio y madera que integra el paisaje en cada espacio."
         }
+      },
+      "cortezLoft": {
+        "title": "Loft Creativo Cortez",
+        "location": "Austin, Texas",
+        "description": "Una nave industrial transformada en sede creativa con zonas adaptables para trabajo y hospitalidad.",
+        "services": [
+          "Zonas acústicas",
+          "Superficies de microcemento",
+          "Diseño de iluminación"
+        ],
+        "story": {
+          "before": "Concreto expuesto y servicios a la vista hacían que el volumen se sintiera frío e inconcluso.",
+          "process": "Aletas de acero a medida definieron vecindarios colaborativos mientras el microcemento cálido ancló la circulación.",
+          "after": "Un loft luminoso que equilibra productividad y pausa, listo para noches de galería y residencias de clientes."
         }
-    },
-    "testimonials": {
-    "title": "Clientes visionarios confían en nosotros",
-        "items": [
-            {
-                "quote": "Atelier Construct trató nuestra propiedad patrimonial como un archivo vivo: cada viga restaurada con reverencia e innovación.",
-                "author": "Elena Martínez",
-                "role": "Directora, Martínez & Co."
-            },
-            {
-                "quote": "Los videos semanales y la documentación minuciosa significaron cero sorpresas. Entregaron antes de tiempo sin comprometer calidad.",
-                "author": "Marcus Lee",
-                "role": "Fundador, Meridian Labs"
-            },
-            {
-                "quote": "Su artesanía solo es superada por su empatía. Nuestro hogar se siente profundamente personal y universalmente admirado.",
-                "author": "Sophia Grant",
-                "role": "Residencia Privada"
-            }
-        ]
-    },
-    "contact": {
-        "title": "Diseñemos tu próximo proyecto",
-    "subtitle": "Comparte tu visión, adjunta planos o inspiración y nuestro concierge responderá en 24 horas.",
-        "form": {
-            "name": "Nombre",
-            "email": "Correo",
-            "message": "Visión del proyecto, cronograma y presupuesto",
-            "upload": "Adjunta briefing, planos o imágenes",
-            "helper": "Adjunta inspiración, presupuestos o fotos del sitio para responderte con detalle.",
-            "submit": "Enviar mensaje",
-            "successTitle": "Mensaje enviado",
-            "successBody": "Gracias. Revisaremos tu información y nos pondremos en contacto pronto."
-        },
-        "whatsapp": "Escríbenos por WhatsApp",
-    "email": "Correo del estudio",
-        "whatsappNumber": "+1 (310) 555-4832",
-        "emailAddress": "studio@atelierconstruct.com"
-    },
-    "footer": {
-        "rights": "© {{year}} Atelier Construct. Todos los derechos reservados.",
-    "crafted": "Creamos con respeto por la arquitectura y quienes la habitan."
+      },
+      "harborHouse": {
+        "title": "Renacimiento Casa Harbor",
+        "location": "Seattle, Washington",
+        "description": "Propiedad histórica frente al mar renovada con materiales marinos y una paleta serena.",
+        "services": [
+          "Restauración de envolvente",
+          "Vidrios de grado marino",
+          "Estuco alisado a mano"
+        ],
+        "story": {
+          "before": "La exposición a la sal comprometió la fachada y la humedad afectó los interiores de madera.",
+          "process": "Reconstruimos la envolvente, integramos triple vidrio sellado y aplicamos pinturas minerales transpirables.",
+          "after": "Un refugio costero resiliente—neutros suaves, transiciones fluidas y vistas al litoral curadas."
+        }
+      },
+      "solsticeSpa": {
+        "title": "Spa Jardín Solstice",
+        "location": "Santa Bárbara, California",
+        "description": "Un pabellón de bienestar interior-exterior que celebra la luz, el agua y las texturas artesanales.",
+        "services": [
+          "Piscinas de hidroterapia",
+          "Carpintería de sauna en cedro",
+          "Irrigación para muro vivo"
+        ],
+        "story": {
+          "before": "El patio desaprovechado carecía de intimidad y uso durante todo el año.",
+          "process": "Esculpimos plataformas en terrazas, instalamos marquesinas de vidrio y coreografiamos iluminación sensorial.",
+          "after": "Un spa restaurador donde agua, calor y botánica componen un ritual cotidiano de calma."
+        }
+      }
     }
+  },
+  "testimonials": {
+    "title": "Con la confianza de clientes visionarios",
+    "selectorLabel": "Voces de nuestros clientes",
+    "items": [
+      {
+        "quote": "Titino Construction trató nuestra propiedad patrimonial como un archivo vivo—cada viga restaurada con reverencia e innovación.",
+        "author": "Elena Martínez",
+        "role": "Directora, Martínez & Co."
+      },
+      {
+        "quote": "Los videos semanales y la documentación meticulosa evitaron sorpresas. Entregaron antes de lo previsto sin comprometer calidad.",
+        "author": "Marcus Lee",
+        "role": "Fundador, Meridian Labs"
+      },
+      {
+        "quote": "Su artesanía solo se compara con su empatía. Nuestro hogar se siente profundamente personal y universalmente admirado.",
+        "author": "Sophia Grant",
+        "role": "Residencia Particular"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Diseñemos tu próximo proyecto",
+    "subtitle": "Comparte tu visión, adjunta bocetos o inspiración y nuestro estudio responderá en menos de 24 horas.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Visión del proyecto, cronograma y presupuesto",
+      "upload": "Adjunta brief, planos o imágenes",
+      "helper": "Adjunta inspiración, presupuestos o fotos del sitio para responderte con detalle.",
+      "submit": "Enviar mensaje",
+      "successTitle": "Mensaje enviado",
+      "successBody": "Gracias. Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo en breve."
+    },
+    "whatsapp": "Escríbenos por WhatsApp",
+    "email": "Envía un correo al estudio",
+    "whatsappNumber": "+1 (310) 555-4832",
+    "emailAddress": "titinoavila7329@gmail.com"
+  },
+  "footer": {
+    "rights": "© {{year}} Titino Construction. Todos los derechos reservados.",
+    "crafted": "Diseñado con respeto por la arquitectura y quienes la habitan."
+  }
 }

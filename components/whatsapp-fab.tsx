@@ -10,7 +10,7 @@ export function WhatsAppFab() {
       href="https://wa.me/13105554832"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-6 z-40 flex h-14 items-center gap-3 rounded-full bg-emerald-500 px-5 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-2xl transition hover:scale-105 hover:bg-emerald-400"
+  className="fixed bottom-8 right-6 z-40 flex h-14 items-center gap-3 rounded-full bg-emerald-500 px-5 text-sm font-semibold tracking-[0.12em] text-white shadow-2xl transition hover:scale-105 hover:bg-emerald-400"
       aria-label={t("contact.whatsapp")}
       data-cursor="focus"
       initial={{ opacity: 0, y: 20 }}

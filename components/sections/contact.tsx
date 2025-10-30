@@ -33,7 +33,7 @@ export function ContactSection() {
           title={t("contact.subtitle")}
           description={null}
         />
-        <div className="mt-12 grid gap-8 rounded-3xl border border-slate-200 bg-white/95 p-8 shadow-sm transition dark:border-slate-700 dark:bg-slate-900/75 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:p-10">
+  <div className="mt-12 grid gap-8 rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white p-8 shadow-[0_32px_60px_rgba(31,42,68,0.14)] transition md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:p-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="space-y-2">
@@ -54,7 +54,7 @@ export function ContactSection() {
               <Input id="file" name="file" type="file" accept="image/*,.pdf" className="file:bg-transparent" />
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-sm text-[rgba(36,48,71,0.6)]">
                 {t("contact.form.helper")}
               </p>
               <Button type="submit" size="lg" disabled={isSubmitting} className="sm:w-auto">
@@ -69,15 +69,15 @@ export function ContactSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.5 }}
-                  className="flex items-center gap-3 rounded-2xl border border-emerald-400/30 bg-emerald-100/60 px-4 py-3 text-sm text-emerald-700 dark:border-emerald-400/40 dark:bg-emerald-500/20 dark:text-emerald-300"
+                  className="flex items-center gap-3 rounded-2xl border border-emerald-300/40 bg-emerald-50 px-4 py-3 text-sm text-emerald-700"
                   role="status"
                   aria-live="polite"
                 >
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                  <span className="font-medium uppercase tracking-[0.18em]">
+                  <span className="font-medium tracking-[0.12em]">
                     {t("contact.form.successTitle")}
                   </span>
-                  <span className="text-xs text-emerald-600 dark:text-emerald-300/80">
+                  <span className="text-xs text-emerald-600">
                     {t("contact.form.successBody")}
                   </span>
                 </motion.div>
@@ -85,8 +85,8 @@ export function ContactSection() {
             </AnimatePresence>
           </form>
           <aside className="space-y-6 text-sm">
-            <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200">
-              <h3 className="font-display text-lg tracking-tight text-slate-900 dark:text-white">
+            <div className="rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white/85 p-6 text-[rgba(36,48,71,0.72)] shadow-sm">
+              <h3 className="font-display text-lg tracking-tight text-[var(--foreground)]">
                 {t("contact.whatsapp")}
               </h3>
               <p className="mt-3 text-sm leading-relaxed">
@@ -108,13 +108,13 @@ export function ContactSection() {
                 </a>
               </Button>
             </div>
-            <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200">
-              <h3 className="font-display text-lg tracking-tight text-slate-900 dark:text-white">
+            <div className="rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white/85 p-6 text-[rgba(36,48,71,0.72)] shadow-sm">
+              <h3 className="font-display text-lg tracking-tight text-[var(--foreground)]">
                 {t("contact.email")}
               </h3>
               <a
-                href="mailto:studio@atelierconstruct.com"
-                className="mt-3 inline-block text-base font-semibold text-slate-900 underline-offset-4 hover:underline dark:text-slate-100"
+                href="mailto:titinoavila7329@gmail.com"
+                className="mt-3 inline-block text-base font-semibold text-[var(--foreground)] underline-offset-4 hover:underline"
                 data-cursor="link"
               >
                 {t("contact.emailAddress")}

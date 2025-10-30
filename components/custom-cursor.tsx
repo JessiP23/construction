@@ -3,12 +3,15 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
 import { createPortal } from "react-dom";
-import { useTheme } from "./theme-provider";
 
 const ACTIVE_SELECTORS = "a, button, [data-cursor='focus'], [data-cursor='link']";
+const BASE_TONE = "rgba(36, 48, 71, 0.16)";
+const ACTIVE_TONE = "rgba(185, 137, 76, 0.28)";
+const BORDER_TONE = "rgba(36, 48, 71, 0.22)";
+const SHADOW_TONE = "0 0 26px rgba(36, 48, 71, 0.2)";
+const SHADOW_ACTIVE_TONE = "0 0 40px rgba(185, 137, 76, 0.25)";
 
 export function CustomCursor() {
-  const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [active, setActive] = useState(false);
   const [visible, setVisible] = useState(true);
@@ -67,24 +70,14 @@ export function CustomCursor() {
     };
   }, [cursorX, cursorY, mounted]);
 
-  const style = useMemo(() => {
-    const baseColor =
-      theme === "dark" ? "rgba(226, 232, 240, 0.15)" : "rgba(15, 23, 42, 0.15)";
-    const activeColor =
-      theme === "dark" ? "rgba(226, 232, 240, 0.35)" : "rgba(15, 23, 42, 0.25)";
-
-    return {
-      background: active ? activeColor : baseColor,
-      border: `1px solid ${
-        theme === "dark" ? "rgba(226, 232, 240, 0.3)" : "rgba(15, 23, 42, 0.15)"
-      }`,
-      boxShadow: active
-        ? theme === "dark"
-          ? "0 0 30px rgba(148, 163, 184, 0.35)"
-          : "0 0 30px rgba(15, 23, 42, 0.25)"
-        : "0 0 20px rgba(15, 23, 42, 0.08)",
-    };
-  }, [active, theme]);
+  const style = useMemo(
+    () => ({
+      background: active ? ACTIVE_TONE : BASE_TONE,
+      border: `1px solid ${BORDER_TONE}`,
+      boxShadow: active ? SHADOW_ACTIVE_TONE : SHADOW_TONE,
+    }),
+    [active],
+  );
 
   if (!mounted || !visible) return null;
 

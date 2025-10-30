@@ -28,11 +28,11 @@ export function HeroSection() {
           muted
           loop
         />
-  <div className="absolute inset-0 bg-slate-950/55 dark:bg-slate-950/62" aria-hidden />
+        <div className="absolute inset-0 bg-[rgba(18,24,36,0.6)]" aria-hidden />
       </div>
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-6 pb-24 md:px-10">
         <Reveal delay={0.05}>
-          <div className="inline-flex items-center gap-3 rounded-full border border-white/40 bg-white/40 px-5 py-2 text-sm font-medium uppercase tracking-[0.28em] text-white shadow backdrop-blur-sm dark:border-white/20 dark:bg-slate-900/60">
+          <div className="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/30 px-5 py-2 text-sm font-medium tracking-[0.14em] text-white shadow backdrop-blur-lg">
             {t("hero.tagline")}
           </div>
         </Reveal>
@@ -68,9 +68,9 @@ export function HeroSection() {
             </Reveal>
           </div>
           <Reveal delay={0.3}>
-              <div className="grid gap-6 rounded-3xl border border-white/30 bg-white/20 p-8 text-sm text-white backdrop-blur-xl">
+            <div className="grid gap-6 rounded-3xl border border-white/30 bg-white/20 p-8 text-sm text-white backdrop-blur-xl">
               <div className="flex items-center justify-between">
-                  <span className="uppercase tracking-[0.25em] text-white/70">{t("navigation.process")}</span>
+                <span className="text-sm tracking-[0.16em] text-white/70">{t("navigation.process")}</span>
                 <span className="text-3xl font-semibold">24</span>
               </div>
               <p className="text-white/80">
@@ -78,13 +78,13 @@ export function HeroSection() {
                   ? "Years delivering design-led construction across residential, hospitality, and civic spaces."
                   : "Años ejecutando construcción guiada por el diseño en espacios residenciales, hoteleros y cívicos."}
               </p>
-              <div className="grid grid-cols-2 gap-4 text-xs uppercase tracking-[0.22em] text-white/60">
+              <div className="grid grid-cols-2 gap-4 text-xs tracking-[0.12em] text-white/60">
                 <div>
-                  <span className="block text-2xl font-semibold text-white">+180</span>
+                  <span className="block text-2xl font-semibold text-white">20</span>
                   {language === "en" ? "Commissions completed" : "Proyectos entregados"}
                 </div>
                 <div>
-                  <span className="block text-2xl font-semibold text-white">12</span>
+                  <span className="block text-2xl font-semibold text-white">2</span>
                   {language === "en" ? "Cities served" : "Ciudades atendidas"}
                 </div>
               </div>
@@ -93,7 +93,7 @@ export function HeroSection() {
         </div>
         <div className="flex items-center gap-4 text-white/70">
           <div className="scroll-indicator" />
-          <p className="text-xs uppercase tracking-[0.25em]">{t("hero.scroll")}</p>
+          <p className="text-xs tracking-[0.16em]">{t("hero.scroll")}</p>
         </div>
       </div>
     </section>

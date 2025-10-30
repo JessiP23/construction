@@ -27,7 +27,7 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | undefined>(undefined);
 
-const LANGUAGE_STORAGE_KEY = "atelier-language";
+const LANGUAGE_STORAGE_KEY = "titino-language";
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const i18n = getI18nInstance();

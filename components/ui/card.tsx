@@ -5,7 +5,7 @@ export function Card({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={clsx(
-        "rounded-3xl border border-white/30 bg-white/70 p-8 shadow-xl backdrop-blur-md transition dark:border-slate-700/50 dark:bg-slate-900/60",
+        "rounded-3xl border border-[rgba(36,48,71,0.12)] bg-white/85 p-8 shadow-[0_28px_56px_rgba(31,42,68,0.16)] backdrop-blur-md transition",
         className,
       )}
       {...props}
@@ -21,7 +21,7 @@ export function CardTitle({ className, ...props }: HTMLAttributes<HTMLParagraphE
   return (
     <p
       className={clsx(
-        "font-display text-xl uppercase tracking-[0.25em] text-slate-900 dark:text-slate-100",
+        "font-display text-xl tracking-[0.06em] text-[var(--foreground)]",
         className,
       )}
       {...props}
@@ -33,7 +33,7 @@ export function CardDescription({ className, ...props }: HTMLAttributes<HTMLPara
   return (
     <p
       className={clsx(
-        "text-sm leading-relaxed text-slate-600 dark:text-slate-300",
+        "text-sm leading-relaxed text-[rgba(36,48,71,0.68)]",
         className,
       )}
       {...props}

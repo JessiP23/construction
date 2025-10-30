@@ -10,11 +10,6 @@
         "en": "EN",
         "es": "ES"
     },
-    "themeToggle": {
-        "light": "Light",
-        "dark": "Dark",
-        "aria": "Toggle light and dark theme"
-    },
     "hero": {
         "tagline": "Construction & Remodeling Studio",
         "dual": {
@@ -166,9 +161,10 @@
     },
     "testimonials": {
         "title": "Trusted by visionary clients",
+        "selectorLabel": "Voices from our clients",
         "items": [
             {
-                "quote": "Atelier Construct treated our heritage property like a living archive—every beam restored with reverence and innovation.",
+                "quote": "Titino Construction treated our heritage property like a living archive—every beam restored with reverence and innovation.",
                 "author": "Elena Martínez",
                 "role": "Principal, Martínez & Co."
             },
@@ -200,10 +196,10 @@
         "whatsapp": "Message us on WhatsApp",
         "email": "Email the studio",
         "whatsappNumber": "+1 (310) 555-4832",
-        "emailAddress": "studio@atelierconstruct.com"
+        "emailAddress": "titinoavila7329@gmail.com"
     },
     "footer": {
-        "rights": "© {{year}} Atelier Construct. All rights reserved.",
+        "rights": "© {{year}} Titino Construction. All rights reserved.",
         "crafted": "Crafted with respect for architecture and the people who inhabit it."
     }
 }

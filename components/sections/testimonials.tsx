@@ -34,42 +34,76 @@ export function TestimonialsSection() {
       <div className="mx-auto flex max-w-4xl flex-col gap-12 px-6 text-center md:px-10">
         <SectionHeading eyebrow={null} title={t("testimonials.title")} description={null} align="center" />
         <Reveal>
-          <div className="relative overflow-hidden rounded-[32px] border border-slate-900/10 bg-white/70 p-12 shadow-2xl backdrop-blur-xl dark:border-slate-700/40 dark:bg-slate-900/70">
-            <AnimatePresence mode="wait">
-              <motion.blockquote
-                key={active.quote}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="space-y-6"
-              >
-                <p className="text-xl leading-relaxed text-slate-700 dark:text-slate-200">
-                  “{active.quote}”
-                </p>
-                <footer className="space-y-1 text-sm uppercase tracking-[0.22em] text-slate-500 dark:text-slate-300">
-                  <div>{active.author}</div>
-                  <div className="tracking-[0.2em] text-slate-400 dark:text-slate-500">{active.role}</div>
-                </footer>
-              </motion.blockquote>
-            </AnimatePresence>
-            <div className="mt-10 flex items-center justify-center gap-4">
-              <Button variant="ghost" size="sm" onClick={handlePrev} aria-label="Previous testimonial">
-                ⟵
-              </Button>
-              <div className="flex gap-2">
-                {testimonials.map((_, dotIndex) => (
-                  <span
-                    key={dotIndex}
-                    className={`h-2 w-10 rounded-full transition ${
-                      index === dotIndex ? "bg-slate-900 dark:bg-slate-200" : "bg-slate-300/60 dark:bg-slate-700"
-                    }`}
-                  />
-                ))}
+          <div className="relative overflow-hidden rounded-[36px] border border-[rgba(36,48,71,0.12)] bg-white p-10 text-left shadow-[0_30px_65px_rgba(31,42,68,0.18)] transition md:p-14">
+            <div className="grid gap-10 md:grid-cols-[minmax(0,2.1fr)_minmax(0,1fr)] md:items-start">
+              <AnimatePresence mode="wait">
+                <motion.blockquote
+                  key={active.quote}
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -18 }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  className="space-y-8"
+                >
+                  <div className="flex items-start gap-4">
+                    <span className="text-5xl leading-none text-[#b9894c]">“</span>
+                    <p className="text-2xl leading-snug text-[var(--foreground)]">
+                      {active.quote}
+                    </p>
+                  </div>
+                  <footer className="flex flex-col gap-1 text-sm text-[rgba(36,48,71,0.6)]">
+                    <span className="text-base font-semibold text-[var(--foreground)]">
+                      {active.author}
+                    </span>
+                    <span className="text-sm text-[rgba(36,48,71,0.45)]">{active.role}</span>
+                  </footer>
+                </motion.blockquote>
+              </AnimatePresence>
+              <div className="flex flex-col gap-4">
+                <span className="text-xs font-medium tracking-[0.18em] text-[rgba(36,48,71,0.45)]">
+                  {t("testimonials.selectorLabel")}
+                </span>
+                <div className="space-y-3">
+                  {testimonials.map((item, itemIndex) => {
+                    const activeItem = index === itemIndex;
+                    return (
+                      <button
+                        key={item.author}
+                        type="button"
+                        onClick={() => setIndex(itemIndex)}
+                        className={`w-full rounded-2xl border px-4 py-4 text-left transition ${
+                          activeItem
+                            ? "border-[rgba(192,128,46,0.35)] bg-[#f9f2e6] text-[var(--foreground)] shadow-sm"
+                            : "border-[rgba(36,48,71,0.12)] bg-white/75 text-[rgba(36,48,71,0.58)] hover:border-[rgba(36,48,71,0.18)] hover:bg-white"
+                        }`}
+                        aria-pressed={activeItem}
+                      >
+                        <div className="flex items-center justify-between gap-4">
+                          <div className="flex flex-col">
+                            <span className="text-sm font-semibold text-[rgba(36,48,71,0.78)]">
+                              {item.author}
+                            </span>
+                            <span className="text-xs text-[rgba(36,48,71,0.45)]">
+                              {item.role}
+                            </span>
+                          </div>
+                          <span className={`text-lg ${activeItem ? "text-[var(--accent)]" : "text-[rgba(36,48,71,0.35)]"}`}>
+                            {activeItem ? "⟶" : "→"}
+                          </span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="hidden gap-2 md:flex">
+                  <Button variant="ghost" size="sm" onClick={handlePrev} aria-label="Previous testimonial">
+                    ⟵
+                  </Button>
+                  <Button variant="ghost" size="sm" onClick={handleNext} aria-label="Next testimonial">
+                    ⟶
+                  </Button>
+                </div>
               </div>
-              <Button variant="ghost" size="sm" onClick={handleNext} aria-label="Next testimonial">
-                ⟶
-              </Button>
             </div>
           </div>
         </Reveal>

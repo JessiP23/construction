@@ -18,15 +18,15 @@ export function SectionHeading({ eyebrow, title, description, align = "left" }: 
       })}
     >
       {eyebrow ? (
-        <span className="font-display text-sm uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">
+        <span className="font-display text-sm tracking-[0.12em] text-[rgba(36,48,71,0.55)]">
           {eyebrow}
         </span>
       ) : null}
-      <h2 className="font-display text-4xl tracking-tight text-slate-900 dark:text-white md:text-5xl">
+      <h2 className="font-display text-4xl tracking-tight text-[var(--foreground)] md:text-5xl">
         {title}
       </h2>
       {description ? (
-        <p className="max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-300">
+        <p className="max-w-2xl text-base leading-relaxed text-[rgba(36,48,71,0.68)]">
           {description}
         </p>
       ) : null}

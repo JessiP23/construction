@@ -14,19 +14,19 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 rounded-full font-medium uppercase tracking-[0.05em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent disabled:cursor-not-allowed disabled:opacity-60";
+  "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-[0.02em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-60";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-[#b9894c] text-white hover:-translate-y-[2px] hover:bg-[#a1763d] hover:shadow-xl dark:bg-[#d9b878] dark:text-slate-900 dark:hover:bg-[#cfa765]",
+    "bg-[var(--accent)] text-white shadow-[0_18px_36px_rgba(192,128,46,0.28)] hover:-translate-y-[2px] hover:bg-[var(--accent-strong)] hover:shadow-[0_24px_48px_rgba(192,128,46,0.32)]",
   secondary:
-    "bg-white/40 text-slate-800 shadow-sm hover:bg-white/70 dark:bg-slate-800/60 dark:text-slate-100 dark:hover:bg-slate-700/80",
+    "border border-[rgba(36,48,71,0.14)] bg-white text-[var(--foreground)] shadow-sm hover:-translate-y-[2px] hover:shadow-[0_18px_34px_rgba(31,42,68,0.16)]",
   ghost:
-    "bg-transparent text-slate-800 hover:bg-slate-900/5 dark:text-slate-200 dark:hover:bg-slate-200/10",
+    "bg-transparent text-[var(--foreground)] hover:bg-[rgba(36,48,71,0.08)]",
   outline:
-    "border border-slate-900/20 bg-transparent text-slate-900 hover:bg-slate-900 hover:text-white dark:border-slate-300/40 dark:text-slate-200 dark:hover:bg-slate-200/10",
+    "border border-[rgba(36,48,71,0.22)] bg-transparent text-[var(--foreground)] hover:bg-[rgba(36,48,71,0.08)]",
   muted:
-    "bg-slate-200/60 text-slate-700 hover:bg-slate-200 dark:bg-slate-700/50 dark:text-slate-200 dark:hover:bg-slate-600/70",
+    "border border-[rgba(36,48,71,0.08)] bg-[rgba(255,255,255,0.8)] text-[rgba(36,48,71,0.7)] hover:bg-white",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

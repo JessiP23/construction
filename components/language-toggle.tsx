@@ -11,7 +11,7 @@ export function LanguageToggle() {
   const { t } = useTranslation();
 
   return (
-    <div className="flex items-center rounded-full border border-white/10 bg-white/40 px-1 py-1 text-xs font-medium backdrop-blur-md transition dark:border-slate-700/40 dark:bg-slate-900/40">
+    <div className="flex items-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/70 px-1 py-1 text-xs font-semibold text-[rgba(36,48,71,0.7)] shadow-sm backdrop-blur-md transition">
       {languages.map((code) => {
         const isActive = language === code;
         return (
@@ -24,8 +24,8 @@ export function LanguageToggle() {
             className={clsx(
               "relative w-12 rounded-full px-3 py-1 transition",
               isActive
-                ? "bg-[#b9894c] text-white shadow-lg dark:bg-[#d9b878] dark:text-slate-900"
-                : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white",
+                ? "bg-[var(--accent)] text-white shadow-lg"
+                : "text-[rgba(36,48,71,0.7)] hover:text-[var(--foreground)]",
             )}
             data-cursor="focus"
           >
