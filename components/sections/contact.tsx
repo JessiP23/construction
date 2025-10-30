@@ -99,7 +99,7 @@ export function ContactSection() {
                 className="mt-4 px-5"
               >
                 <a
-                  href="https://wa.me/13105554832"
+                  href="https://wa.me/13474240746"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor="focus"

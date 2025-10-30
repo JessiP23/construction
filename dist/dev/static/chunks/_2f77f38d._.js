@@ -2449,7 +2449,7 @@ function ContactSection() {
                                             size: "sm",
                                             className: "mt-4 px-5",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                href: "https://wa.me/13105554832",
+                                                href: "https://wa.me/13474240746",
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
                                                 "data-cursor": "focus",
@@ -2828,7 +2828,7 @@ function WhatsAppFab() {
     _s();
     const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].a, {
-        href: "https://wa.me/13105554832",
+        href: "https://wa.me/13474240746",
         target: "_blank",
         rel: "noopener noreferrer",
         className: "fixed bottom-8 right-6 z-40 flex h-14 items-center gap-3 rounded-full bg-emerald-500 px-5 text-sm font-semibold tracking-[0.12em] text-white shadow-2xl transition hover:scale-105 hover:bg-emerald-400",

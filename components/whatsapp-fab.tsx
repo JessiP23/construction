@@ -7,7 +7,7 @@ export function WhatsAppFab() {
   const { t } = useTranslation();
   return (
     <motion.a
-      href="https://wa.me/13105554832"
+      href="https://wa.me/13474240746"
       target="_blank"
       rel="noopener noreferrer"
   className="fixed bottom-8 right-6 z-40 flex h-14 items-center gap-3 rounded-full bg-emerald-500 px-5 text-sm font-semibold tracking-[0.12em] text-white shadow-2xl transition hover:scale-105 hover:bg-emerald-400"
