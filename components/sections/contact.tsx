@@ -26,14 +26,14 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-6 md:px-10">
+    <section id="contact" className="relative py-24 md:py-28">
+      <div className="mx-auto max-w-6xl px-6 md:px-8">
         <SectionHeading
           eyebrow={t("contact.title")}
           title={t("contact.subtitle")}
           description={null}
         />
-  <div className="mt-12 grid gap-10 rounded-[32px] border border-white/40 bg-white/30 p-8 backdrop-blur-2xl dark:border-slate-700/40 dark:bg-slate-900/60 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:p-12">
+        <div className="mt-12 grid gap-8 rounded-3xl border border-slate-200 bg-white/95 p-8 shadow-sm transition dark:border-slate-700 dark:bg-slate-900/75 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] md:p-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="space-y-2">
@@ -47,15 +47,20 @@ export function ContactSection() {
             </div>
             <div className="space-y-2">
               <Label htmlFor="message">{t("contact.form.message")}</Label>
-              <Textarea id="message" name="message" required rows={6} />
+              <Textarea id="message" name="message" required rows={5} />
             </div>
             <div className="space-y-2">
               <Label htmlFor="file">{t("contact.form.upload")}</Label>
               <Input id="file" name="file" type="file" accept="image/*,.pdf" className="file:bg-transparent" />
             </div>
-            <Button type="submit" size="lg" disabled={isSubmitting}>
-              {isSubmitting ? `${t("contact.form.submit")}…` : t("contact.form.submit")}
-            </Button>
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                {t("contact.form.helper")}
+              </p>
+              <Button type="submit" size="lg" disabled={isSubmitting} className="sm:w-auto">
+                {isSubmitting ? `${t("contact.form.submit")}…` : t("contact.form.submit")}
+              </Button>
+            </div>
             <AnimatePresence>
               {submitted ? (
                 <motion.div
@@ -69,7 +74,7 @@ export function ContactSection() {
                   aria-live="polite"
                 >
                   <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                  <span className="font-medium uppercase tracking-[0.3em]">
+                  <span className="font-medium uppercase tracking-[0.18em]">
                     {t("contact.form.successTitle")}
                   </span>
                   <span className="text-xs text-emerald-600 dark:text-emerald-300/80">
@@ -79,9 +84,9 @@ export function ContactSection() {
               ) : null}
             </AnimatePresence>
           </form>
-          <aside className="space-y-8 text-sm">
-            <div className="glass-panel rounded-3xl p-6 text-slate-700 dark:text-slate-200">
-              <h3 className="font-display text-lg uppercase tracking-[0.4em] text-slate-900 dark:text-white">
+          <aside className="space-y-6 text-sm">
+            <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200">
+              <h3 className="font-display text-lg tracking-tight text-slate-900 dark:text-white">
                 {t("contact.whatsapp")}
               </h3>
               <p className="mt-3 text-sm leading-relaxed">
@@ -89,9 +94,9 @@ export function ContactSection() {
               </p>
               <Button
                 asChild
-                variant="outline"
+                variant="primary"
                 size="sm"
-                className="mt-4 border-slate-900/30 bg-white/50 dark:border-slate-600/40 dark:bg-slate-900/60"
+                className="mt-4 px-5"
               >
                 <a
                   href="https://wa.me/13105554832"
@@ -103,8 +108,8 @@ export function ContactSection() {
                 </a>
               </Button>
             </div>
-            <div className="glass-panel rounded-3xl p-6 text-slate-700 dark:text-slate-200">
-              <h3 className="font-display text-lg uppercase tracking-[0.4em] text-slate-900 dark:text-white">
+            <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 text-slate-700 shadow-sm dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200">
+              <h3 className="font-display text-lg tracking-tight text-slate-900 dark:text-white">
                 {t("contact.email")}
               </h3>
               <a

@@ -14,13 +14,13 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const baseStyles =
-  "inline-flex items-center justify-center gap-2 rounded-full font-medium uppercase tracking-[0.08em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent disabled:cursor-not-allowed disabled:opacity-60";
+  "inline-flex items-center justify-center gap-2 rounded-full font-medium uppercase tracking-[0.05em] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent disabled:cursor-not-allowed disabled:opacity-60";
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-slate-900 text-slate-50 hover:-translate-y-[2px] hover:bg-slate-800 hover:shadow-xl dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200",
+    "bg-[#b9894c] text-white hover:-translate-y-[2px] hover:bg-[#a1763d] hover:shadow-xl dark:bg-[#d9b878] dark:text-slate-900 dark:hover:bg-[#cfa765]",
   secondary:
-    "bg-white/30 text-slate-800 shadow-sm hover:bg-white/60 dark:bg-slate-800/60 dark:text-slate-100 dark:hover:bg-slate-700/80",
+    "bg-white/40 text-slate-800 shadow-sm hover:bg-white/70 dark:bg-slate-800/60 dark:text-slate-100 dark:hover:bg-slate-700/80",
   ghost:
     "bg-transparent text-slate-800 hover:bg-slate-900/5 dark:text-slate-200 dark:hover:bg-slate-200/10",
   outline:

@@ -24,7 +24,7 @@ export function LanguageToggle() {
             className={clsx(
               "relative w-12 rounded-full px-3 py-1 transition",
               isActive
-                ? "bg-slate-900 text-slate-50 shadow-lg dark:bg-slate-100 dark:text-slate-900"
+                ? "bg-[#b9894c] text-white shadow-lg dark:bg-[#d9b878] dark:text-slate-900"
                 : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white",
             )}
             data-cursor="focus"

@@ -113,13 +113,13 @@ function ProjectCard({
               sizes="(min-width: 1024px) 480px, 100vw"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/0 to-black/60" />
+            <div className="absolute inset-0 bg-black/45" aria-hidden />
             <div className="absolute left-6 right-6 bottom-6 flex flex-col gap-3 text-white">
               <div className="flex items-center gap-3">
                 <Badge className="bg-white/20 text-xs text-white">
                   {String(index + 1).padStart(2, "0")}
                 </Badge>
-                <span className="text-xs uppercase tracking-[0.35em] text-white/70">
+                <span className="text-xs uppercase tracking-[0.22em] text-white/70">
                   {copy.location}
                 </span>
               </div>
@@ -127,8 +127,8 @@ function ProjectCard({
               <p className="max-w-xl text-sm text-white/80">{copy.description}</p>
             </div>
           </div>
-          <div className="grid gap-3 border-t border-white/10 bg-white/60 px-6 py-4 text-xs uppercase tracking-[0.3em] text-slate-600 dark:bg-slate-900/70 dark:text-slate-200">
-            <span className="text-[0.6rem] text-slate-500 dark:text-slate-400">
+          <div className="grid gap-3 border-t border-white/10 bg-white/60 px-6 py-4 text-xs uppercase tracking-[0.2em] text-slate-600 dark:bg-slate-900/70 dark:text-slate-200">
+            <span className="text-[0.6rem] tracking-[0.3em] text-slate-500 dark:text-slate-400">
               {stageLabels[activeStage]}
             </span>
             <p className="text-sm normal-case tracking-normal text-slate-600 dark:text-slate-300">
@@ -163,7 +163,7 @@ function ProjectCard({
                 key={media.key}
                 type="button"
                 onClick={() => setActiveStage(media.key)}
-                className={`rounded-full px-4 py-2 text-xs uppercase tracking-[0.4em] transition ${
+                className={`rounded-full px-4 py-2 text-xs uppercase tracking-[0.22em] transition ${
                   activeStage === media.key
                     ? "bg-white text-slate-900"
                     : "bg-white/40 text-white hover:bg-white/60"
@@ -208,7 +208,7 @@ function ProjectCard({
                     : "border-slate-900/10 bg-white/50 text-slate-500 dark:border-slate-700/40 dark:bg-slate-900/50 dark:text-slate-400"
                 }`}
               >
-                <span className="block text-xs uppercase tracking-[0.4em]">{stageLabels[media.key]}</span>
+                <span className="block text-xs uppercase tracking-[0.22em]">{stageLabels[media.key]}</span>
                 <span className="mt-2 block text-sm">
                   {copy.story[media.key]}
                 </span>

@@ -1,2 +1,2 @@
-[00:00:00.529] Server  LOG      ✓ Ready in 377ms
-[00:00:03.008] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:00:00.460] Server  LOG      ✓ Ready in 324ms
+[00:27:13.738] Server  LOG      ✓ Compiled in 79ms

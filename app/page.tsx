@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 import { NavigationBar } from "@/components/navigation-bar";
 import { HeroSection } from "@/components/sections/hero";
-import { ProcessSection } from "@/components/sections/process";
 import { ValuesSection } from "@/components/sections/values";
 import { ProjectsSection } from "@/components/sections/projects";
 import { TestimonialsSection } from "@/components/sections/testimonials";
@@ -22,7 +21,6 @@ export default function Home() {
     >
       <NavigationBar />
       <HeroSection />
-      <ProcessSection />
       <ValuesSection />
       <ProjectsSection />
       <TestimonialsSection />

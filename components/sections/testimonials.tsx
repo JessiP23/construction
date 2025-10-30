@@ -47,7 +47,7 @@ export function TestimonialsSection() {
                 <p className="text-xl leading-relaxed text-slate-700 dark:text-slate-200">
                   “{active.quote}”
                 </p>
-                <footer className="space-y-1 text-sm uppercase tracking-[0.35em] text-slate-500 dark:text-slate-300">
+                <footer className="space-y-1 text-sm uppercase tracking-[0.22em] text-slate-500 dark:text-slate-300">
                   <div>{active.author}</div>
                   <div className="tracking-[0.2em] text-slate-400 dark:text-slate-500">{active.role}</div>
                 </footer>

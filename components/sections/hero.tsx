@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { useBilingual } from "@/hooks/use-bilingual";
@@ -13,20 +12,13 @@ const HERO_VIDEO =
   "https://res.cloudinary.com/demo/video/upload/f_auto,q_auto/v1695222458/construction/site_panorama.mp4";
 
 export function HeroSection() {
-  const heroRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
   const { language } = useLanguage();
   const { t } = useTranslation();
   const { tEn, tEs } = useBilingual();
 
   return (
-    <section
-      ref={heroRef}
-      id="top"
-      className="relative flex min-h-[100vh] items-center overflow-hidden pt-28"
-    >
-      <div className="absolute inset-0 -z-10 before:absolute before:inset-0 before:bg-gradient-to-b before:from-slate-900/40 before:via-slate-900/20 before:to-white/80 dark:before:to-slate-950/95">
+    <section id="top" className="relative flex min-h-[100vh] items-center overflow-hidden pt-28">
+      <div className="absolute inset-0 -z-10">
         <motion.video
           key="hero-video"
           className="h-full w-full object-cover"
@@ -35,12 +27,12 @@ export function HeroSection() {
           playsInline
           muted
           loop
-          style={{ y: parallax }}
         />
+  <div className="absolute inset-0 bg-slate-950/55 dark:bg-slate-950/62" aria-hidden />
       </div>
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-6 pb-24 md:px-10">
         <Reveal delay={0.05}>
-          <div className="inline-flex items-center gap-3 rounded-full border border-white/40 bg-white/40 px-5 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-white shadow backdrop-blur-sm dark:border-white/20 dark:bg-slate-900/60">
+          <div className="inline-flex items-center gap-3 rounded-full border border-white/40 bg-white/40 px-5 py-2 text-sm font-medium uppercase tracking-[0.28em] text-white shadow backdrop-blur-sm dark:border-white/20 dark:bg-slate-900/60">
             {t("hero.tagline")}
           </div>
         </Reveal>
@@ -76,9 +68,9 @@ export function HeroSection() {
             </Reveal>
           </div>
           <Reveal delay={0.3}>
-            <div className="grid gap-6 rounded-3xl border border-white/30 bg-white/20 p-8 text-sm text-white backdrop-blur-xl">
+              <div className="grid gap-6 rounded-3xl border border-white/30 bg-white/20 p-8 text-sm text-white backdrop-blur-xl">
               <div className="flex items-center justify-between">
-                <span className="uppercase tracking-[0.4em] text-white/70">{t("navigation.process")}</span>
+                  <span className="uppercase tracking-[0.25em] text-white/70">{t("navigation.process")}</span>
                 <span className="text-3xl font-semibold">24</span>
               </div>
               <p className="text-white/80">
@@ -86,7 +78,7 @@ export function HeroSection() {
                   ? "Years delivering design-led construction across residential, hospitality, and civic spaces."
                   : "Años ejecutando construcción guiada por el diseño en espacios residenciales, hoteleros y cívicos."}
               </p>
-              <div className="grid grid-cols-2 gap-4 text-xs uppercase tracking-[0.3em] text-white/60">
+              <div className="grid grid-cols-2 gap-4 text-xs uppercase tracking-[0.22em] text-white/60">
                 <div>
                   <span className="block text-2xl font-semibold text-white">+180</span>
                   {language === "en" ? "Commissions completed" : "Proyectos entregados"}
@@ -101,7 +93,7 @@ export function HeroSection() {
         </div>
         <div className="flex items-center gap-4 text-white/70">
           <div className="scroll-indicator" />
-          <p className="text-xs uppercase tracking-[0.35em]">{t("hero.scroll")}</p>
+          <p className="text-xs uppercase tracking-[0.25em]">{t("hero.scroll")}</p>
         </div>
       </div>
     </section>

@@ -18,7 +18,7 @@ export function SectionHeading({ eyebrow, title, description, align = "left" }: 
       })}
     >
       {eyebrow ? (
-        <span className="font-display text-xs uppercase tracking-[0.5em] text-slate-500 dark:text-slate-400">
+        <span className="font-display text-sm uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">
           {eyebrow}
         </span>
       ) : null}

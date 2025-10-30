@@ -10,8 +10,8 @@ export function FooterSection() {
   return (
     <footer className="relative border-t border-slate-900/10 bg-white/60 py-10 dark:border-slate-800/60 dark:bg-slate-900/70">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 md:flex-row md:items-center md:justify-between md:px-10">
-        <div className="space-y-2 text-xs uppercase tracking-[0.35em] text-slate-500 dark:text-slate-400">
-          <span className="block font-display text-sm tracking-[0.5em] text-slate-900 dark:text-white">
+        <div className="space-y-2 text-xs uppercase tracking-[0.22em] text-slate-500 dark:text-slate-400">
+          <span className="block font-display text-sm tracking-[0.3em] text-slate-900 dark:text-white">
             Atelier Construct
           </span>
           <span>{t("footer.crafted")}</span>

@@ -34,29 +34,29 @@
         "stages": [
             {
                 "title": "Planificar",
-                "description": "Diagnósticos arquitectónicos, estudios de factibilidad y visualizaciones alineadas con tus aspiraciones.",
+                "description": "Alineamos visión, viabilidad y presupuesto para iniciar con total claridad.",
                 "highlights": [
-                    "Análisis integral del sitio y la estructura",
-                    "Estudios detallados de costos y cronograma",
-                    "Mood boards de materiales y maquetas digitales"
+                    "Recorridos del sitio y revisión estructural",
+                    "Presupuestos transparentes y calendario por hitos",
+                    "Mood boards y bocetos 3D ágiles"
                 ]
             },
             {
                 "title": "Construir",
-                "description": "Maestros constructores, artesanos e ingenieros colaborando para ejecutar con precisión milimétrica.",
+                "description": "Supervisores de confianza coordinan oficios, permisos y avances diarios con precisión.",
                 "highlights": [
-                    "Conserjería dedicada del proyecto",
-                    "Coordinación en obra con rituales semanales",
-                    "Control de calidad y documentación en tiempo real"
+                    "Un solo punto de contacto en obra",
+                    "Recorridos semanales y videos de avance",
+                    "Control de calidad documentado en la nube"
                 ]
             },
             {
                 "title": "Entregar",
-                "description": "Espacios comisionados entregados sin fallas, calibrados y listos para habitar.",
+                "description": "Entregamos el espacio ajustado, te capacitamos en sistemas y quedamos disponibles para ajustes.",
                 "highlights": [
-                    "Lista de verificación white-glove y ajustes",
-                    "Estilismo, ambientación y capacitación de sistemas",
-                    "Garantía de artesanía de por vida"
+                    "Lista de pendientes detallada y retoques",
+                    "Estilismo, limpieza y puesta en marcha",
+                    "Acompañamiento posterior a la entrega"
                 ]
             }
         ]
@@ -192,6 +192,7 @@
             "email": "Correo",
             "message": "Visión del proyecto, cronograma y presupuesto",
             "upload": "Adjunta briefing, planos o imágenes",
+            "helper": "Adjunta inspiración, presupuestos o fotos del sitio para responderte con detalle.",
             "submit": "Enviar mensaje",
             "successTitle": "Mensaje enviado",
             "successBody": "Gracias. Revisaremos tu información y nos pondremos en contacto pronto."

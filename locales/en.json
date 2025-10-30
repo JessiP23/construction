@@ -34,29 +34,29 @@
         "stages": [
             {
                 "title": "Plan",
-                "description": "Architectural diagnostics, feasibility studies, and visualizations grounded in your ambitions.",
+                "description": "We align vision, feasibility, and budget so the project begins with complete clarity.",
                 "highlights": [
-                    "360° site and structural analysis",
-                    "Detailed cost studies and scheduling",
-                    "Material mood boards and digital mockups"
+                    "Site walk-throughs and structural checks",
+                    "Transparent budgets and milestone schedule",
+                    "Mood boards and quick 3D sketches"
                 ]
             },
             {
                 "title": "Build",
-                "description": "Master builders, artisans, and engineers collaborating to execute with millimeter precision.",
+                "description": "Trusted supervisors coordinate trades, permits, and daily progress so every detail stays precise.",
                 "highlights": [
-                    "Dedicated project concierge",
-                    "On-site coordination with weekly rituals",
-                    "Real-time quality assurance and documentation"
+                    "One point of contact on site",
+                    "Weekly walkthroughs and video recaps",
+                    "Quality checks logged in the cloud"
                 ]
             },
             {
                 "title": "Deliver",
-                "description": "Commissioned spaces handed over flawlessly, calibrated and ready for living.",
+                "description": "We hand over a tuned space, train you on systems, and stay available for any adjustments.",
                 "highlights": [
-                    "White-glove punch list and adjustments",
-                    "Styling, staging, and systems training",
-                    "Lifetime craftsmanship assurance"
+                    "Detailed punch list and touch-ups",
+                    "Styling, cleaning, and setup",
+                    "Post-delivery support on call"
                 ]
             }
         ]
@@ -192,6 +192,7 @@
             "email": "Email",
             "message": "Project vision, timeline, and budget",
             "upload": "Attach brief, plans, or imagery",
+            "helper": "Attach inspiration, budgets, or site photos so we can respond with detail.",
             "submit": "Send message",
             "successTitle": "Message sent",
             "successBody": "Thank you. Our team will review your submission and connect with you shortly."
