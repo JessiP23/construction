@@ -13,7 +13,7 @@ export type ProjectMedia = {
 
 export type Project = {
   id: "ridgeResidence" | "cortezLoft" | "harborHouse" | "solsticeSpa";
-  cover: string;
+  cover?: string;
   coverAlt: {
     en: string;
     es: string;
@@ -31,10 +31,9 @@ function buildImage(path: string) {
   return `${CLOUDINARY_BASE}/${path}`;
 }
 
-export const projects: Project[] = [
+const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
   {
     id: "ridgeResidence",
-  cover: "/stairs.png",
     coverAlt: {
       en: "Completed alpine living room with expansive glazing and timber beams",
       es: "Sala alpina terminada con ventanales y vigas de madera",
@@ -47,7 +46,7 @@ export const projects: Project[] = [
       {
         key: "before",
         type: "image",
-        src: "/stairs.png",
+        src: "/stairs1.png",
         alt: {
           en: "Before renovation: compartmentalized mountain home under construction",
           es: "Antes de la renovación: vivienda de montaña compartimentada en obra",
@@ -65,9 +64,7 @@ export const projects: Project[] = [
       {
         key: "after",
         type: "image",
-        src: "/images/ridge-after.jpg",
-        // small thumbnail/poster you want shown in the modal controls
-        poster: "/images/ridge-thumb.jpg",
+        src: "/stairs.png",
         alt: {
           en: "After: open-plan alpine living room with panoramic glazing",
           es: "Después: sala alpina de planta abierta con ventanales panorámicos",
@@ -77,9 +74,6 @@ export const projects: Project[] = [
   },
   {
     id: "cortezLoft",
-    cover: buildImage(
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80",
-    ),
     coverAlt: {
       en: "Creative loft with warm microcement floors and collaborative zones",
       es: "Loft creativo con pisos de microcemento cálidos y zonas colaborativas",
@@ -103,9 +97,7 @@ export const projects: Project[] = [
       {
         key: "process",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1529429703513-243fcdad3f96?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: '/door.png',
         alt: {
           en: "Process: steel fins and lighting installation",
           es: "Proceso: instalación de aletas de acero e iluminación",
@@ -114,9 +106,7 @@ export const projects: Project[] = [
       {
         key: "after",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: "/door.png",
         alt: {
           en: "After: luminous creative loft with layered work lounges",
           es: "Después: loft creativo luminoso con zonas de trabajo estratificadas",
@@ -126,9 +116,7 @@ export const projects: Project[] = [
   },
   {
     id: "harborHouse",
-    cover: buildImage(
-      "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=2000&q=80",
-    ),
+    cover: "/renovation.png",
     coverAlt: {
       en: "Waterfront residence with soft neutral interiors overlooking the harbor",
       es: "Residencia frente al mar con interiores neutros y vistas a la bahía",
@@ -141,9 +129,7 @@ export const projects: Project[] = [
       {
         key: "before",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: "/renovation.png",
         alt: {
           en: "Before: weathered waterfront facade with peeling paint",
           es: "Antes: fachada frente al mar desgastada con pintura descascarada",
@@ -152,9 +138,7 @@ export const projects: Project[] = [
       {
         key: "process",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1503389152951-9f343605f61e?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: "/renovation.png",
         alt: {
           en: "Process: scaffolding during envelope restoration",
           es: "Proceso: andamios durante la restauración de la envolvente",
@@ -163,9 +147,7 @@ export const projects: Project[] = [
       {
         key: "after",
         type: "image",
-        src: buildImage(
-          "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=2000&q=80",
-        ),
+        src: "/renovation.png",
         alt: {
           en: "After: living room with marine glazing and serene palette",
           es: "Después: sala con cristalería marina y paleta serena",
@@ -175,9 +157,7 @@ export const projects: Project[] = [
   },
   {
     id: "solsticeSpa",
-    cover: buildImage(
-      "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?auto=format&fit=crop&w=2000&q=80",
-    ),
+    cover: "/bathroom.png",
     coverAlt: {
       en: "Indoor-outdoor spa pavilion surrounded by greenery",
       es: "Pabellón de spa interior-exterior rodeado de vegetación",
@@ -223,3 +203,16 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+// Compute a sensible `cover` for any project that didn't provide one explicitly.
+export const projects: Project[] = rawProjects.map((p) => {
+  const media = p.media ?? [];
+  const afterMedia = media.find((m) => m.key === "after");
+  const first = media[0];
+  const cover = (p.cover as string | undefined) ?? afterMedia?.src ?? first?.src ?? "";
+  return {
+    ...(p as Project),
+    cover,
+    media: media as ProjectMedia[],
+  } as Project;
+});

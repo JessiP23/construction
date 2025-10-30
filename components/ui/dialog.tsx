@@ -42,6 +42,7 @@ export const DialogContent = forwardRef<
 			)}
 			{...props}
 		>
+			<DialogPrimitive.Title className="sr-only">Dialog</DialogPrimitive.Title>
 			<DialogPrimitive.Close
 				className="absolute right-6 top-6 flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(36,48,71,0.14)] bg-white/80 text-[rgba(36,48,71,0.7)] transition hover:rotate-90 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
 				aria-label="Close"

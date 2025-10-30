@@ -1,8 +1,32 @@
-[00:00:00.479] Server  LOG      ✓ Ready in 335ms
-[00:01:11.000] Server  LOG      ✓ Compiled in 22ms
-[00:01:17.594] Server  LOG      ✓ Compiled in 17ms
-[00:16:44.497] Server  LOG      ✓ Compiled in 35ms
-[00:31:05.087] Server  LOG      ✓ Compiled in 18ms
-[00:31:16.472] Browser WARN    Image with src "/stairs.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:31:46.883] Server  LOG      ✓ Compiled in 25ms
+[00:03:01.453] Server  LOG      ✓ Compiled in 19ms
+[00:03:23.372] Server  LOG      ✓ Compiled in 20ms
+[00:03:30.249] Server  LOG      ✓ Compiled in 16ms
+[00:03:36.914] Server  LOG      ✓ Compiled in 15ms
+[00:03:40.255] Server  LOG      ✓ Compiled in 16ms
+[00:03:42.215] Server  LOG      ✓ Compiled in 16ms
+[00:04:59.606] Server  LOG      ✓ Compiled in 14ms
+[00:05:06.816] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog
+[00:05:06.816] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:05:06.816] Browser ERROR   `DialogContent` requires a `DialogTitle` for the component to be accessible for screen reader users.
+
+If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden component.
+
+For more information, see https://radix-ui.com/primitives/docs/components/dialog
+[00:05:06.816] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:06:40.481] Server  LOG      ✓ Compiled in 33ms
+[00:06:50.431] Server  LOG      ✓ Compiled in 37ms
+[00:07:36.562] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:07:36.562] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:07:48.327] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:07:48.327] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:07:50.417] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:07:50.417] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:09:01.368] Server  LOG      ✓ Compiled in 19ms
+[00:09:47.859] Server  LOG      ✓ Compiled in 17ms
+[00:11:35.431] Server  LOG      ✓ Compiled in 15ms
+[00:11:36.817] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:11:36.817] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
