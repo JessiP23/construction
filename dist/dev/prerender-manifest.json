@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "cba6a1d1c657d7172b69375ecdca8a78",
-    "previewModeSigningKey": "0e80070ea1f1df74cc2dd6ea4b8b02f30ebe89cc856f91f6c46e359ec15dd8a4",
-    "previewModeEncryptionKey": "d430c1689a3461c264fe0443a0dff62d9fc76c3eff1fd603e309501c3c49f984"
-  }
-}
+{"version":4,"routes":{"/specialties/whole-home-remodeling":{},"/specialties/roofing-and-envelope-renewal":{},"/specialties/painting-and-plaster-artistry":{},"/specialties/luxury-flooring-systems":{},"/specialties/custom-millwork-and-cabinetry":{},"/specialties/outdoor-living-architecture":{}},"dynamicRoutes":{"/specialties/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/specialties/[slug]","routeRegex":"^\\/specialties\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"3381d014b70792db0a9128b7215d7552","previewModeSigningKey":"7a654f8f67d22aa76dfe7d9314c647f4bd642746bf1ec939b1af0e41d6c4b3ac","previewModeEncryptionKey":"d88a37021c0e4f9860fe1b8e9be76fdbcc61e8354e5a9af0468a637fbd723763"}}

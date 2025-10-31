@@ -50,7 +50,7 @@ const rawProjects = [
         },
         media: [
             {
-                key: "before",
+                key: "after",
                 type: "image",
                 src: '/door.png',
                 alt: {
@@ -59,7 +59,7 @@ const rawProjects = [
                 }
             },
             {
-                key: "after",
+                key: "before",
                 type: "image",
                 src: "/door1.png",
                 alt: {
@@ -82,7 +82,7 @@ const rawProjects = [
         },
         media: [
             {
-                key: "before",
+                key: "after",
                 type: "image",
                 src: "/renovation.png",
                 alt: {
@@ -91,7 +91,7 @@ const rawProjects = [
                 }
             },
             {
-                key: "after",
+                key: "before",
                 type: "image",
                 src: "/renovation1.png",
                 alt: {
@@ -114,7 +114,7 @@ const rawProjects = [
         },
         media: [
             {
-                key: "before",
+                key: "after",
                 type: "image",
                 src: '/bathroom.png',
                 alt: {
@@ -141,7 +141,7 @@ const rawProjects = [
                 }
             },
             {
-                key: "after",
+                key: "before",
                 type: "image",
                 src: '/bathroom3.png',
                 alt: {
