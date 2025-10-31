@@ -12,7 +12,7 @@ export type ProjectMedia = {
 };
 
 export type Project = {
-  id: "ridgeResidence" | "cortezLoft" | "harborHouse" | "solsticeSpa";
+  id: string;
   cover?: string;
   coverAlt: {
     en: string;
@@ -171,6 +171,76 @@ const rawProjects: Array<Partial<Project> & { id: Project["id"] }> = [
     ],
   },
 ];
+
+rawProjects.push(
+  {
+    id: "cliffHouse",
+    coverAlt: {
+      en: "Cliffside residence with panoramic decks",
+      es: "Residencia en acantilado con terrazas panorámicas",
+    },
+    palette: { light: "#f6f4ef", dark: "#0f2430" },
+    media: [
+      {
+        key: "before",
+        type: "image",
+        src: "/build.png",
+        alt: { en: "Before: raw cliff access and retaining walls", es: "Antes: acceso sin terminar y muros de contención" },
+      },
+      {
+        key: "after",
+        type: "image",
+        src: "/build1.png",
+        alt: { en: "After: terraces and glazing embracing the view", es: "Después: terrazas y acristalamiento que abrazan la vista" },
+      },
+    ],
+  },
+  {
+    id: "studioVista",
+    coverAlt: { en: "Creative studio with layered volumes", es: "Estudio creativo con volúmenes estratificados" },
+    palette: { light: "#f5f2ec", dark: "#151018" },
+    media: [
+      { key: "before", type: "image", src: "/home.png", alt: { en: "Before: closed loft with limited light", es: "Antes: loft cerrado con luz limitada" } },
+      { key: "after", type: "image", src: "/home1.png", alt: { en: "After: open studio with warm finishes", es: "Después: estudio abierto con acabados cálidos" } },
+    ],
+  },
+  {
+    id: "orchardCottage",
+    coverAlt: { en: "Cottage set among orchard plantings", es: "Cabaña entre plantaciones de huerto" },
+    palette: { light: "#eef6ee", dark: "#102015" },
+    media: [
+      { key: "before", type: "image", src: "/new.png", alt: { en: "Before: small outdated bath", es: "Antes: baño pequeño y anticuado" } },
+      { key: "after", type: "image", src: "/new1.png", alt: { en: "After: bright spa-like bathroom", es: "Después: baño luminoso estilo spa" } },
+    ],
+  },
+  {
+    id: "urbanRow",
+    coverAlt: { en: "Rowhouse retrofit with modern joinery", es: "Reforma de vivienda adosada con carpintería moderna" },
+    palette: { light: "#f3efe8", dark: "#111318" },
+    media: [
+      { key: "before", type: "image", src: "/paint.png", alt: { en: "Before: worn finishes and compartmentalized plan", es: "Antes: acabados desgastados y planta compartimentada" } },
+      { key: "after", type: "image", src: "/paint1.png", alt: { en: "After: unified plan and refined palette", es: "Después: planta unificada y paleta refinada" } },
+    ],
+  },
+  {
+    id: "sunsetRetreat",
+    coverAlt: { en: "Sunset-facing pavilion with deep overhangs", es: "Pabellón con vista al atardecer y aleros profundos" },
+    palette: { light: "#fbf6f0", dark: "#241814" },
+    media: [
+      { key: "before", type: "image", src: "/remod.png", alt: { en: "Before: segmented circulation and stairs", es: "Antes: circulación segmentada y escaleras" } },
+      { key: "after", type: "image", src: "/remod1.png", alt: { en: "After: repaired stairs and connected volumes", es: "Después: escaleras reparadas y volúmenes conectados" } },
+    ],
+  },
+  {
+    id: "harborLoft",
+    coverAlt: { en: "Adaptive reuse loft near the harbor", es: "Loft de reutilización adaptativa cerca de la bahía" },
+    palette: { light: "#eef3f6", dark: "#08121a" },
+    media: [
+      { key: "before", type: "image", src: "/wall.png", alt: { en: "Before: closed facade and limited openings", es: "Antes: fachada cerrada y aberturas limitadas" } },
+      { key: "after", type: "image", src: "/wall1.png", alt: { en: "After: new openings and coastal finishes", es: "Después: nuevas aberturas y acabados costeros" } },
+    ],
+  },
+);
 
 export const projects: Project[] = rawProjects.map((p) => {
   const media = p.media ?? [];

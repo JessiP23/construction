@@ -879,6 +879,187 @@ const rawProjects = [
         ]
     }
 ];
+rawProjects.push({
+    id: "cliffHouse",
+    coverAlt: {
+        en: "Cliffside residence with panoramic decks",
+        es: "Residencia en acantilado con terrazas panorámicas"
+    },
+    palette: {
+        light: "#f6f4ef",
+        dark: "#0f2430"
+    },
+    media: [
+        {
+            key: "before",
+            type: "image",
+            src: "/build.png",
+            alt: {
+                en: "Before: raw cliff access and retaining walls",
+                es: "Antes: acceso sin terminar y muros de contención"
+            }
+        },
+        {
+            key: "after",
+            type: "image",
+            src: "/build1.png",
+            alt: {
+                en: "After: terraces and glazing embracing the view",
+                es: "Después: terrazas y acristalamiento que abrazan la vista"
+            }
+        }
+    ]
+}, {
+    id: "studioVista",
+    coverAlt: {
+        en: "Creative studio with layered volumes",
+        es: "Estudio creativo con volúmenes estratificados"
+    },
+    palette: {
+        light: "#f5f2ec",
+        dark: "#151018"
+    },
+    media: [
+        {
+            key: "before",
+            type: "image",
+            src: "/home.png",
+            alt: {
+                en: "Before: closed loft with limited light",
+                es: "Antes: loft cerrado con luz limitada"
+            }
+        },
+        {
+            key: "after",
+            type: "image",
+            src: "/home1.png",
+            alt: {
+                en: "After: open studio with warm finishes",
+                es: "Después: estudio abierto con acabados cálidos"
+            }
+        }
+    ]
+}, {
+    id: "orchardCottage",
+    coverAlt: {
+        en: "Cottage set among orchard plantings",
+        es: "Cabaña entre plantaciones de huerto"
+    },
+    palette: {
+        light: "#eef6ee",
+        dark: "#102015"
+    },
+    media: [
+        {
+            key: "before",
+            type: "image",
+            src: "/new.png",
+            alt: {
+                en: "Before: small outdated bath",
+                es: "Antes: baño pequeño y anticuado"
+            }
+        },
+        {
+            key: "after",
+            type: "image",
+            src: "/new1.png",
+            alt: {
+                en: "After: bright spa-like bathroom",
+                es: "Después: baño luminoso estilo spa"
+            }
+        }
+    ]
+}, {
+    id: "urbanRow",
+    coverAlt: {
+        en: "Rowhouse retrofit with modern joinery",
+        es: "Reforma de vivienda adosada con carpintería moderna"
+    },
+    palette: {
+        light: "#f3efe8",
+        dark: "#111318"
+    },
+    media: [
+        {
+            key: "before",
+            type: "image",
+            src: "/paint.png",
+            alt: {
+                en: "Before: worn finishes and compartmentalized plan",
+                es: "Antes: acabados desgastados y planta compartimentada"
+            }
+        },
+        {
+            key: "after",
+            type: "image",
+            src: "/paint1.png",
+            alt: {
+                en: "After: unified plan and refined palette",
+                es: "Después: planta unificada y paleta refinada"
+            }
+        }
+    ]
+}, {
+    id: "sunsetRetreat",
+    coverAlt: {
+        en: "Sunset-facing pavilion with deep overhangs",
+        es: "Pabellón con vista al atardecer y aleros profundos"
+    },
+    palette: {
+        light: "#fbf6f0",
+        dark: "#241814"
+    },
+    media: [
+        {
+            key: "before",
+            type: "image",
+            src: "/remod.png",
+            alt: {
+                en: "Before: segmented circulation and stairs",
+                es: "Antes: circulación segmentada y escaleras"
+            }
+        },
+        {
+            key: "after",
+            type: "image",
+            src: "/remod1.png",
+            alt: {
+                en: "After: repaired stairs and connected volumes",
+                es: "Después: escaleras reparadas y volúmenes conectados"
+            }
+        }
+    ]
+}, {
+    id: "harborLoft",
+    coverAlt: {
+        en: "Adaptive reuse loft near the harbor",
+        es: "Loft de reutilización adaptativa cerca de la bahía"
+    },
+    palette: {
+        light: "#eef3f6",
+        dark: "#08121a"
+    },
+    media: [
+        {
+            key: "before",
+            type: "image",
+            src: "/wall.png",
+            alt: {
+                en: "Before: closed facade and limited openings",
+                es: "Antes: fachada cerrada y aberturas limitadas"
+            }
+        },
+        {
+            key: "after",
+            type: "image",
+            src: "/wall1.png",
+            alt: {
+                en: "After: new openings and coastal finishes",
+                es: "Después: nuevas aberturas y acabados costeros"
+            }
+        }
+    ]
+});
 const projects = rawProjects.map((p)=>{
     const media = p.media ?? [];
     const afterMedia = media.find((m)=>m.key === "after");
@@ -956,9 +1137,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-i18next/dist/es/useTranslation.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$projects$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/data/projects.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$section$2d$heading$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/section-heading.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$reveal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/reveal.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$language$2d$provider$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/language-provider.tsx [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -998,7 +1181,7 @@ function ProjectsSection() {
                     description: null
                 }, void 0, false, {
                     fileName: "[project]/components/sections/projects.tsx",
-                    lineNumber: 46,
+                    lineNumber: 47,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1011,28 +1194,60 @@ function ProjectsSection() {
                                 stageLabels: stageLabels
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/projects.tsx",
-                                lineNumber: 54,
+                                lineNumber: 55,
                                 columnNumber: 15
                             }, this)
                         }, project.id, false, {
                             fileName: "[project]/components/sections/projects.tsx",
-                            lineNumber: 53,
+                            lineNumber: 54,
                             columnNumber: 13
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/components/sections/projects.tsx",
-                    lineNumber: 51,
+                    lineNumber: 52,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$reveal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Reveal"], {
+                    delay: projectEntries.length * 0.08,
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mt-6 flex w-full justify-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                            asChild: true,
+                            size: "lg",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "/projects",
+                                children: t("projects.viewAll", {
+                                    defaultValue: "See all projects"
+                                })
+                            }, void 0, false, {
+                                fileName: "[project]/components/sections/projects.tsx",
+                                lineNumber: 63,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/components/sections/projects.tsx",
+                            lineNumber: 62,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/components/sections/projects.tsx",
+                        lineNumber: 61,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "[project]/components/sections/projects.tsx",
+                    lineNumber: 60,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/sections/projects.tsx",
-            lineNumber: 45,
+            lineNumber: 46,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 44,
+        lineNumber: 45,
         columnNumber: 5
     }, this);
 }
@@ -1060,7 +1275,7 @@ function ProjectCard({ project, copy, stageLabels }) {
                                     children: copy.location
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 96,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1068,13 +1283,13 @@ function ProjectCard({ project, copy, stageLabels }) {
                                     children: copy.title
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 90,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/sections/projects.tsx",
-                            lineNumber: 86,
+                            lineNumber: 95,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(StageLegend, {
@@ -1082,13 +1297,13 @@ function ProjectCard({ project, copy, stageLabels }) {
                             hasProcess: processMedia.length > 0
                         }, void 0, false, {
                             fileName: "[project]/components/sections/projects.tsx",
-                            lineNumber: 94,
+                            lineNumber: 103,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/sections/projects.tsx",
-                    lineNumber: 85,
+                    lineNumber: 94,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1103,7 +1318,7 @@ function ProjectCard({ project, copy, stageLabels }) {
                                     language: language
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 108,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectImage, {
@@ -1112,13 +1327,13 @@ function ProjectCard({ project, copy, stageLabels }) {
                                     language: language
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 104,
+                                    lineNumber: 113,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/sections/projects.tsx",
-                            lineNumber: 98,
+                            lineNumber: 107,
                             columnNumber: 11
                         }, this),
                         processMedia.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1129,7 +1344,7 @@ function ProjectCard({ project, copy, stageLabels }) {
                                     children: stageLabels.process
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 113,
+                                    lineNumber: 122,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1139,35 +1354,35 @@ function ProjectCard({ project, copy, stageLabels }) {
                                             language: language
                                         }, media.src, false, {
                                             fileName: "[project]/components/sections/projects.tsx",
-                                            lineNumber: 118,
+                                            lineNumber: 127,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 116,
+                                    lineNumber: 125,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/sections/projects.tsx",
-                            lineNumber: 112,
+                            lineNumber: 121,
                             columnNumber: 13
                         }, this) : null
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/sections/projects.tsx",
-                    lineNumber: 97,
+                    lineNumber: 106,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/sections/projects.tsx",
-            lineNumber: 84,
+            lineNumber: 93,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 83,
+        lineNumber: 92,
         columnNumber: 5
     }, this);
 }
@@ -1184,7 +1399,7 @@ function StageLegend({ stageLabels, hasProcess }) {
                 className: "h-px w-24 bg-[#e6dfd2]"
             }, void 0, false, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 148,
+                lineNumber: 157,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1195,7 +1410,7 @@ function StageLegend({ stageLabels, hasProcess }) {
                         color: legendSwatches.before
                     }, void 0, false, {
                         fileName: "[project]/components/sections/projects.tsx",
-                        lineNumber: 150,
+                        lineNumber: 159,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(LegendItem, {
@@ -1203,7 +1418,7 @@ function StageLegend({ stageLabels, hasProcess }) {
                         color: legendSwatches.after
                     }, void 0, false, {
                         fileName: "[project]/components/sections/projects.tsx",
-                        lineNumber: 151,
+                        lineNumber: 160,
                         columnNumber: 9
                     }, this),
                     hasProcess ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(LegendItem, {
@@ -1211,19 +1426,19 @@ function StageLegend({ stageLabels, hasProcess }) {
                         color: legendSwatches.process
                     }, void 0, false, {
                         fileName: "[project]/components/sections/projects.tsx",
-                        lineNumber: 153,
+                        lineNumber: 162,
                         columnNumber: 11
                     }, this) : null
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 149,
+                lineNumber: 158,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 147,
+        lineNumber: 156,
         columnNumber: 5
     }, this);
 }
@@ -1239,14 +1454,14 @@ function LegendItem({ label, color }) {
                 "aria-hidden": true
             }, void 0, false, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 163,
+                lineNumber: 172,
                 columnNumber: 7
             }, this),
             label
         ]
     }, void 0, true, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 162,
+        lineNumber: 171,
         columnNumber: 5
     }, this);
 }
@@ -1263,17 +1478,17 @@ function ProjectImage({ media, label, language }) {
                 className: "h-full w-full object-cover"
             }, void 0, false, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 185,
+                lineNumber: 194,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/sections/projects.tsx",
-            lineNumber: 184,
+            lineNumber: 193,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 183,
+        lineNumber: 192,
         columnNumber: 5
     }, this);
 }
@@ -1291,17 +1506,17 @@ function ProjectProcessImage({ media, language }) {
                 loading: "lazy"
             }, void 0, false, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 207,
+                lineNumber: 216,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/sections/projects.tsx",
-            lineNumber: 206,
+            lineNumber: 215,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 205,
+        lineNumber: 214,
         columnNumber: 5
     }, this);
 }

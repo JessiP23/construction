@@ -8,8 +8,6 @@ import { projects } from "@/data/projects";
 import { useTranslation } from "react-i18next";
 import { useMemo } from "react";
 
-// metadata removed because this file is a client component (uses useTranslation)
-
 type ProjectCopy = {
   title: string;
   location: string;
@@ -25,8 +23,6 @@ export default function ProjectsPage() {
       <section className="py-20">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <SectionHeading
-            eyebrow={t("projects.title")}
-            title={t("projects.subtitle")}
             description={null}
           />
 
@@ -38,20 +34,13 @@ export default function ProjectsPage() {
 
               return (
                 <Card key={project.id} className="p-0">
-                  <div className="p-6">
-                    <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#4c4f5a]">
-                      {copy?.location ?? project.coverAlt.en}
-                    </p>
-                    <h3 className="mt-2 text-lg font-semibold text-[#0b1f3b]">{copy?.title ?? project.id}</h3>
-                  </div>
-
                   <div className="grid grid-cols-2 gap-1">
-                    <figure className="relative aspect-[4/3] overflow-hidden">
+                    <figure className="relative h-44 sm:h-56 md:h-64 overflow-hidden">
                       {before ? (
                         <Image src={before.src} alt={before.alt.en} fill className="object-cover" />
                       ) : null}
                     </figure>
-                    <figure className="relative aspect-[4/3] overflow-hidden">
+                    <figure className="relative h-44 sm:h-56 md:h-64 overflow-hidden">
                       {after ? (
                         <Image src={after.src} alt={after.alt.en} fill className="object-cover" />
                       ) : null}

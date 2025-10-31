@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 interface SectionHeadingProps {
   eyebrow?: ReactNode;
-  title: ReactNode;
+  title?: ReactNode;
   description?: ReactNode;
   align?: "left" | "center" | "right";
 }

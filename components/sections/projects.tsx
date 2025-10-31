@@ -5,6 +5,7 @@ import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { projects, ProjectStageKey, Project, ProjectMedia } from "@/data/projects";
 import { SectionHeading } from "@/components/section-heading";
+import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 import { useLanguage } from "@/components/language-provider";
 
@@ -55,6 +56,14 @@ export function ProjectsSection() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={projectEntries.length * 0.08}>
+          <div className="mt-6 flex w-full justify-center">
+            <Button asChild size="lg">
+              <a href="/projects">{t("projects.viewAll", { defaultValue: "See all projects" })}</a>
+            </Button>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
