@@ -68,7 +68,7 @@ export function HeroSection() {
             <div className="grid gap-6 rounded-3xl border border-white/30 bg-white/20 p-8 text-sm text-white backdrop-blur-xl">
               <div className="flex items-center justify-between">
                 <span className="text-sm tracking-[0.16em] text-white/70">{t("navigation.process")}</span>
-                <span className="text-3xl font-semibold">24</span>
+                <span className="text-3xl font-semibold">10</span>
               </div>
               <p className="text-white/80">
                 {language === "en"
@@ -81,7 +81,7 @@ export function HeroSection() {
                   {language === "en" ? "Commissions completed" : "Proyectos entregados"}
                 </div>
                 <div>
-                  <span className="block text-2xl font-semibold text-white">2</span>
+                  <span className="block text-2xl font-semibold text-white">8</span>
                   {language === "en" ? "Cities served" : "Ciudades atendidas"}
                 </div>
               </div>

@@ -49,7 +49,7 @@
     "description": "From structural reimagination to bespoke finishes, we orchestrate every layer of the build.",
     "support": "Choose a discipline to learn our methodology, deliverables, and reference projects.",
     "cardIndicator": "Discipline",
-    "ctaLabel": "View offering",
+    "ctaLabel": "Details",
     "backLabel": "Back to specialties",
     "deliverablesTitle": "Distinctive deliverables",
     "processTitle": "How we run the work",
@@ -249,13 +249,13 @@
   },
   "projects": {
     "title": "Featured Transformations",
-    "subtitle": "Four architectural narratives that honor heritage while designing for the future.",
+    "subtitle": "Some of our recent work",
     "stageLabels": { "before": "Before", "process": "Process", "after": "After" },
     "modal": { "close": "Close project" },
     "items": {
       "ridgeResidence": {
         "title": "Ridge Residence Renewal",
-        "location": "Aspen, Colorado",
+        "location": "New York, New York",
         "description": "A mountainside home stripped back to its bones and reimagined as a warm alpine retreat.",
         "story": {
           "before": "Fragmented additions and outdated finishes muted the mountain views and natural light.",
@@ -267,7 +267,7 @@
       },
       "cortezLoft": {
         "title": "Cortez Creative Loft",
-        "location": "Austin, Texas",
+        "location": "Brooklyn, New York",
         "description": "Industrial shell transformed into a creative headquarters with adaptable zones for work and hospitality.",
         "story": {
           "before": "Raw concrete and exposed utilities made the volume feel cold and unfinished.",
@@ -279,7 +279,7 @@
       },
       "harborHouse": {
         "title": "Harbor House Revival",
-        "location": "Seattle, Washington",
+        "location": "Elizabeth, New Jersey",
         "description": "Historical waterfront property renewed with marine-grade materials and a serene palette.",
         "story": {
           "before": "Salt exposure compromised the facade and moisture crept into interior hardwoods.",
@@ -291,7 +291,7 @@
       },
       "solsticeSpa": {
         "title": "Solstice Garden Spa",
-        "location": "Santa Barbara, California",
+        "location": "Staten Island, New York",
         "description": "An indoor-outdoor wellness pavilion celebrating light, water, and handcrafted textures.",
         "story": {
           "before": "Underutilized courtyard lacked intimacy and year-round usability.",
@@ -314,7 +314,7 @@
   },
   "contact": {
     "title": "Let's shape your next project",
-    "subtitle": "Share your vision, attach sketches or inspiration, and our studio concierge will respond within 24 hours.",
+    "subtitle": "Share your vision or inspiration, and our studio concierge will respond within 24 hours.",
     "form": {
       "name": "Name",
       "email": "Email",

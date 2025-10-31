@@ -80,7 +80,7 @@
     "description": "De la reimaginación estructural a los acabados hechos a medida, orquestamos cada capa de la obra.",
     "support": "Elige una disciplina para conocer nuestra metodología, entregables y proyectos de referencia.",
     "cardIndicator": "Disciplina",
-    "ctaLabel": "Ver oferta",
+    "ctaLabel": "Detalles",
     "backLabel": "Volver a especialidades",
     "deliverablesTitle": "Entregables distintivos",
     "processTitle": "Cómo dirigimos el trabajo",
@@ -295,7 +295,7 @@
   },
   "projects": {
     "title": "Transformaciones Destacadas",
-    "subtitle": "Cuatro narrativas arquitectónicas que honran la herencia mientras diseñan el mañana.",
+    "subtitle": "Algunos de nuestros trabajos recientes",
     "stageLabels": {
       "before": "Antes",
       "process": "Proceso",
@@ -307,7 +307,7 @@
     "items": {
       "ridgeResidence": {
         "title": "Renovación Residencial Ridge",
-        "location": "Aspen, Colorado",
+        "location": "New York, New York",
         "description": "Una casa de montaña despojada hasta su estructura y reimaginada como un refugio cálido.",
         "story": {
           "before": "Ampliaciones fragmentadas y acabados desactualizados apagaban las vistas y la luz natural.",
@@ -317,7 +317,7 @@
       },
       "cortezLoft": {
         "title": "Loft Creativo Cortez",
-        "location": "Austin, Texas",
+        "location": "Brooklyn, Nueva York",
         "description": "Una nave industrial transformada en sede creativa con zonas adaptables para trabajo y hospitalidad.",
         "story": {
           "before": "Concreto expuesto y servicios a la vista hacían que el volumen se sintiera frío e inconcluso.",
@@ -327,7 +327,7 @@
       },
       "harborHouse": {
         "title": "Renacimiento Casa Harbor",
-        "location": "Seattle, Washington",
+        "location": "Elizabeth, Nueva Jersey",
         "description": "Propiedad histórica frente al mar renovada con materiales marinos y una paleta serena.",
         "story": {
           "before": "La exposición a la sal comprometió la fachada y la humedad afectó los interiores de madera.",
@@ -337,7 +337,7 @@
       },
       "solsticeSpa": {
         "title": "Spa Jardín Solstice",
-        "location": "Santa Bárbara, California",
+        "location": "Staten Island, Nueva York",
         "description": "Un pabellón de bienestar interior-exterior que celebra la luz, el agua y las texturas artesanales.",
         "story": {
           "before": "El patio desaprovechado carecía de intimidad y uso durante todo el año.",
@@ -370,7 +370,7 @@
   },
   "contact": {
     "title": "Diseñemos tu próximo proyecto",
-    "subtitle": "Comparte tu visión, adjunta bocetos o inspiración y nuestro estudio responderá en menos de 24 horas.",
+    "subtitle": "Comparte tu visión o inspiración y nuestro estudio responderá en menos de 24 horas.",
     "form": {
       "name": "Nombre",
       "email": "Correo electrónico",
