@@ -104,7 +104,7 @@ function ProjectCard({
         </div>
 
         <div className="flex-1 space-y-6">
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2">
             <ProjectImage projectId={project.id} media={beforeMedia} label={stageLabels.before} />
             <ProjectImage projectId={project.id} media={afterMedia} label={stageLabels.after} />
           </div>
@@ -114,7 +114,7 @@ function ProjectCard({
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#4c4f5a]">
                 {stageLabels.process}
               </p>
-              <div className="mt-3 grid gap-3 sm:grid-cols-3">
+              <div className="mt-3 grid gap-3 md:grid-cols-3">
                 {processMedia.map((media) => (
                   <ProjectProcessImage key={media.src} projectId={project.id} media={media} />
                 ))}

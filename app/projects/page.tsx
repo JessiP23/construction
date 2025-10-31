@@ -35,7 +35,7 @@ export default function ProjectsPage() {
 
               return (
                 <Card key={project.id} className="p-0 group hover:shadow-lg transition-shadow duration-300">
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     <figure className="relative overflow-hidden h-64 sm:h-80 md:h-96">
                       {before ? (
                         <Image
