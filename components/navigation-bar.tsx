@@ -7,10 +7,10 @@ import { LanguageToggle } from "@/components/language-toggle";
 import { Button } from "@/components/ui/button";
 
 const SECTIONS = [
-  { href: "#work", key: "navigation.work" },
-  { href: "#process", key: "navigation.process" },
-  { href: "#values", key: "navigation.values" },
-  { href: "#contact", key: "navigation.contact" },
+  { href: "/#work", key: "navigation.work" },
+  { href: "/#process", key: "navigation.process" },
+  { href: "/#values", key: "navigation.values" },
+  { href: "/#contact", key: "navigation.contact" },
 ];
 
 export function NavigationBar() {
@@ -30,20 +30,20 @@ export function NavigationBar() {
         </Link>
         <nav className="hidden items-center gap-8 text-sm font-medium tracking-[0.08em] md:flex">
           {SECTIONS.map((section) => (
-            <a
+            <Link
               key={section.href}
               href={section.href}
               className="text-slate-600 transition hover:text-slate-900"
               data-cursor="link"
             >
               {t(section.key)}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="flex items-center gap-3">
           <LanguageToggle />
           <Button asChild size="sm" variant="outline" className="hidden md:inline-flex">
-            <a href="#contact">{t("hero.actions.contact")}</a>
+            <Link href="/#contact">{t("hero.actions.contact")}</Link>
           </Button>
         </div>
       </div>
