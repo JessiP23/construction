@@ -12,10 +12,18 @@ export interface BackgroundSlideshowProps {
 
 export default function BackgroundSlideshow({
   images,
-  delayMs = 2000,
+  delayMs = 5000,
   transitionMs = 800,
 }: BackgroundSlideshowProps) {
   const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (!images || images.length === 0) return;
+    images.forEach((src) => {
+      const img = document.createElement("img");
+      img.src = src;
+    });
+  }, [images]);
 
   useEffect(() => {
     if (!images || images.length <= 1) return;
@@ -25,7 +33,7 @@ export default function BackgroundSlideshow({
     return () => clearInterval(id);
   }, [images, delayMs, transitionMs]);
 
-  const current = images[index] ?? images[0];
+  const current = images[index];
 
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -37,6 +45,10 @@ export default function BackgroundSlideshow({
           exit={{ opacity: 0 }}
           transition={{ duration: transitionMs / 1000, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0"
+          style={{
+            transform: "translateZ(0)",
+            backfaceVisibility: "hidden",
+          }}
         >
           <Image
             src={current}
@@ -44,7 +56,7 @@ export default function BackgroundSlideshow({
             fill
             priority
             sizes="100vw"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover will-change-[opacity]"
           />
         </motion.div>
       </AnimatePresence>

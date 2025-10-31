@@ -22,7 +22,7 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-10">
         <BackgroundSlideshow
           images={["/background.png", "/background1.png", "/background2.png"]}
-          delayMs={2000}
+          delayMs={5000}
           transitionMs={800}
         />
         <div className="absolute inset-0 bg-[rgba(18,24,36,0.28)]" aria-hidden />
