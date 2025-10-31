@@ -11,3 +11,67 @@
 [01:08:37.427] Server  LOG      ✓ Compiled in 26ms
 [01:14:09.948] Server  LOG      ✓ Compiled in 33ms
 [01:17:16.161] Server  LOG      ✓ Compiled in 28ms
+[01:18:53.653] Server  LOG      ✓ Compiled in 41ms
+[01:19:27.330] Server  LOG      ✓ Compiled in 26ms
+[01:20:35.081] Server  LOG      ✓ Compiled in 28ms
+[01:20:35.185] Browser ERROR   ./app/projects/page.tsx:52:15
+Parsing ecmascript source code failed
+  50 |               );
+  51 |               );
+> 52 |             })}
+     |               ^
+  53 |           </div>
+  54 |         </div>
+  55 |       </section>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/projects/page.tsx [Client Component Browser]
+    ./app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/projects/page.tsx [Client Component SSR]
+    ./app/projects/page.tsx [Server Component]
+[01:21:05.914] Browser ERROR   ./app/projects/page.tsx:52:15
+Parsing ecmascript source code failed
+  50 |               );
+  51 |               );
+> 52 |             })}
+     |               ^
+  53 |           </div>
+  54 |         </div>
+  55 |       </section>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/projects/page.tsx [Client Component Browser]
+    ./app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/projects/page.tsx [Client Component SSR]
+    ./app/projects/page.tsx [Server Component]
+[01:21:06.469] Browser ERROR   ./app/projects/page.tsx:52:15
+Parsing ecmascript source code failed
+  50 |               );
+  51 |               );
+> 52 |             })}
+     |               ^
+  53 |           </div>
+  54 |         </div>
+  55 |       </section>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/projects/page.tsx [Client Component Browser]
+    ./app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/projects/page.tsx [Client Component SSR]
+    ./app/projects/page.tsx [Server Component]
+[01:23:21.429] Server  LOG      ✓ Compiled in 15ms
