@@ -7,6 +7,7 @@ import { useBilingual } from "@/hooks/use-bilingual";
 import { useLanguage } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
+import BackgroundSlideshow from "@/components/background-slideshow";
 
 const HERO_VIDEO =
   "https://res.cloudinary.com/demo/video/upload/f_auto,q_auto/v1695222458/construction/site_panorama.mp4";
@@ -19,16 +20,12 @@ export function HeroSection() {
   return (
     <section id="top" className="relative flex min-h-[100vh] items-center overflow-hidden pt-28">
       <div className="absolute inset-0 -z-10">
-        <motion.video
-          key="hero-video"
-          className="h-full w-full object-cover"
-          src={HERO_VIDEO}
-          autoPlay
-          playsInline
-          muted
-          loop
+        <BackgroundSlideshow
+          images={["/background.png", "/background1.png", "/background2.png"]}
+          delayMs={2000}
+          transitionMs={800}
         />
-        <div className="absolute inset-0 bg-[rgba(18,24,36,0.6)]" aria-hidden />
+        <div className="absolute inset-0 bg-[rgba(18,24,36,0.28)]" aria-hidden />
       </div>
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-14 px-6 pb-24 md:px-10">
         <Reveal delay={0.05}>

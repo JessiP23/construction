@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[38537,["/_next/static/chunks/cd8cb9f0bcb8b178.js","/_next/static/chunks/6da99119ee96fa20.js","/_next/static/chunks/93c36b426dca8672.js","/_next/static/chunks/a2811dddef3a2112.js","/_next/static/chunks/f64992fb9bcc2fae.js"],"SpecialtyDetail"]
+3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"uTiyhzGZJE_cvs7eflC3b","rsc":["$","$1","c",{"children":[["$","$L2",null,{"specialtyId":"outdoorArchitecture"}],[["$","script","script-0",{"src":"/_next/static/chunks/a2811dddef3a2112.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/f64992fb9bcc2fae.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
