@@ -105,16 +105,8 @@ function ProjectCard({
 
         <div className="flex-1 space-y-6">
           <div className="grid gap-4 sm:grid-cols-2">
-            <ProjectImage
-              media={beforeMedia}
-              label={stageLabels.before}
-              language={language}
-            />
-            <ProjectImage
-              media={afterMedia}
-              label={stageLabels.after}
-              language={language}
-            />
+            <ProjectImage projectId={project.id} media={beforeMedia} label={stageLabels.before} />
+            <ProjectImage projectId={project.id} media={afterMedia} label={stageLabels.after} />
           </div>
 
           {processMedia.length > 0 ? (
@@ -124,11 +116,7 @@ function ProjectCard({
               </p>
               <div className="mt-3 grid gap-3 sm:grid-cols-3">
                 {processMedia.map((media) => (
-                  <ProjectProcessImage
-                    key={media.src}
-                    media={media}
-                    language={language}
-                  />
+                  <ProjectProcessImage key={media.src} projectId={project.id} media={media} />
                 ))}
               </div>
             </div>
@@ -179,48 +167,27 @@ function LegendItem({ label, color }: { label: string; color: string }) {
   );
 }
 
-function ProjectImage({
-  media,
-  label,
-  language,
-}: {
-  media: ProjectMedia;
-  label: string;
-  language: string;
-}) {
+function ProjectImage({ projectId, media, label }: { projectId: string; media: ProjectMedia; label: string }) {
+  const { t } = useTranslation();
+  const alt = t(`projects.items.${projectId}.media.${media.key}.alt`, { defaultValue: "" });
+
   return (
     <figure className="group relative overflow-hidden rounded-3xl border border-[#dad5ca] bg-[#101820]">
       <div className="relative aspect-[4/3]">
-        <Image
-          src={media.src}
-          alt={media.alt[language as keyof typeof media.alt]}
-          fill
-          sizes="(min-width: 1280px) 480px, (min-width: 768px) 50vw, 90vw"
-          className="h-full w-full object-cover"
-        />
+        <Image src={media.src} alt={alt} fill sizes="(min-width: 1280px) 480px, (min-width: 768px) 50vw, 90vw" className="h-full w-full object-cover" />
       </div>
     </figure>
   );
 }
 
-function ProjectProcessImage({
-  media,
-  language,
-}: {
-  media: ProjectMedia;
-  language: string;
-}) {
+function ProjectProcessImage({ projectId, media }: { projectId: string; media: ProjectMedia }) {
+  const { t } = useTranslation();
+  const alt = t(`projects.items.${projectId}.media.${media.key}.alt`, { defaultValue: "" });
+
   return (
     <figure className="relative overflow-hidden rounded-2xl border border-[#dad5ca]">
       <div className="relative aspect-square">
-        <Image
-          src={media.src}
-          alt={media.alt[language as keyof typeof media.alt]}
-          fill
-          sizes="(min-width: 768px) 20vw, 45vw"
-          className="h-full w-full object-cover"
-          loading="lazy"
-        />
+        <Image src={media.src} alt={alt} fill sizes="(min-width: 768px) 20vw, 45vw" className="h-full w-full object-cover" loading="lazy" />
       </div>
     </figure>
   );

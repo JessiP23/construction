@@ -2217,12 +2217,6 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:h-56 {
-      height: calc(var(--spacing) * 56);
-    }
-  }
-
-  @media (min-width: 40rem) {
     .sm\:h-80 {
       height: calc(var(--spacing) * 80);
     }
@@ -2291,18 +2285,6 @@
   @media (min-width: 48rem) {
     .md\:inline-flex {
       display: inline-flex;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:h-64 {
-      height: calc(var(--spacing) * 64);
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:h-72 {
-      height: calc(var(--spacing) * 72);
     }
   }
 
@@ -2427,13 +2409,6 @@
     .md\:text-7xl {
       font-size: var(--text-7xl);
       line-height: var(--tw-leading, var(--text-7xl--line-height));
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:text-base {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
 

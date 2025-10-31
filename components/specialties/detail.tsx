@@ -209,6 +209,7 @@ function RelatedProjectCard({
   stageLabels: StageLabels;
   language: string;
 }) {
+  const { t } = useTranslation();
   const beforeMedia = project.media.find((media) => media.key === "before");
   const afterMedia = project.media.find((media) => media.key === "after");
 
@@ -230,7 +231,7 @@ function RelatedProjectCard({
             <div className="relative aspect-[4/3]">
               <Image
                 src={media.src}
-                alt={media.alt[language as keyof typeof media.alt]}
+                alt={t(`projects.items.${project.id}.media.${media.key}.alt`, { defaultValue: "" })}
                 fill
                 sizes="(min-width: 768px) 45vw, 90vw"
                 className="h-full w-full object-cover"

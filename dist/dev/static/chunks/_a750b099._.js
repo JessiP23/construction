@@ -828,10 +828,6 @@ __turbopack_context__.s([
 const rawProjects = [
     {
         id: "ridgeResidence",
-        coverAlt: {
-            en: "Completed alpine living room with expansive glazing and timber beams",
-            es: "Sala alpina terminada con ventanales y vigas de madera"
-        },
         palette: {
             light: "#f6f1eb",
             dark: "#151a24"
@@ -840,29 +836,17 @@ const rawProjects = [
             {
                 key: "before",
                 type: "image",
-                src: "/stairs1.png",
-                alt: {
-                    en: "Before renovation: compartmentalized mountain home under construction",
-                    es: "Antes de la renovación: vivienda de montaña compartimentada en obra"
-                }
+                src: "/stairs1.png"
             },
             {
                 key: "after",
                 type: "image",
-                src: "/stairs.png",
-                alt: {
-                    en: "After: open-plan alpine living room with panoramic glazing",
-                    es: "Después: sala alpina de planta abierta con ventanales panorámicos"
-                }
+                src: "/stairs.png"
             }
         ]
     },
     {
         id: "cortezLoft",
-        coverAlt: {
-            en: "Creative loft with warm microcement floors and collaborative zones",
-            es: "Loft creativo con pisos de microcemento cálidos y zonas colaborativas"
-        },
         palette: {
             light: "#f4ede6",
             dark: "#171819"
@@ -871,30 +855,18 @@ const rawProjects = [
             {
                 key: "after",
                 type: "image",
-                src: '/door.png',
-                alt: {
-                    en: "Before: raw industrial loft with exposed concrete",
-                    es: "Antes: loft industrial crudo con concreto expuesto"
-                }
+                src: "/door.png"
             },
             {
                 key: "before",
                 type: "image",
-                src: "/door1.png",
-                alt: {
-                    en: "After: luminous creative loft with layered work lounges",
-                    es: "Después: loft creativo luminoso con zonas de trabajo estratificadas"
-                }
+                src: "/door1.png"
             }
         ]
     },
     {
         id: "harborHouse",
         cover: "/renovation.png",
-        coverAlt: {
-            en: "Waterfront residence with soft neutral interiors overlooking the harbor",
-            es: "Residencia frente al mar con interiores neutros y vistas a la bahía"
-        },
         palette: {
             light: "#eef4f6",
             dark: "#101827"
@@ -903,30 +875,18 @@ const rawProjects = [
             {
                 key: "after",
                 type: "image",
-                src: "/renovation.png",
-                alt: {
-                    en: "Before: weathered waterfront facade with peeling paint",
-                    es: "Antes: fachada frente al mar desgastada con pintura descascarada"
-                }
+                src: "/renovation.png"
             },
             {
                 key: "before",
                 type: "image",
-                src: "/renovation1.png",
-                alt: {
-                    en: "After: living room with marine glazing and serene palette",
-                    es: "Después: sala con cristalería marina y paleta serena"
-                }
+                src: "/renovation1.png"
             }
         ]
     },
     {
         id: "solsticeSpa",
         cover: "/bathroom.png",
-        coverAlt: {
-            en: "Indoor-outdoor spa pavilion surrounded by greenery",
-            es: "Pabellón de spa interior-exterior rodeado de vegetación"
-        },
         palette: {
             light: "#f1f4ed",
             dark: "#101b15"
@@ -935,48 +895,28 @@ const rawProjects = [
             {
                 key: "after",
                 type: "image",
-                src: '/bathroom.png',
-                alt: {
-                    en: "Before: underutilized courtyard with sparse landscaping",
-                    es: "Antes: patio subutilizado con paisajismo escaso"
-                }
+                src: "/bathroom.png"
             },
             {
                 key: "process",
                 type: "image",
-                src: '/bathroom1.png',
-                alt: {
-                    en: "Before: underutilized courtyard with sparse landscaping",
-                    es: "Antes: patio subutilizado con paisajismo escaso"
-                }
+                src: "/bathroom1.png"
             },
             {
                 key: "process",
                 type: "image",
-                src: '/bathroom2.png',
-                alt: {
-                    en: "Process: concrete forming and pool waterproofing",
-                    es: "Proceso: encofrado de concreto y impermeabilización de piscina"
-                }
+                src: "/bathroom2.png"
             },
             {
                 key: "before",
                 type: "image",
-                src: '/bathroom3.png',
-                alt: {
-                    en: "After: tranquil hydrotherapy pavilion with lush planting",
-                    es: "Después: pabellón de hidroterapia sereno con vegetación abundante"
-                }
+                src: "/bathroom3.png"
             }
         ]
     }
 ];
 rawProjects.push({
     id: "cliffHouse",
-    coverAlt: {
-        en: "Cliffside residence with panoramic decks",
-        es: "Residencia en acantilado con terrazas panorámicas"
-    },
     palette: {
         light: "#f6f4ef",
         dark: "#0f2430"
@@ -985,28 +925,16 @@ rawProjects.push({
         {
             key: "before",
             type: "image",
-            src: "/build.png",
-            alt: {
-                en: "Before: raw cliff access and retaining walls",
-                es: "Antes: acceso sin terminar y muros de contención"
-            }
+            src: "/build.png"
         },
         {
             key: "after",
             type: "image",
-            src: "/build1.png",
-            alt: {
-                en: "After: terraces and glazing embracing the view",
-                es: "Después: terrazas y acristalamiento que abrazan la vista"
-            }
+            src: "/build1.png"
         }
     ]
 }, {
     id: "studioVista",
-    coverAlt: {
-        en: "Creative studio with layered volumes",
-        es: "Estudio creativo con volúmenes estratificados"
-    },
     palette: {
         light: "#f5f2ec",
         dark: "#151018"
@@ -1015,28 +943,16 @@ rawProjects.push({
         {
             key: "before",
             type: "image",
-            src: "/home.png",
-            alt: {
-                en: "Before: closed loft with limited light",
-                es: "Antes: loft cerrado con luz limitada"
-            }
+            src: "/home.png"
         },
         {
             key: "after",
             type: "image",
-            src: "/home1.png",
-            alt: {
-                en: "After: open studio with warm finishes",
-                es: "Después: estudio abierto con acabados cálidos"
-            }
+            src: "/home1.png"
         }
     ]
 }, {
     id: "orchardCottage",
-    coverAlt: {
-        en: "Cottage set among orchard plantings",
-        es: "Cabaña entre plantaciones de huerto"
-    },
     palette: {
         light: "#eef6ee",
         dark: "#102015"
@@ -1045,28 +961,16 @@ rawProjects.push({
         {
             key: "before",
             type: "image",
-            src: "/new.png",
-            alt: {
-                en: "Before: small outdated bath",
-                es: "Antes: baño pequeño y anticuado"
-            }
+            src: "/new.png"
         },
         {
             key: "after",
             type: "image",
-            src: "/new1.png",
-            alt: {
-                en: "After: bright spa-like bathroom",
-                es: "Después: baño luminoso estilo spa"
-            }
+            src: "/new1.png"
         }
     ]
 }, {
     id: "urbanRow",
-    coverAlt: {
-        en: "Rowhouse retrofit with modern joinery",
-        es: "Reforma de vivienda adosada con carpintería moderna"
-    },
     palette: {
         light: "#f3efe8",
         dark: "#111318"
@@ -1075,28 +979,16 @@ rawProjects.push({
         {
             key: "before",
             type: "image",
-            src: "/paint.png",
-            alt: {
-                en: "Before: worn finishes and compartmentalized plan",
-                es: "Antes: acabados desgastados y planta compartimentada"
-            }
+            src: "/paint.png"
         },
         {
             key: "after",
             type: "image",
-            src: "/paint1.png",
-            alt: {
-                en: "After: unified plan and refined palette",
-                es: "Después: planta unificada y paleta refinada"
-            }
+            src: "/paint1.png"
         }
     ]
 }, {
     id: "sunsetRetreat",
-    coverAlt: {
-        en: "Sunset-facing pavilion with deep overhangs",
-        es: "Pabellón con vista al atardecer y aleros profundos"
-    },
     palette: {
         light: "#fbf6f0",
         dark: "#241814"
@@ -1105,28 +997,16 @@ rawProjects.push({
         {
             key: "before",
             type: "image",
-            src: "/remod.png",
-            alt: {
-                en: "Before: segmented circulation and stairs",
-                es: "Antes: circulación segmentada y escaleras"
-            }
+            src: "/remod.png"
         },
         {
             key: "after",
             type: "image",
-            src: "/remod1.png",
-            alt: {
-                en: "After: repaired stairs and connected volumes",
-                es: "Después: escaleras reparadas y volúmenes conectados"
-            }
+            src: "/remod1.png"
         }
     ]
 }, {
     id: "harborLoft",
-    coverAlt: {
-        en: "Adaptive reuse loft near the harbor",
-        es: "Loft de reutilización adaptativa cerca de la bahía"
-    },
     palette: {
         light: "#eef3f6",
         dark: "#08121a"
@@ -1135,20 +1015,12 @@ rawProjects.push({
         {
             key: "before",
             type: "image",
-            src: "/wall.png",
-            alt: {
-                en: "Before: closed facade and limited openings",
-                es: "Antes: fachada cerrada y aberturas limitadas"
-            }
+            src: "/wall.png"
         },
         {
             key: "after",
             type: "image",
-            src: "/wall1.png",
-            alt: {
-                en: "After: new openings and coastal finishes",
-                es: "Después: nuevas aberturas y acabados costeros"
-            }
+            src: "/wall1.png"
         }
     ]
 });
@@ -1242,7 +1114,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$reveal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/reveal.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$language$2d$provider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/language-provider.tsx [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature(), _s2 = __turbopack_context__.k.signature(), _s3 = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
@@ -1433,21 +1305,21 @@ function ProjectCard({ project, copy, stageLabels }) {
                             className: "grid gap-4 sm:grid-cols-2",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectImage, {
+                                    projectId: project.id,
                                     media: beforeMedia,
-                                    label: stageLabels.before,
-                                    language: language
+                                    label: stageLabels.before
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
                                     lineNumber: 108,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectImage, {
+                                    projectId: project.id,
                                     media: afterMedia,
-                                    label: stageLabels.after,
-                                    language: language
+                                    label: stageLabels.after
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 113,
+                                    lineNumber: 109,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -1464,28 +1336,28 @@ function ProjectCard({ project, copy, stageLabels }) {
                                     children: stageLabels.process
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 114,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "mt-3 grid gap-3 sm:grid-cols-3",
                                     children: processMedia.map((media)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectProcessImage, {
-                                            media: media,
-                                            language: language
+                                            projectId: project.id,
+                                            media: media
                                         }, media.src, false, {
                                             fileName: "[project]/components/sections/projects.tsx",
-                                            lineNumber: 127,
+                                            lineNumber: 119,
                                             columnNumber: 19
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/projects.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 117,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/sections/projects.tsx",
-                            lineNumber: 121,
+                            lineNumber: 113,
                             columnNumber: 13
                         }, this) : null
                     ]
@@ -1525,7 +1397,7 @@ function StageLegend({ stageLabels, hasProcess }) {
                 className: "h-px w-24 bg-[#e6dfd2]"
             }, void 0, false, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 157,
+                lineNumber: 145,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1536,7 +1408,7 @@ function StageLegend({ stageLabels, hasProcess }) {
                         color: legendSwatches.before
                     }, void 0, false, {
                         fileName: "[project]/components/sections/projects.tsx",
-                        lineNumber: 159,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LegendItem, {
@@ -1544,7 +1416,7 @@ function StageLegend({ stageLabels, hasProcess }) {
                         color: legendSwatches.after
                     }, void 0, false, {
                         fileName: "[project]/components/sections/projects.tsx",
-                        lineNumber: 160,
+                        lineNumber: 148,
                         columnNumber: 9
                     }, this),
                     hasProcess ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(LegendItem, {
@@ -1552,19 +1424,19 @@ function StageLegend({ stageLabels, hasProcess }) {
                         color: legendSwatches.process
                     }, void 0, false, {
                         fileName: "[project]/components/sections/projects.tsx",
-                        lineNumber: 162,
+                        lineNumber: 150,
                         columnNumber: 11
                     }, this) : null
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 158,
+                lineNumber: 146,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 156,
+        lineNumber: 144,
         columnNumber: 5
     }, this);
 }
@@ -1581,74 +1453,94 @@ function LegendItem({ label, color }) {
                 "aria-hidden": true
             }, void 0, false, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 172,
+                lineNumber: 160,
                 columnNumber: 7
             }, this),
             label
         ]
     }, void 0, true, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 171,
+        lineNumber: 159,
         columnNumber: 5
     }, this);
 }
 _c3 = LegendItem;
-function ProjectImage({ media, label, language }) {
+function ProjectImage({ projectId, media, label }) {
+    _s2();
+    const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
+    const alt = t(`projects.items.${projectId}.media.${media.key}.alt`, {
+        defaultValue: ""
+    });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("figure", {
         className: "group relative overflow-hidden rounded-3xl border border-[#dad5ca] bg-[#101820]",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "relative aspect-[4/3]",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 src: media.src,
-                alt: media.alt[language],
+                alt: alt,
                 fill: true,
                 sizes: "(min-width: 1280px) 480px, (min-width: 768px) 50vw, 90vw",
                 className: "h-full w-full object-cover"
             }, void 0, false, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 194,
+                lineNumber: 177,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/sections/projects.tsx",
-            lineNumber: 193,
+            lineNumber: 176,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 192,
+        lineNumber: 175,
         columnNumber: 5
     }, this);
 }
+_s2(ProjectImage, "zlIdU9EjM2llFt74AbE2KsUJXyM=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]
+    ];
+});
 _c4 = ProjectImage;
-function ProjectProcessImage({ media, language }) {
+function ProjectProcessImage({ projectId, media }) {
+    _s3();
+    const { t } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"])();
+    const alt = t(`projects.items.${projectId}.media.${media.key}.alt`, {
+        defaultValue: ""
+    });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("figure", {
         className: "relative overflow-hidden rounded-2xl border border-[#dad5ca]",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "relative aspect-square",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 src: media.src,
-                alt: media.alt[language],
+                alt: alt,
                 fill: true,
                 sizes: "(min-width: 768px) 20vw, 45vw",
                 className: "h-full w-full object-cover",
                 loading: "lazy"
             }, void 0, false, {
                 fileName: "[project]/components/sections/projects.tsx",
-                lineNumber: 216,
+                lineNumber: 190,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/sections/projects.tsx",
-            lineNumber: 215,
+            lineNumber: 189,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/sections/projects.tsx",
-        lineNumber: 214,
+        lineNumber: 188,
         columnNumber: 5
     }, this);
 }
+_s3(ProjectProcessImage, "zlIdU9EjM2llFt74AbE2KsUJXyM=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$i18next$2f$dist$2f$es$2f$useTranslation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTranslation"]
+    ];
+});
 _c5 = ProjectProcessImage;
 var _c, _c1, _c2, _c3, _c4, _c5;
 __turbopack_context__.k.register(_c, "ProjectsSection");

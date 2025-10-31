@@ -40,7 +40,7 @@ export default function ProjectsPage() {
                       {before ? (
                         <Image
                           src={before.src}
-                          alt={before.alt.en}
+                          alt={before.src}
                           fill
                           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                         />
@@ -50,7 +50,7 @@ export default function ProjectsPage() {
                       {after ? (
                         <Image
                           src={after.src}
-                          alt={after.alt.en}
+                          alt={after.src}
                           fill
                           className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                         />
