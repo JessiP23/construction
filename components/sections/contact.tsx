@@ -89,9 +89,6 @@ export function ContactSection() {
               <h3 className="font-display text-lg tracking-tight text-[var(--foreground)]">
                 {t("contact.whatsapp")}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed">
-                {t("contact.whatsappNumber")}
-              </p>
               <Button
                 asChild
                 variant="primary"

@@ -229,7 +229,7 @@
         "summary": "Nuestro taller acompaña al cliente desde los bocetos hasta la instalación para lograr almacenamiento integrado y mobiliario arquitectónico.",
         "seoDescription": "Titino Construction desarrolla carpintería y mobiliario a medida con planos detallados, fabricación artesanal y servicio continuo.",
         "metrics": [
-          { "label": "Alcance ideal", "value": "Cocinas, bibliotecas, suites de hospitalidad" },
+          { "label": "Alcance ideal", "value": "Cocinas" },
           { "label": "Duración típica", "value": "Programas de 12–24 semanas" },
           { "label": "Disciplinas clave", "value": "Diseño, fabricación, acabado" }
         ],
@@ -263,7 +263,7 @@
         "summary": "Construimos terrazas, albercas, cocinas y pabellones pensados para recibir durante todo el año.",
         "seoDescription": "Titino Construction diseña y construye arquitectura exterior con ingeniería estructural, cuerpos de agua y detalles hospitalarios.",
         "metrics": [
-          { "label": "Alcance ideal", "value": "Patios, azoteas y jardines residenciales" },
+          { "label": "Alcance ideal", "value": "Patios y jardines residenciales" },
           { "label": "Duración típica", "value": "Programas de 10–24 semanas" },
           { "label": "Disciplinas clave", "value": "Estructuras, cuerpos de agua, iluminación" }
         ],
@@ -307,7 +307,7 @@
     "items": {
       "ridgeResidence": {
         "title": "Renovación Residencial Ridge",
-        "location": "New York, New York",
+        "location": "Staten Island, Nueva York",
         "description": "Una casa de montaña despojada hasta su estructura y reimaginada como un refugio cálido.",
         "story": {
           "before": "Ampliaciones fragmentadas y acabados desactualizados apagaban las vistas y la luz natural.",
@@ -327,7 +327,7 @@
       },
       "harborHouse": {
         "title": "Renacimiento Casa Harbor",
-        "location": "Elizabeth, Nueva Jersey",
+        "location": "Staten Island, Nueva York",
         "description": "Propiedad histórica frente al mar renovada con materiales marinos y una paleta serena.",
         "story": {
           "before": "La exposición a la sal comprometió la fachada y la humedad afectó los interiores de madera.",
@@ -337,7 +337,7 @@
       },
       "solsticeSpa": {
         "title": "Spa Jardín Solstice",
-        "location": "Staten Island, Nueva York",
+        "location": "Brooklyn, Nueva York",
         "description": "Un pabellón de bienestar interior-exterior que celebra la luz, el agua y las texturas artesanales.",
         "story": {
           "before": "El patio desaprovechado carecía de intimidad y uso durante todo el año.",

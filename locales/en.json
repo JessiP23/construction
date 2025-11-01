@@ -183,7 +183,7 @@
         "summary": "Our wood studio partners with clients from concept sketches through installation to deliver integrated storage and architectural furniture.",
         "seoDescription": "Titino Construction crafts custom millwork and cabinetry with detailed shop drawings, artisan fabrication, and lifetime service.",
         "metrics": [
-          { "label": "Ideal scope", "value": "Kitchens, libraries, hospitality suites" },
+          { "label": "Ideal scope", "value": "Kitchens" },
           { "label": "Typical duration", "value": "12–24 week programs" },
           { "label": "Core disciplines", "value": "Design development, fabrication, finishing" }
         ],
@@ -217,7 +217,7 @@
         "summary": "We build terraces, pools, kitchens, and pavilions designed for year-round entertaining and restorative rituals.",
         "seoDescription": "Titino Construction designs and builds outdoor living architecture with structural engineering, water features, and hospitality-grade detailing.",
         "metrics": [
-          { "label": "Ideal scope", "value": "Courtyards, rooftops, and estate grounds" },
+          { "label": "Ideal scope", "value": "Courtyards and estate grounds" },
           { "label": "Typical duration", "value": "10–24 week programs" },
           { "label": "Core disciplines", "value": "Landscape structures, water features, lighting" }
         ],
@@ -255,7 +255,7 @@
     "items": {
       "ridgeResidence": {
         "title": "Ridge Residence Renewal",
-        "location": "New York, New York",
+        "location": "Staten Island, New York",
         "description": "A mountainside home stripped back to its bones and reimagined as a warm alpine retreat.",
         "story": {
           "before": "Fragmented additions and outdated finishes muted the mountain views and natural light.",
@@ -279,7 +279,7 @@
       },
       "harborHouse": {
         "title": "Harbor House Revival",
-        "location": "Elizabeth, New Jersey",
+        "location": "Staten Island, New York",
         "description": "Historical waterfront property renewed with marine-grade materials and a serene palette.",
         "story": {
           "before": "Salt exposure compromised the facade and moisture crept into interior hardwoods.",
@@ -291,7 +291,7 @@
       },
       "solsticeSpa": {
         "title": "Solstice Garden Spa",
-        "location": "Staten Island, New York",
+        "location": "Brooklyn, New York",
         "description": "An indoor-outdoor wellness pavilion celebrating light, water, and handcrafted textures.",
         "story": {
           "before": "Underutilized courtyard lacked intimacy and year-round usability.",

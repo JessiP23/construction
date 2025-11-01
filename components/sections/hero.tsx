@@ -21,7 +21,7 @@ export function HeroSection() {
     <section id="top" className="relative flex min-h-[100vh] items-center overflow-hidden pt-28">
       <div className="absolute inset-0 -z-10">
         <BackgroundSlideshow
-          images={["/background.png", "/background1.png", "/background2.png"]}
+          images={["/background1.png", "/background2.png", "/background.png"]}
           delayMs={5000}
           transitionMs={800}
         />
