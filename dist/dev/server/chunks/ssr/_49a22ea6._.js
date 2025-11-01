@@ -2612,13 +2612,13 @@ function FooterSection() {
                     className: "flex items-center gap-4 text-[rgba(36,48,71,0.68)]",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "https://www.instagram.com",
+                            href: "https://www.linkedin.com/in/ernesto-avila-0b50002b7/",
                             target: "_blank",
                             rel: "noopener noreferrer",
                             className: "group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]",
                             "data-cursor": "link",
-                            "aria-label": "Instagram",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(InstagramIcon, {
+                            "aria-label": "LinkedIn",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(LinkedInIcon, {
                                 className: "h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]"
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/footer.tsx",
@@ -2631,25 +2631,6 @@ function FooterSection() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "https://www.linkedin.com/in/ernesto-avila-0b50002b7/",
-                            target: "_blank",
-                            rel: "noopener noreferrer",
-                            className: "group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]",
-                            "data-cursor": "link",
-                            "aria-label": "LinkedIn",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(LinkedInIcon, {
-                                className: "h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]"
-                            }, void 0, false, {
-                                fileName: "[project]/components/sections/footer.tsx",
-                                lineNumber: 39,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/components/sections/footer.tsx",
-                            lineNumber: 31,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: "mailto:titinoavila7329@gmail.com",
                             className: "group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]",
                             "data-cursor": "link",
@@ -2658,12 +2639,12 @@ function FooterSection() {
                                 className: "h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]"
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/footer.tsx",
-                                lineNumber: 47,
+                                lineNumber: 37,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/sections/footer.tsx",
-                            lineNumber: 41,
+                            lineNumber: 31,
                             columnNumber: 11
                         }, this)
                     ]
@@ -2702,14 +2683,14 @@ function InstagramIcon({ className }) {
                 ry: "5"
             }, void 0, false, {
                 fileName: "[project]/components/sections/footer.tsx",
-                lineNumber: 58,
+                lineNumber: 48,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M16 11.37A3.37 3.37 0 1 1 12.63 8 3.37 3.37 0 0 1 16 11.37z"
             }, void 0, false, {
                 fileName: "[project]/components/sections/footer.tsx",
-                lineNumber: 59,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -2719,13 +2700,13 @@ function InstagramIcon({ className }) {
                 y2: "6.5"
             }, void 0, false, {
                 fileName: "[project]/components/sections/footer.tsx",
-                lineNumber: 60,
+                lineNumber: 50,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/sections/footer.tsx",
-        lineNumber: 57,
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }
@@ -2742,14 +2723,14 @@ function LinkedInIcon({ className }) {
                 d: "M4 4h4v16H4z"
             }, void 0, false, {
                 fileName: "[project]/components/sections/footer.tsx",
-                lineNumber: 68,
+                lineNumber: 58,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M8 11c0-1.657 1.343-3 3-3s3 1.343 3 3v9h-6z"
             }, void 0, false, {
                 fileName: "[project]/components/sections/footer.tsx",
-                lineNumber: 69,
+                lineNumber: 59,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
@@ -2758,20 +2739,20 @@ function LinkedInIcon({ className }) {
                 r: "1.5"
             }, void 0, false, {
                 fileName: "[project]/components/sections/footer.tsx",
-                lineNumber: 70,
+                lineNumber: 60,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                 d: "M14 13c0-1.105.895-2 2-2s2 .895 2 2v7h-4z"
             }, void 0, false, {
                 fileName: "[project]/components/sections/footer.tsx",
-                lineNumber: 71,
+                lineNumber: 61,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/sections/footer.tsx",
-        lineNumber: 67,
+        lineNumber: 57,
         columnNumber: 5
     }, this);
 }
@@ -2788,20 +2769,20 @@ function EnvelopeIcon({ className }) {
                 d: "M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"
             }, void 0, false, {
                 fileName: "[project]/components/sections/footer.tsx",
-                lineNumber: 79,
+                lineNumber: 69,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("polyline", {
                 points: "22,6 12,13 2,6"
             }, void 0, false, {
                 fileName: "[project]/components/sections/footer.tsx",
-                lineNumber: 80,
+                lineNumber: 70,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/sections/footer.tsx",
-        lineNumber: 78,
+        lineNumber: 68,
         columnNumber: 5
     }, this);
 }

@@ -19,16 +19,6 @@ export function FooterSection() {
         </div>
         <div className="flex items-center gap-4 text-[rgba(36,48,71,0.68)]">
           <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative flex h-12 w-12 items-center justify-center rounded-full border border-[rgba(36,48,71,0.12)] bg-white/85 transition hover:-translate-y-1 hover:border-[rgba(36,48,71,0.24)] hover:shadow-[0_18px_36px_rgba(31,42,68,0.18)]"
-            data-cursor="link"
-            aria-label="Instagram"
-          >
-            <InstagramIcon className="h-5 w-5 text-[rgba(36,48,71,0.7)] transition group-hover:text-[var(--foreground)]" />
-          </a>
-          <a
             href="https://www.linkedin.com/in/ernesto-avila-0b50002b7/"
             target="_blank"
             rel="noopener noreferrer"
